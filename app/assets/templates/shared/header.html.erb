@@ -1,4 +1,5 @@
-
+<div class="col-md-10 col-md-offset-1">
+  
   <div class="navbar-header">
     <a ng-click="toggleNavSize($event)" class="btn btn-link visible-xs" data-toggle="class:nav-off-screen" data-target="#nav"><i class="fa fa-bars"></i></a>
     <a ui-sref="app.public.home" class="navbar-brand" ng-click="goabout = false">
@@ -8,14 +9,14 @@
 
   <ul class="nav navbar-nav hidden-xs">
     <li>
-      <a href class="about-link font-sbold text-sm" ng-click="goabout = !goabout" ui-sref="app.public.about" ng-show="!goabout">
+      <!-- ABOUT LINK HIDDEN <a href class="about-link font-sbold text-sm" ng-click="goabout = !goabout" ui-sref="app.public.about" ng-show="!goabout">
         <span class="label label-theme rounded text-lg text-white m-r-sm font-ebold">?</span>
           {{ 'about_the_fablab' | translate:{ GENDER: nameGenre, NAME: fablabName }:"messageformat" }}
-      </a>
+      </a>-->
       <a href class="about-link font-sbold text-sm" ng-click="goabout = !goabout" ui-sref="app.public.home" ng-show="goabout">
         <span class="label label-theme label-icon rounded text-lg text-white m-r-sm font-ebold"><i class="fa fa-caret-up" ng-show="goabout"></i></span>
           {{ 'return' | translate }}
-      </div>
+      
       </a>
     </li>
   </ul>
@@ -59,3 +60,5 @@
         </li>
     <% end %>
   </ul>
+
+</div>
