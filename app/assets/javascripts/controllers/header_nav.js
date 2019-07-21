@@ -13,19 +13,18 @@
 /**
  * Navigation controller. List the links availables in the left navigation pane and their icon.
  */
-Application.Controllers.controller('MainNavController', ['$scope', function ($scope) {
+Application.Controllers.controller('HeaderNavController', ['$scope', function ($scope) {
   // Common links (public application)
   $scope.navLinks = [
-    {
-      state: 'app.public.home',
-      linkText: 'home',
-      linkIcon: 'home'
-    },
-
     {
       state: 'app.public.events_list',
       linkText: 'events_registrations',
       linkIcon: 'tags'
+    },
+    {
+      state: 'app.public.spaces_list',
+      linkText: 'place',
+      linkIcon: 'rocket'
     },
     {
       state: 'app.public.machines_list',
@@ -38,14 +37,9 @@ Application.Controllers.controller('MainNavController', ['$scope', function ($sc
       linkIcon: 'th'
     },
     {
-      state: 'app.public.trainings_list',
-      linkText: 'trainings_registrations',
-      linkIcon: 'graduation-cap'
-    },   
-    {
-      state: 'app.public.calendar',
-      linkText: 'public_calendar',
-      linkIcon: 'calendar'
+      state: 'app.public.spaces_list',
+      linkText: 'contact',
+      linkIcon: 'rocket'
     }
 
   ];
@@ -55,14 +49,6 @@ Application.Controllers.controller('MainNavController', ['$scope', function ($sc
       state: 'app.public.plans',
       linkText: 'subscriptions',
       linkIcon: 'credit-card'
-    });
-  }
-
-  if (!Fablab.withoutSpaces) {
-    $scope.navLinks.splice(3, 0, {
-      state: 'app.public.spaces_list',
-      linkText: 'reserve_a_space',
-      linkIcon: 'rocket'
     });
   }
 

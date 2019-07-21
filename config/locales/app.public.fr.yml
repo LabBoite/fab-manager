@@ -35,13 +35,15 @@ fr:
 
         # menu de gauche (partie publique)
         home: "Accueil"
-        reserve_a_machine: "Réserver une machine"
-        trainings_registrations: "Inscriptions formations"
-        events_registrations: "Inscriptions aux évènements"
-        reserve_a_space: "Réserver un espace"
-        projects_gallery: "Galerie de projets"
+        reserve_a_machine: "Outils"
+        trainings_registrations: "Initiations"
+        events_registrations: "Programmation"
+        reserve_a_space: "Espaces"
+        projects_gallery: "Projets"
         subscriptions: "Abonnements"
         public_calendar: "Calendrier"
+        place: "Lieu"
+        contact: "Contact"
 
         # menu de gauche (partie admin)
         trainings_monitoring: "Suivi formations"

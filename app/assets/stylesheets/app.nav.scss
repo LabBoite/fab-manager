@@ -257,9 +257,17 @@
 	.navbar-nav{
 		> li{
 			> a{
+				color: #A0A0A0;
+				font-weight: 700;
 				.header-md &{
-					padding: floor(($header-md-height - $line-height-computed)/2 - 1);
+					padding-top: floor(($header-md-height - $line-height-computed)/2 - 1);
+					padding-bottom: floor(($header-md-height - $line-height-computed)/2 - 1);
+					padding-left: 20px;
+					padding-right: 20px;
 				}
+			}
+			> a:hover {
+				color: #E1580A;
 			}
 		}
 	}

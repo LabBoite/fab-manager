@@ -23,6 +23,12 @@
 
   <!-- Top Nav -->
   <ul class="nav navbar-nav navbar-right m-n hidden-xs nav-user user">
+    <li class="headerNavLink" ng-repeat="navLink in navLinks" >
+      <a ng-click="toggleNavSize($event)" ui-sref="{{navLink.state}}" ui-sref-active="active" class="auto" data-toggle="class:nav-off-screen" data-target="#nav">
+        <span>{{navLink.linkText | translate}}</span>
+      </a>
+    </li>
+
     <li class="notification-open" ng-if="isAuthenticated()">
       <a ui-sref="app.logged.notifications"><i class="fa fa-bell fa-2x black"></i> <span class="badge" ng-class="{'bg-red': notifications.unread > 0}">{{notifications.unread}}</span></a>
     </li>
@@ -30,7 +36,7 @@
       <a href="#" class="dropdown-toggle" uib-dropdown-toggle>
         <span class="avatar text-center">
           <fab-user-avatar ng-model="currentUser.profile.user_avatar" avatar-class="thumb-50"></fab-user-avatar>
-          <span class="user-name m-l-sm text-black-light font-sbold hidden-sm">{{currentUser.name}} </span>
+          <!-- NICKNAME HIDDEN <span class="user-name m-l-sm text-black-light font-sbold hidden-sm">{{currentUser.name}} </span>-->
           <b class="caret"></b>
         </span>
       </a>
@@ -49,14 +55,12 @@
     </li>
     <% active_provider = AuthProvider.active %>
     <% if active_provider.providable_type == DatabaseProvider.name %>
-      <li ng-if="!isAuthenticated()"><a href="#" class="font-sbold label text-md" ng-click="signup($event)"><i class="fa fa-rocket"></i> {{ 'sign_up' | translate }}</a></li>
       <li ng-if="!isAuthenticated()">
-          <a href="#" class="font-sbold  label text-md" ng-click="login($event)"><i class="fa fa-sign-in"></i> {{ 'sign_in' | translate }}</a>
+          <a href="#" class="font-sbold  label text-md" ng-click="login($event)">{{ 'sign_in' | translate }}</a>
       </li>
     <% else %>
-        <li ng-if="!isAuthenticated()"><a href="<%= "/users/auth/#{active_provider.strategy_name}"%>" class="font-sbold label text-md"><i class="fa fa-rocket"></i> {{ 'sign_up' | translate }}</a></li>
         <li ng-if="!isAuthenticated()">
-          <a href="<%= "/users/auth/#{active_provider.strategy_name}"%>" class="font-sbold  label text-md"><i class="fa fa-sign-in"></i> {{ 'sign_in' | translate }}</a>
+          <a href="<%= "/users/auth/#{active_provider.strategy_name}"%>" class="font-sbold  label text-md">{{ 'sign_in' | translate }}</a>
         </li>
     <% end %>
   </ul>

@@ -21,7 +21,8 @@ angular.module('application.router', ['ui.router'])
         abstract: true,
         views: {
           'header': {
-            templateUrl: '<%= asset_path "shared/header.html" %>'
+            templateUrl: '<%= asset_path "shared/header.html" %>',
+            controller: 'HeaderNavController'
           },
           'leftnav': {
             templateUrl: '<%= asset_path "shared/leftnav.html" %>',
