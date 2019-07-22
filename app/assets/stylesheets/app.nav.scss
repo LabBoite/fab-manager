@@ -262,8 +262,8 @@
 				.header-md &{
 					padding-top: floor(($header-md-height - $line-height-computed)/2 - 1);
 					padding-bottom: floor(($header-md-height - $line-height-computed)/2 - 1);
-					padding-left: 20px;
-					padding-right: 20px;
+					padding-left: 17px;
+					padding-right: 17px;
 				}
 			}
 			> a:hover {
@@ -460,5 +460,4 @@
 
 .user-profile-nav > a {
   display: inline-block !important;
-  padding: 11px 44px !important;
 }

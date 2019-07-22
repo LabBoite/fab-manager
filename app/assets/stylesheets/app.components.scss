@@ -177,8 +177,7 @@
     position: relative;
     .badge {
       position: absolute;
-      top: 18px; right: 18px;
-      padding: 3px 6px 1px 6px;
+      top: 40px; right: 12px;
     }
     .menu-badge {
       position: absolute;
@@ -187,6 +186,10 @@
       border: 2px solid white;
     }
   }
+  .fa { color: black; font-size: rem-calc(24); }
+}
+
+.user-profile-nav {
   .fa { color: black; font-size: rem-calc(24); }
 }
 
