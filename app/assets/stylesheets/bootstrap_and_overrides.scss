@@ -46,7 +46,7 @@ $violet: 				#bd7ae9;
 $cyan:                  #3fc7ff;
 $japonica: #dd7e6b;
 
-$border-color:		  	#dddddd;
+$border-color:		    transparent;
 $header-bg: 			$bg-gray;
 
 $off-screen-nav-width:        	75%;
@@ -160,9 +160,9 @@ $padding-xs-horizontal:     5px !default;
 $line-height-large:         1.33 !default;
 $line-height-small:         1.5 !default;
 
-$border-radius-base:        4px !default;
-$border-radius-large:       6px !default;
-$border-radius-small:       3px !default;
+$border-radius-base:        0px !default;
+$border-radius-large:       0px !default;
+$border-radius-small:       0px !default;
 
 //** Global color for active items (e.g., navs or dropdowns).
 $component-active-color:    #fff !default;
@@ -766,7 +766,7 @@ $list-group-link-heading-color: #333 !default;
 //
 //##
 
-$panel-bg:                    #fff !default;
+$panel-bg:                    #F4F4F4 !default;
 $panel-body-padding:          15px !default;
 $panel-heading-padding:       18px 15px !default;
 $panel-footer-padding:        $panel-heading-padding !default;

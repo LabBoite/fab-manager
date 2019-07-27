@@ -101,6 +101,42 @@
 	}
 }
 
+/* Homepage */
+.home-intro {
+	background: #CCCCCC;
+	height: 380px;
+}
+
+.homeIntroContent {
+	bottom: 0;
+	margin-bottom: 53px;
+	text-align: left;
+
+	h1 {
+		color: #FFFFFF;
+		font-weight: normal;
+		font-size: 38px;
+		line-height: 115%;
+	}
+
+	.claimEmphase {
+		font-weight: 700;
+	}
+
+	a {
+		background: #E1580A;
+		padding: 15px;
+		font-weight: 800;
+		color: white;
+		text-transform: uppercase;
+	}
+}
+
+.home-sponsors {
+	img {
+		max-width: 100%;
+	}
+}
 
 body.container{
 	padding: 0;

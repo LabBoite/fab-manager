@@ -148,12 +148,13 @@ fr:
         latest_registered_members: "Derniers membres inscrits"
         create_an_account: "Créer un compte"
         discover_members: "Découvrir les membres"
+        fablab_s_sponsors: "Nos partenaires"
 
         # résumé des prochains évènements sur la page d'acceuil
-        fablab_s_next_events: "Les prochains évènements du Fab Lab"
+        fablab_s_next_events: "Prochains évènements"
         every_events: "Tous les évènements"
         from_date_to_date: "du {{START}} au {{END}}"  # angular interpolation
-        on_the_date: "le {{DATE}}"                    # angular interpolation
+        on_the_date: "{{DATE}}"                    # angular interpolation
         from_time_to_time: "de {{START}} à {{END}}"   # angular interpolation
         free_entry: "Accès libre"
         free_admission: "Entrée gratuite"

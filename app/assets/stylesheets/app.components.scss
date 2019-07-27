@@ -1,20 +1,24 @@
 .widget {
-
-	h1, h2, h3 {
+	h1, h2, h3, h6 {
 		margin: 0;
 		line-height: rem-calc(18);
 		font-size: rem-calc(14);
-		font-weight: 600;
-		color: black;
 	}
 	h1 {
-    font-size: rem-calc(16); text-transform: uppercase;
+    font-size: rem-calc(16);
+    font-weight: 800;
+    color: #565656;
   }
-	h2 { font-weight: bold; }
-	//h3 { color: $red; }
+	h2 { 
+    font-weight: bold; 
+  }
   h4 {
     font-size: rem-calc(12);
     margin: 8px 0;
+  }
+  h6 {
+    color: #565656;
+    font-weight: 600;
   }
 
 
@@ -196,19 +200,19 @@
 
 .panel {
   margin-bottom: 30px;
+
   .panel-heading {
     &.small {
       padding: 15px 15px;
     }
     &.picture {
-      height: 250px;
+      height: 150px;
       background-size: cover;
       background-position: center;
       @include transition(opacity .5s ease);
       cursor: pointer;
       padding:0;
-      img { @include border-radius(6px 6px 0 0); }
-      &:hover {
+      img:hover {
         opacity: 0.8;
       }
     }

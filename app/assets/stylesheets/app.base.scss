@@ -10,16 +10,18 @@ body {
   margin: 0;
 }
 
-h1, .page-title {
+.page-title {
    line-height: rem-calc(24);
    text-transform: uppercase;
    font-weight: 900;
 }
+
 h2 {
-   //color: $red;
+   color: #E1580A;
    line-height: rem-calc(24);
-   font-weight: 900;
+   font-weight: 700;
 }
+
 h3 { font-weight: 600; }
 h4 { font-weight: bold; }
 h5 {
