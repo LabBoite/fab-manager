@@ -1,8 +1,46 @@
+.footer {
+	margin-top: 60px;
+	background: #E1580A;
+	color: #FFFFFF;
+	font-weight: 600;
+	.footer-wrapper {
+		padding: 30px 0;
+	}
+	.footer-logo {
+		img {
+			width: 250px;
+		}
+	}
+	.footer-links {
+		font-size: 12pt;
+		margin-top: 30px;
+		padding: 0;
+		li {
+			list-style: none;
+		}
+		a {
+			color: #FFFFFF;
+		}
+		a:hover {
+			color: #000;
+		}
+	}
+	.footer-credit {
+		font-size: 8pt;
+		margin-top: 15px;
+		a {
+			color: #FFFFFF;
+		}
+		a:hover {
+			color: #000;
+		}
+	}
+}
+
 /*layout*/
 .header,
 .footer{
 	min-height: 50px;
-	padding: 0 15px;
 	> p{
 		margin-top: 15px;
 		display: inline-block;
@@ -56,14 +94,9 @@
 		margin-bottom: 0;
 		padding:0;
 		position: relative !important;
-		z-index: 1000;
 	}
 }
 
-.header {
-	background-color: $header-bg;
-	//@include box-shadow(0 1px 0px #cfcfcf);
-}
 
 
 .heading {
@@ -156,7 +189,6 @@ body.container{
 		&,
 		body{
 			height:100%;
-			overflow: hidden;
 		}
 		.hbox{
 			&.stretch{
@@ -164,10 +196,6 @@ body.container{
 			}
 		}
 		.vbox{
-			> section,
-			> footer{
-				position: absolute;
-			}
 			&.flex{
 				> section{
 					> section{
@@ -281,7 +309,6 @@ body.container{
 	}
 
 	.header-md{
-		height: $header-md-height;
 		.navbar-form{
 			margin-top: floor( ($header-md-height - 30)/2 );
 			margin-bottom: floor( ($header-md-height - 30)/2 );

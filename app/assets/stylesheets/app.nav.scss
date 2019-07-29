@@ -1,4 +1,55 @@
 /*primary nav*/
+
+.header-public {
+	height: $header-md-height;
+	background-color: #f5f5f5;
+}
+
+.header-admin {
+	background-color: #E1580A;
+}
+
+.navbar-public.navbar-nav{
+	> li{
+		font-size: 16px;
+		> a{
+			color: #A0A0A0;
+		}
+		> a:hover {
+			color: #E1580A;
+			background: transparent;
+		}
+		> .navbar-webesite {
+			font-weight: 700;
+		}
+		> .navbar-connect {
+			font-weight: 400;
+		}
+	}
+}
+
+.navbar-admin.navbar-nav{
+	> li{
+		font-weight: 600;
+		font-size: 13px;
+		> h1 {
+			font-size: 13px;
+			color: #000000;
+			padding: 10px 15px;
+			margin: 0 !important;
+		}
+		> a{
+			color: #FFFFFF;
+			padding: 10px 15px;
+		}
+		> a:hover {
+			color: #000000;
+			background: transparent;
+		}
+	}
+}
+
+
 .navbar-header{
 	position: relative;
 	> .btn{
@@ -254,20 +305,16 @@
 			}
 		}
 	}
-	.navbar-nav{
+	
+	.navbar-public.navbar-nav{
 		> li{
 			> a{
-				color: #A0A0A0;
-				font-weight: 700;
 				.header-md &{
 					padding-top: floor(($header-md-height - $line-height-computed)/2 - 1);
 					padding-bottom: floor(($header-md-height - $line-height-computed)/2 - 1);
 					padding-left: 17px;
 					padding-right: 17px;
 				}
-			}
-			> a:hover {
-				color: #E1580A;
 			}
 		}
 	}

@@ -85,8 +85,9 @@
     </header>
 
     <section ui-view="content">
+      
       <section class="hbox stretch">
-        <aside id="nav" class="aside-md bg-red hidden-print" ui-view="leftnav"></aside>
+        <!-- NAV HIDDEN <aside id="nav" class="aside-md bg-red hidden-print" ui-view="leftnav"></aside>-->
 
         <section id="content">
           <section class="vbox">
@@ -94,20 +95,24 @@
             </section>
             <section id="content-main" class="scrollable" ui-view="main">
             </section>
+            <section id="footer" class="scrollable" ui-view="footer">
+            </section>
           </section>
         </section>
-
-      </section> <!-- /.hbox -->
+      
+        </section> <!-- /.hbox -->
     </section>
+  
+    </section> <!-- /.vbox -->
 
-  </section> <!-- /.vbox -->
-
-  <div class="app-generator">
+  <!-- POWERED HIDDEN  <div class="app-generator">
     <span class="app-version" ng-if="currentUser && currentUser.role == 'admin'" uib-tooltip="{{'version' | translate}} {{version.version}}">
       <i class="fa fa-question-circle" aria-label="Version ?"></i>
     </span>
     <span class="text-sm">Powered by <a href="http://www.fab-manager.com" target="_blank">Fab Manager</a></span>
-  </div>
+  </div> -->
+
+
 
 <%= javascript_include_tag 'application' %>
 
@@ -139,5 +144,6 @@
     raise LoadError, "fullcalendar/dist/lang/#{Rails.application.secrets.fullcalendar_locale}.js does not exists"
   end
 %>
+
 </body>
 </html>
