@@ -69,7 +69,7 @@
 
         <div class="col-xs-12 col-md-12 col-lg-10 col-centered no-gutter" ng-if="currentUser.subscription && isInPast(currentUser.subscription.expired_at)">
           <uib-alert type="info">
-            {{ 'your_subscription_expires_on_the_DATE' | translate:{DATE:(currentUser.subscription.expired_at | amDateFormat:'L' )} }}
+            {{ 'your_subscription_expires_on_the_DATE' | translate:{DATE:(currentUser.subscription.expired_at | amDateFormat:'LL' )} }}
           </uib-alert>
         </div>
 

@@ -165,9 +165,9 @@
                 <i class="fa fa-arrows-h"></i>
                 <i class="fa fa-calendar"></i>
                 <span translate>{{ 'from_date' }}</span>
-                <b class="text-info" id="datepicker-from-info">{{datePickerStart.selected | amDateFormat:'L'}}</b>
+                <b class="text-info" id="datepicker-from-info">{{datePickerStart.selected | amDateFormat:'LL'}}</b>
                 <span translate>{{ 'to_date' }}</span>
-                <b class="text-info" id="datepicker-to-info">{{datePickerEnd.selected | amDateFormat:'L'}}</b>
+                <b class="text-info" id="datepicker-to-info">{{datePickerEnd.selected | amDateFormat:'LL'}}</b>
                 <i class="fa fa-caret-down" ng-show="!datePicker.show"></i>
                 <i class="fa fa-caret-up" ng-show="datePicker.show"></i>
               </button>
