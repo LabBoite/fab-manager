@@ -52,8 +52,8 @@
             <div class="pull-left half-w m-t-n-sm">
               <h5 class="text-xs">{{event.category.name}}</h5>
               <h4 class="m-n text-sm clear l-n">{{event.title}}</h4>
-              <h3 class="m-n" ng-show="onSingleDay(event)">{{event.start_date | amDateFormat:'L'}}</h3>
-              <h3 class="m-n" ng-hide="onSingleDay(event)">{{event.start_date | amDateFormat:'L'}} <span class="text-sm font-thin" translate> {{ 'to_date' }} </span> {{event.end_date | amDateFormat:'L'}}</h3>
+              <h3 class="m-n" ng-show="onSingleDay(event)">{{event.start_date | amDateFormat:'LL'}}</h3>
+              <h3 class="m-n" ng-hide="onSingleDay(event)">{{event.start_date | amDateFormat:'LL'}} <span class="text-sm font-thin" translate> {{ 'to_date' }} </span> {{event.end_date | amDateFormat:'LL'}}</h3>
 
               <h6 class="m-n" ng-if="!event.amount" translate>{{ 'free_admission' }}</h6>
               <h6 class="m-n" ng-if="event.amount">{{ 'full_price_' | translate }} {{event.amount | currency}} <span ng-repeat="price in event.prices">/ {{ price.category.name }} {{price.amount | currency}}</span></h6>

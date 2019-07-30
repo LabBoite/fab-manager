@@ -80,7 +80,7 @@
         </dl>
         <dl class="text-sm">
           <dt><i class="fa fa-calendar" aria-hidden="true"></i> {{ 'dates' | translate }}</dt>
-          <dd>{{ 'beginning' | translate }} <span class="text-u-l">{{event.start_date | amDateFormat:'L'}}</span><br>{{ 'ending' | translate }} <span class="text-u-l">{{event.end_date | amDateFormat:'L'}}</span></dd>
+          <dd>{{ 'beginning' | translate }} <span class="text-u-l">{{event.start_date | amDateFormat:'LL'}}</span><br>{{ 'ending' | translate }} <span class="text-u-l">{{event.end_date | amDateFormat:'LL'}}</span></dd>
           <dt><i class="fa fa-clock-o"></i> {{ 'opening_hours' | translate }}</dt>
           <dd ng-if="event.all_day == 'true'"><span translate>{{ 'all_day' }}</span></dd>
           <dd ng-if="event.all_day == 'false'">{{ 'from_time' | translate }} <span class="text-u-l">{{event.start_date | amDateFormat:'LT'}}</span> {{ 'to_time' | translate }} <span class="text-u-l">{{event.end_date | amDateFormat:'LT'}}</span></dd>

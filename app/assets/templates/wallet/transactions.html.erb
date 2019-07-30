@@ -10,7 +10,7 @@
     </thead>
     <tbody>
     <tr ng-repeat="t in transactions">
-      <td>{{ ::t.created_at | amDateFormat:'L' }}</td>
+      <td>{{ ::t.created_at | amDateFormat:'LL' }}</td>
       <td>
         <span ng-if="t.transaction_type == 'credit'" translate>{{ 'credit' }}</span>
         <span ng-if="t.transaction_type == 'debit'" translate>{{ 'debit' }}</span>

@@ -71,7 +71,7 @@
                     {{ 'duration' | translate }} {{ subscription.plan.interval | planIntervalFilter: subscription.plan.interval_count }}
                   </p>
                   <p>
-                    {{ 'expires_at' | translate }} {{ subscription.expired_at | amDateFormat: 'L' }}
+                    {{ 'expires_at' | translate }} {{ subscription.expired_at | amDateFormat: 'LL' }}
                   </p>
                   <p>
                     {{ 'price_' | translate }} {{ subscription.plan.amount | currency}}
