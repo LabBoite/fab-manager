@@ -233,6 +233,9 @@ fr:
 
       training_show:
         # détails d'une formation
+        training: "Initiation"
+        msg_training_condition: "reservée aux adhérents"
+        all_the_events: "toute la programmation"
         book_this_training: "Réserver cette formation"
         do_you_really_want_to_delete_this_training: "Êtes-vous sur de vouloir supprimer cette formation ?"
         unauthorized_operation: "Opération non autorisée"
@@ -275,13 +278,16 @@ fr:
 
       events_show:
         # détails d'un événement et réservation
+        all_the_events: "toute la programmation"
+        msg_workshop_condition: "gratuit sur inscription"
+        msg_meeting_condition: "en accès libre"
         event_description: "Description de l'évènement"
         downloadable_documents: "Documents à télécharger"
         information_and_booking: "Informations et réservation"
         beginning: "Début :"
         ending: "Fin :"
-        opening_hours: "Horaires :"
-        tickets_still_availables: "Places encore disponibles :"
+        opening_hours: "Horaires"
+        tickets_still_availables: "place(s) encore disponibles"
         sold_out: "Événement complet"
         free_entry: "Accès libre"
         cancelled: "Annulé"
