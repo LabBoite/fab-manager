@@ -152,7 +152,7 @@ fr:
 
         # résumé des prochains évènements sur la page d'acceuil
         fablab_s_next_events: "Prochains évènements"
-        every_events: "Tous les évènements"
+        every_events: "toute la programmation"
         from_date_to_date: "du {{START}} au {{END}}"  # angular interpolation
         on_the_date: "{{DATE}}"                    # angular interpolation
         from_time_to_time: "de {{START}} à {{END}}"   # angular interpolation

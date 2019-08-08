@@ -3,29 +3,33 @@
     <ui-view autoscroll='true'></ui-view>
 
   <div class="row no-gutter">
+    
+    <!-- BACK -->
+    <div class="col-lg-12">
+      <a ui-sref="app.public.events_list">{{ 'all_the_events' | translate }}</a>
+    </div>
+    
+    <!-- MAIN -->
     <div class="col-sm-12 col-md-12 col-lg-8">
-
-      <div class="article wrapper-lg">
-        <a ui-sref="app.public.events_list">{{ 'all_the_events' | translate }}</a>
+      <div class="article">
         <div class="article-thumbnail" ng-if="event.event_image">
           <img ng-src="{{event.event_image}}" alt="{{event.title}}" class="img-responsive">
         </div>
-
-        <dt ng-if="event.event_themes.length > 0">{{event.event_themes[0].name}}</dt>
-        <h3>{{ event.title }}</h3>
+        <h6 ng-if="event.event_themes.length > 0">{{event.event_themes[0].name}}</h6>
+        <h2>{{ event.title }}</h2>
         <p ng-bind-html="event.description | toTrusted"></p>
       </div>
-
     </div>
 
+    <!-- SIDE INFOS -->
     <div class="col-sm-12 col-md-12 col-lg-4">
-
-      <section class="widget panel b-a m" ng-if="event.event_files_attributes">
-        <div class="panel-heading b-b">
+      
+      <!-- Files -->
+      <section class="panel" ng-if="event.event_files_attributes">
+        <div class="panel-heading">
           <span class="badge bg-warning pull-right">{{event.event_files_attributes.length}}</span>
           <h3 translate>{{ 'downloadable_documents' }}</h3>
         </div>
-
         <ul class="widget-content list-group list-group-lg no-bg auto">
           <li ng-repeat="file in event.event_files_attributes" class="list-group-item no-b clearfix">
             <a target="_blank" ng-href="{{file.attachment_url}}"><i class="fa fa-arrow-circle-o-down"> </i> {{file.attachment | humanize : 25}}</a>
@@ -33,24 +37,22 @@
         </ul>
       </section>
 
-      <section class="widget panel b-a m m-t-lg">
-        <div class="panel-heading b-b small">
-          <h5>{{event.category.name}}</h5>
+      <!-- Dates -->
+      <section class="panel">
+        <div class="panel-heading">
+          <h2>{{event.category.name}}</h2>
           <div ng-if="event.category.name == 'Atelier'">{{ 'msg_workshop_condition' | translate }}</div>
           <div ng-if="event.category.name == 'Rencontre'">{{ 'msg_meeting_condition' | translate }}</div>
         </div>
-
-        <div class="panel-content wrapper">
-
-          <dl class="text-sm">
-            <dt>{{ 'dates' | translate }}</dt>
+        <div class="panel-content">
+          <dl>
+            <dt><h5>{{ 'dates' | translate }}</h5></dt>
             <dd>{{ 'beginning' | translate }} <span class="text-l">{{event.start_date | amDateFormat:'LL'}}</span><br>{{ 'ending' | translate }} <span class="text-l">{{event.end_date | amDateFormat:'LL'}}</span></dd>
-            <dt>{{ 'opening_hours' | translate }}</dt>
+            <dt><h5>{{ 'opening_hours' | translate }}</h5></dt>
             <dd ng-if="event.all_day == 'true'"><span translate>{{ 'all_day' }}</span></dd>
             <dd ng-if="event.all_day == 'false'">{{ 'from_time' | translate }} <span class="text-l">{{event.start_date | amDateFormat:'LT'}}</span> {{ 'to_time' | translate }} <span class="text-l">{{event.end_date | amDateFormat:'LT'}}</span></dd>
           </dl>
-
-          <div class="text-sm" ng-if="event.amount">
+          <div ng-if="event.amount">
             <div>{{ 'full_price_' | translate }} <span>{{ event.amount | currency}}</span></div>
             <div ng-repeat="price in event.prices" class="description-hover">
               <span uib-popover="{{getPriceCategoryConditions(price.category.id)}}" popover-trigger="mouseenter">
@@ -59,16 +61,14 @@
               {{price.amount | currency}}
             </div>
           </div>
-
-          <div class="text-sm m-b" ng-if="event.nb_total_places">
+          <div ng-if="event.nb_total_places">
             <div ng-if="event.nb_free_places > 0"><span class="font-sbold">{{event.nb_free_places}}</span> {{ 'tickets_still_availables' | translate }}</div>
-            <div ng-if="event.nb_total_places > 0 && event.nb_free_places <= 0"><span class="badge font-sbold" translate>{{ 'sold_out' }}</span></div>
-            <div ng-if="event.nb_total_places == -1"><span class="badge font-sbold" translate>{{ 'cancelled' }}</span></div>
+            <div ng-if="event.nb_total_places > 0 && event.nb_free_places <= 0"><span class="font-sbold" translate>{{ 'sold_out' }}</span></div>
+            <div ng-if="event.nb_total_places == -1"><span class="font-sbold" translate>{{ 'cancelled' }}</span></div>
           </div>
-          <div class="text-sm m-b" ng-if="!event.nb_total_places">
-            <div><span class="badge font-sbold" translate>{{ 'free_entry' }}</span></div>
+          <div ng-if="!event.nb_total_places">
+            <div><span class="font-sbold" translate>{{ 'free_entry' }}</span></div>
           </div>
-
 
           <div class="m-b">
             <div ng-show="reserve.toReserve">
@@ -159,12 +159,5 @@
   </div>
 
 
-  </div>
-
-  <div class="row">
-    <div class="col-lg-12 text-center m-t-md" ng-if="isAuthorized('admin')">
-      <a ui-sref="app.admin.events_edit({id: event.id})" ng-if="isAuthorized('admin')" class="btn btn-lg btn-warning bg-white b-2x rounded m-t-xs text-u-c text-sm"><i class="fa fa-edit"></i> {{ 'edit' | translate }}</a>
-      <a ng-click="deleteEvent(event)" ng-if="isAuthorized('admin')" class="btn btn-lg btn-danger b-2x rounded no-b m-t-xs"><i class="fa fa-trash-o"></i></a>
-    </div>
   </div>
 </section>

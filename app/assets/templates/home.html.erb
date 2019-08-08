@@ -1,4 +1,3 @@
-
 <div class="alert alert-warning m-sm text-center" ng-if="(homeBlogpost != null) && (homeBlogpost != '') && (homeBlogpost != undefined)">
 	<span ng-bind-html="homeBlogpost"></span>
 </div>
@@ -12,38 +11,32 @@
   </div>
 </div>
 
+<!-- NEXT EVENTS -->
 <section class="home-events col-lg-10 col-md-offset-1 wrapper">
   <h2 class="m-t-sm">{{ 'fablab_s_next_events' | translate }}</h2>
-    
   <div class="row" ng-repeat="event in (upcomingEvents.length/4 | array)">  
     
+    <!-- Event card -->
     <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3" ng-repeat="event in upcomingEvents.slice(4*$index, 4*$index + 4)">
-      <div class="widget panel" ui-sref="app.public.events_show({id: event.id})">
-        <div class="panel-heading picture" style="background-image: url({{event.event_image_medium}});" >
+      <div class="card" ui-sref="app.public.events_show({id: event.id})">
+        <div class="card-header" style="background-image: url({{event.event_image_medium}});" >
           <img src="data:image/png;base64," data-src="holder.js/100%x100%/text:&#xf03e;/font:FontAwesome/icon" bs-holder ng-if="!event.event_image" class="img-responsive">
         </div>
-        <div class="panel-body" style="heigth:170px;">
-          <div class="row">
-            <div class="col-sm-6 col-md-12 row m-b-sm">
-              <h6 class="m-n col-xs-9 col-md-12" ng-hide="isOneDayEvent(event)">{{ 'from_date_to_date' | translate:{START:(event.start_date | amDateFormat:'LL'), END:(event.end_date | amDateFormat:'LL')} }}</h6>
-              <h6 class="m-n col-xs-9 col-md-12" ng-show="isOneDayEvent(event)">{{ 'on_the_date' | translate:{DATE:(event.start_date | amDateFormat:'LL')} }}</h6>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xs-9 col-md-12">
-            <h1 class="m-b">{{event.title}}</h1>
-          </div>
+        <div class="card-body">
+            <h3 ng-hide="isOneDayEvent(event)">{{ 'from_date_to_date' | translate:{START:(event.start_date | amDateFormat:'LL'), END:(event.end_date | amDateFormat:'LL')} }}</h3>
+            <h3 ng-show="isOneDayEvent(event)">{{ 'on_the_date' | translate:{DATE:(event.start_date | amDateFormat:'LL')} }}</h3>
+            <h2>{{event.title}}</h2>
         </div>
       </div>  
     </div>
+
   </div>
-    
   <a ui-sref="app.public.events_list" class="pull-right">{{ 'every_events' | translate }}</a>
 </section>
 
+<!-- SPONSORS -->
 <section class="home-sponsors col-lg-10 col-md-offset-1 wrapper">
   <h2 class="m-t-sm">{{ 'fablab_s_sponsors' | translate }}</h2>
-
   <div class="row">
     <div class="col-md-2">
       <img src="/sponsor_agglo.png" />

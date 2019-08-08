@@ -1,13 +1,79 @@
 // reset
+
 html {
   overflow-x: hidden;
 }
+
 body {
   -webkit-font-smoothing: antialiased;
 }
 
-.h1, .h2, .h3, .h4, .h5, .h6{
-  margin: 0;
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  margin-top: 0;
+  font-family: 'Open Sans', Arial, sans-serif;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: normal;
+  margin-bottom: 15px;
+  color: #E1580A;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 19px;
+  letter-spacing: normal;
+  margin-bottom: 15px;
+  color: #E1580A;
+}
+
+h4 {
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: normal;
+  margin-bottom: 15px;
+  color: #777777;
+}
+
+h5 {
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: normal;
+  margin-bottom: 15px;
+  color: #777777;
+  text-transform: uppercase;
+}
+
+h6 {
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: normal;
+  margin-bottom: 15px;
+  color: #E1580A;
+}
+
+.title_h7 {
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: normal;
+  margin-bottom: 15px;
+  color: #E1580A;
+}
+
+p {
+  font-weight: 400;
+  font-size: rem-calc($font-size-base);
+  line-height: rem-calc(24);
+  color: #777777;
+  margin-bottom: 45px;
+
+  &.intro, .intro {
+     font-size: rem-calc(16);
+     line-height: rem-calc(24);
+     margin: 1.038em 0 30px 0;
+  }
 }
 
 .page-title {
@@ -16,66 +82,37 @@ body {
    font-weight: 900;
 }
 
-h2 {
-   color: #E1580A;
-   line-height: rem-calc(24);
-   font-weight: 700;
-}
-
-h3 { font-weight: 600; }
-h4 { font-weight: bold; }
-h5 {
-   display: inline-block;
-   position: relative;
-   line-height: rem-calc(18);
-   //color: $red;
-   font-size: rem-calc(16);
-   &:after {
-      position: absolute;
-      top: 18px;
-      left: 0;
-      content: '';
-      width: 35%;
-      height: 1px;
-      //background-color: $red;
-   }
-}
-
-// Links
-// -------------------------
-
 a {
-  //color: $link-color;
+  font-weight: 600;
+  color: $link-color;
   text-decoration: none;
 }
-a:hover,
-a:focus {
-  //color: $link-hover-color;
+
+a:visited, a:focus {
+  color: $link-color;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #E1580A;
   text-decoration: none;
 }
 
 label{ font-weight: 600; }
+
 small, .small{font-size: $font-size-sm;}
 
 pre { padding: 0; }
 
-p {
-   font-size: rem-calc($font-size-base);
-   line-height: rem-calc(24);
-
-   &.intro, .intro {
-      font-size: rem-calc(16);
-      line-height: rem-calc(24);
-      margin: 1.038em 0 30px 0;
-   }
-}
-
 dt {
-  color: $black-light;
+  font-size: 15px;
+  color: #777777;
 }
+
 dd {
-  color: $black-light;
-  margin-bottom: 20px;
+  font-size: 15px;
+  color: #777777;
+  margin-bottom: 15px;
 }
 
 

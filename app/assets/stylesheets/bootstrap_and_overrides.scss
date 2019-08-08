@@ -68,9 +68,9 @@ $body-bg:               #fff !default;
 $text-color:            black !default;
 
 //** Global textual link color.
-$link-color:            #cb1117 !default;
+$link-color:            #777777 !default;
 //** Link hover color set via `darken()` function.
-$link-hover-color:      #840b0f !default;
+$link-hover-color:      #E1580A !default;
 //** Link hover decoration.
 $link-hover-decoration: underline;
 
@@ -91,7 +91,7 @@ $font-felt:                'felt-tip-roman', 'Loved by the King', cursive, sans-
 $font-family-base:        $font-family-sans-serif !default;
 $font-family-monospace:   $font-family-base;
 
-$font-size-base:          16px !default;
+$font-size-base:          15px !default;
 $font-size-large:         ceil(($font-size-base * 1.125)) !default; // ~18px
 $font-size-medium:        ceil(($font-size-base * 0.875)) !default; // ~14px
 $font-size-small:         ceil(($font-size-base * 0.75)) !default; // ~12px
