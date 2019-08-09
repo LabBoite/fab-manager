@@ -12,8 +12,6 @@ stylesheet_1:
          .btn-theme { background-color: #cb1117; color: white; }
          .btn-theme:active, .btn-theme:hover { background-color: #6d090c; }
          .label-theme { background-color: #cb1117 }
-         .btn-link { color: #cb1117 !important; }
-         .btn-link:hover { color: #6d090c !important; }
          a { color: #cb1117; }
          a:hover, a:focus { color: #6d090c; }
          h2, h3, h5 { color: #cb1117; }

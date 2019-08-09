@@ -17,6 +17,7 @@ h2 {
   font-weight: 700;
   font-size: 24px;
   letter-spacing: normal;
+  margin-top: 0;
   margin-bottom: 15px;
   color: #E1580A;
 }
@@ -25,6 +26,7 @@ h3 {
   font-weight: 600;
   font-size: 19px;
   letter-spacing: normal;
+  margin-top: 0;
   margin-bottom: 15px;
   color: #E1580A;
 }
@@ -33,6 +35,7 @@ h4 {
   font-weight: 600;
   font-size: 16px;
   letter-spacing: normal;
+  margin-top: 0;
   margin-bottom: 15px;
   color: #777777;
 }
@@ -41,6 +44,7 @@ h5 {
   font-weight: 600;
   font-size: 15px;
   letter-spacing: normal;
+  margin-top: 0;
   margin-bottom: 15px;
   color: #777777;
   text-transform: uppercase;
@@ -50,7 +54,8 @@ h6 {
   font-weight: 600;
   font-size: 15px;
   letter-spacing: normal;
-  margin-bottom: 15px;
+  margin-top: 0;
+  margin-bottom: 7px;
   color: #E1580A;
 }
 
@@ -76,26 +81,38 @@ p {
   }
 }
 
-.page-title {
-   line-height: rem-calc(24);
-   text-transform: uppercase;
-   font-weight: 900;
+.txt-orange {
+  color: #E1580A;
 }
 
 a {
   font-weight: 600;
-  color: $link-color;
   text-decoration: none;
 }
 
-a:visited, a:focus {
-  color: $link-color;
+a:visited, a:focus, a:hover {
   text-decoration: none;
 }
 
-a:hover {
-  color: #E1580A;
-  text-decoration: none;
+a.link-button {
+  background-color: #E1580A;
+  padding: 15px;
+  font-size: 15px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #FFFFFF;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+a.link-button-block {
+  display: block;
+  width: 100%;
+}
+
+a.link-button:hover, a.link-button:focus, a.link-button:active, a.link-button.active {
+  background-color: #B74208;
+  color: #FFFFFF;
 }
 
 label{ font-weight: 600; }
@@ -110,6 +127,12 @@ dt {
 }
 
 dd {
+  font-size: 15px;
+  color: #777777;
+  margin-bottom: 15px;
+}
+
+dl {
   font-size: 15px;
   color: #777777;
   margin-bottom: 15px;

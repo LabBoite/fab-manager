@@ -1,8 +1,15 @@
+.btn-default {
+  background-color: #E1580A;
+  padding: 15px;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  font-weight: 800;
+}
 
 .btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open > .btn-default.dropdown-toggle {
-
-	background-color: #f2f2f2;
-
+  background-color: #B74208;
+  color: #FFFFFF;
 }
 
 .btn{

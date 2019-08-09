@@ -1,11 +1,11 @@
-<section class="col-lg-10 col-md-offset-1 p-n">
+<section class="col-lg-10 col-md-offset-1 p-n wrapper">
   <div>
     <ui-view autoscroll='true'></ui-view>
 
   <div class="row no-gutter">
     
     <!-- BACK -->
-    <div class="col-lg-12">
+    <div class="col-lg-12 m-b-md">
       <a ui-sref="app.public.events_list">{{ 'all_the_events' | translate }}</a>
     </div>
     
@@ -41,8 +41,8 @@
       <section class="panel">
         <div class="panel-heading">
           <h2>{{event.category.name}}</h2>
-          <div ng-if="event.category.name == 'Atelier'">{{ 'msg_workshop_condition' | translate }}</div>
-          <div ng-if="event.category.name == 'Rencontre'">{{ 'msg_meeting_condition' | translate }}</div>
+          <div class="txt-orange" ng-if="event.category.name == 'Atelier'">{{ 'msg_workshop_condition' | translate }}</div>
+          <div class="txt-orange" ng-if="event.category.name == 'Rencontre'">{{ 'msg_meeting_condition' | translate }}</div>
         </div>
         <div class="panel-content">
           <dl>
@@ -125,10 +125,6 @@
                 <a class="pull-right m-t-xs text-u-l" href="#" ng-click="modifyReservation(reservation, $event)" translate>{{ 'change' }}</a>
               </div>
             </div>
-
-
-            <button class="btn btn-warning-full rounded btn-block text-sm" ng-click="reserveEvent()" ng-show="event.nb_free_places > 0 && !reserve.toReserve">{{ 'book' | translate }}</button>
-
             <coupon show="reserve.totalSeats > 0 && ctrl.member" coupon="coupon.applied" total="reserve.totalNoCoupon" user-id="{{ctrl.member.id}}"></coupon>
           </div>
         </div>
@@ -136,13 +132,16 @@
         <div class="panel-footer no-padder ng-scope" ng-if="event.amount">
           <button class="btn btn-valid btn-info btn-block p-l btn-lg text-u-c r-b text-base" ng-click="payEvent()" ng-if="reserve.totalSeats > 0">{{ 'confirm_and_pay' | translate }} {{reserve.amountTotal | currency}}</button>
         </div>
-
         <div class="panel-footer no-padder ng-scope" ng-if="event.amount == 0">
           <button class="btn btn-valid btn-info btn-block p-l btn-lg text-u-c r-b text-base" ng-click="validReserveEvent()" ng-if="reserve.totalSeats > 0" ng-disabled="attempting">{{ 'confirm' | translate }}</button>
         </div>
-
+        
+        <!-- Reservation button -->
+        <div class="panel-footer no-padder ng-scope">
+          <button class="btn-default btn-block" ng-click="reserveEvent()" ng-show="event.nb_free_places > 0 && !reserve.toReserve">{{ 'book' | translate }}</button>
+        </div>
       </section>
-
+      
       <div ng-if="currentUser.role === 'admin'">
         <select-member></select-member>
       </div>

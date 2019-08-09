@@ -21,17 +21,6 @@
     font-weight: 600;
   }
 
-
-  p { font-size: rem-calc(14); margin-top: 15px; }
-
-	a {
-		color: $black-light;
-		&:hover { color: $red; }
-	}
-	.fa {
-		// color: $red;
-	}
-
 	.widget-content {
 		font-size: rem-calc(14);
 	}
@@ -78,7 +67,6 @@
   border-radius: 0;
   overflow: hidden;
   cursor: pointer;
-  margin-bottom: 30px;
   
   h2 {
     font-weight: 800;
@@ -91,7 +79,7 @@
     padding: O;
   }
   h3 {
-    font-weight: 600;
+    font-weight: 700;
     font-size: 12px;
     letter-spacing: normal;
     line-height: 120%;
@@ -209,11 +197,11 @@
 
 // PANEL
 .panel {
-  margin-bottom: 15px;
   color: #777777;
   box-shadow: none;
   -webkit-box-shadow: none;
   border: none;
+  margin-bottom: 15px;
 
   h2 {
     font-weight: 700;

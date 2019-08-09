@@ -1,7 +1,7 @@
-<section class="col-lg-10 col-md-offset-1 p-n">
+<section class="col-lg-10 col-md-offset-1 p-n wrapper">
 
   <!-- NAV -->
-  <ul class="nav nav-tabs m-b-lg m-t-lg">
+  <ul class="nav nav-tabs m-b-md">
     <li>
       <a href="" uib-tab-heading-transclude="" class="ng-binding">rencontres</a>
     </li>
@@ -13,7 +13,7 @@
     </li>
   </ul>
 
-  <!-- FILTERS -->
+  <!-- FILTERS to be hidden -->
   <div class="row m-b-md">
     <div class="col-md-3 m-b" ng-show="categories.length > 0">
       <select ng-model="filters.category_id" ng-change="filterEvents()" class="form-control" ng-options="c.id as c.name for c in categories">
@@ -34,7 +34,7 @@
 
   <!-- EVENT LIST -->
   <div ng-repeat="month in monthOrder">
-    <div class="row" ng-repeat="event in (eventsGroupByMonth[month].length/4 | array)">
+    <div class="row m-b-md" ng-repeat="event in (eventsGroupByMonth[month].length/4 | array)">
       
       <!-- Event card -->
       <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3" ng-repeat="event in eventsGroupByMonth[month].slice(4*$index, 4*$index + 4)" ng-click="showEvent(event)">
