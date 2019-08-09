@@ -35,7 +35,7 @@ fr:
 
         # menu de gauche (partie publique)
         home: "Accueil"
-        reserve_a_machine: "Outils"
+        tools: "Outils"
         trainings_registrations: "Initiations"
         events_registrations: "Programmation"
         reserve_a_space: "Espaces"
@@ -53,7 +53,7 @@ fr:
         manage_the_invoices: "Factures"
         subscriptions_and_prices: "Tarifs"
         manage_the_events: "Évènements"
-        manage_the_machines: "Machines"
+        manage_the_tools: "Outils"
         manage_the_spaces: "Espaces"
         manage_the_projects_elements: "Projets"
         statistics: "Statistiques"

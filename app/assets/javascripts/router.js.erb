@@ -320,6 +320,30 @@ angular.module('application.router', ['ui.router'])
         }
       })
 
+      // tools
+      .state('app.public.tools', {
+        url: '/tools',
+        views: {
+          'main@': {
+            templateUrl: '<%= asset_path "tools/index.html.erb" %>',
+          },
+          'fablab_space@app.public.tools': {
+            templateUrl: '<%= asset_path "machines/index.html.erb" %>',
+            controller: 'MachinesController'
+          },
+          'free_space@app.public.tools': {
+            templateUrl: '<%= asset_path "spaces/index.html" %>',
+            controller: 'SpacesController'
+          }
+        },
+        resolve: {
+          machinesPromise: ['Machine', function (Machine) { return Machine.query().$promise; }],
+          translations: ['Translations', function (Translations) { return Translations.query(['app.public.machines_list', 'app.shared.training_reservation_modal', 'app.shared.request_training_modal']).$promise; }],
+          spacesPromise: ['Space', function (Space) { return Space.query().$promise; }],
+          translations: ['Translations', function (Translations) { return Translations.query(['app.public.spaces_list']).$promise; }]
+        }
+      })
+
       // machines
       .state('app.public.machines_list', {
         url: '/machines',

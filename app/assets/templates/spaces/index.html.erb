@@ -1,69 +1,30 @@
-<section class="heading b-b">
-  <div class="row no-gutter">
-    <div class="col-xs-2 col-sm-2 col-md-1">
-      <section class="heading-btn">
-        <a href="#" ng-click="backPrevLocation($event)"><i class="fa fa-long-arrow-left "></i></a>
-      </section>
-    </div>
-    <div class="col-xs-10 col-sm-10 col-md-8 b-l b-r-md">
-      <section class="heading-title">
-        <h1 translate>{{ 'spaces_list.the_spaces' }}</h1>
-      </section>
-    </div>
-
-    <div class="col-xs-12 col-sm-12 col-md-3 b-t hide-b-md" ng-if="isAuthorized('admin')">
-      <section class="heading-actions wrapper">
-       <a class="btn btn-lg btn-warning bg-white b-2x rounded m-t-xs" ui-sref="app.admin.space_new" role="button" translate>{{ 'spaces_list.add_a_space' }}</a>
-      </section>
-    </div>
-  </div>
-</section>
-
-
-<section class="m-lg">
-
-  <div class="form-group row">
-    <div class="input-group col-md-3 m-l-lg m-b">
-      <span class="input-group-addon"><i class="fa fa-filter"></i></span>
-      <select ng-model="spaceFiltering" class="form-control">
-        <option ng-repeat="status in filterDisabled" value="{{status}}" translate>{{ 'spaces_list.status_'+status }}</option>
-      </select>
-    </div>
+<section class="col-lg-10 col-md-offset-1 p-n wrapper">
+  
+  <!-- INTRO  -->
+  <div class="col-lg-12">
+    <h2>Espace libre</h2>
+    <p>Disposant d’un point d’accès à internet (wi-fi) espace vous permet de travailler en co-working. Des espaces de détente ont également été aménagés. L’accès à cet espace est gratuit et ouvert à tous.</p>
   </div>
 
-
-
-  <div class="col-xs-12 col-sm-6 col-md-4 reservable-card" ng-class="{'disabled-reservable' : space.disabled && spaceFiltering === 'all'}" ng-repeat="space in spaces | filterDisabled:spaceFiltering">
-    <div class="widget panel panel-default">
-      <div class="panel-heading picture" ng-if="!space.space_image" ng-click="showSpace(space)">
-        <img src="data:image/png;base64," data-src="holder.js/100%x100%/text:&#xf03e;/font:FontAwesome/icon" bs-holder class="img-responsive">
-      </div>
-      <div class="panel-heading picture" style="background-image:url({{space.space_image}})" ng-if="space.space_image" ng-click="showSpace(space)">
-      </div>
-      <div class="panel-body">
-        <h1 class="text-center m-b">{{space.name}}</h1>
-      </div>
-      <div class="panel-footer no-padder">
-
-        <div class="text-center clearfix">
-          <div class="col-sm-6 b-r no-padder">
-            <div class="btn btn-default btn-block no-b padder-v red" ng-click="reserveSpace(space, $event)" ng-hide="space.disabled">
-              <i class="fa fa-bookmark m-r-xs"></i>
-              <span class="hidden-sm" translate>{{ 'spaces_list.book' }}</span>
-            </div>
-          </div>
-          <div class="no-padder" ng-class="{'col-sm-6': !space.disabled}">
-            <div class="btn btn-default btn-block padder-v no-b red" ng-click="showSpace(space)">
-              <i class="fa fa-eye m-r-xs"></i>
-              <span class="hidden-sm" translate>{{ 'consult' }}</span>
-            </div>
-          </div>
+  <!-- SPACES LIST -->
+  <div class="row m-b-md" ng-repeat="space in (spaces.length/4 | array)">
+    <!-- Space card -->
+    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3" ng-repeat="space in spaces.slice(4*$index, 4*$index + 4)" ng-click="showSpace(space)">
+      <div class="card">
+        <div class="card-header" ng-if="!space.space_image">
+          <img src="data:image/png;base64," data-src="holder.js/100%x100%/text:&#xf03e;/font:FontAwesome/icon" bs-holder class="img-responsive">
         </div>
-
+        <div class="card-header" style="background-image:url({{space.space_image}})" ng-if="space.space_image"></div>
+        <div class="card-body">
+          <h2>{{space.name}}</h2>
+        </div>
       </div>
     </div>
   </div>
 
-
-
+  <!-- ADMIN CONTROLS -->
+  <div class="col-md-12">
+    <a class="link-button button-admin" ui-sref="app.admin.space_new" role="button" translate>{{ 'spaces_list.add_a_space' }}</a>
+  </div>
+  
 </section>

@@ -72,7 +72,7 @@ p {
   font-size: rem-calc($font-size-base);
   line-height: rem-calc(24);
   color: #777777;
-  margin-bottom: 45px;
+  margin-bottom: 30px;
 
   &.intro, .intro {
      font-size: rem-calc(16);
@@ -95,12 +95,11 @@ a:visited, a:focus, a:hover {
 }
 
 a.link-button {
-  background-color: #E1580A;
+  display: inline-block;
   padding: 15px;
   font-size: 15px;
   text-transform: uppercase;
   text-align: center;
-  color: #FFFFFF;
   font-weight: 800;
   cursor: pointer;
 }
@@ -110,8 +109,23 @@ a.link-button-block {
   width: 100%;
 }
 
-a.link-button:hover, a.link-button:focus, a.link-button:active, a.link-button.active {
+a.button-public {
+  background-color: #E1580A;
+  color: #FFFFFF;
+}
+
+a.button-public:hover, a.button-public:focus, a.button-public:active {
   background-color: #B74208;
+  color: #FFFFFF;
+}
+
+a.button-admin {
+  background-color: #58BAAB;
+  color: #FFFFFF;
+}
+
+a.button-admin:hover, a.button-admin:focus, a.button-admin:active {
+  background-color: #3D9988;
   color: #FFFFFF;
 }
 

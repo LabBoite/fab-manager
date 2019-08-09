@@ -27,8 +27,8 @@ Application.Controllers.controller('HeaderNavController', ['$scope', function ($
       linkIcon: 'rocket'
     },
     {
-      state: 'app.public.machines_list',
-      linkText: 'reserve_a_machine',
+      state: 'app.public.tools',
+      linkText: 'tools',
       linkIcon: 'cogs'
     },
     {
@@ -85,8 +85,8 @@ Application.Controllers.controller('HeaderNavController', ['$scope', function ($
       linkIcon: 'tags'
     },
     {
-      state: 'app.public.machines_list',
-      linkText: 'manage_the_machines',
+      state: 'app.public.tools',
+      linkText: 'manage_the_tools',
       linkIcon: 'cogs'
     },
     {
@@ -112,13 +112,5 @@ Application.Controllers.controller('HeaderNavController', ['$scope', function ($
   ].concat(Fablab.adminNavLinks);
 
   $scope.adminNavLinks = adminNavLinks;
-
-  if (!Fablab.withoutSpaces) {
-    return $scope.adminNavLinks.splice(7, 0, {
-      state: 'app.public.spaces_list',
-      linkText: 'manage_the_spaces',
-      linkIcon: 'rocket'
-    });
-  }
 }
 ]);
