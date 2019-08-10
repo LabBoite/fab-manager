@@ -3,41 +3,42 @@
   <!-- NAV -->
   <ul class="nav nav-tabs m-b-md">
     <li>
-      <a href="" uib-tab-heading-transclude="" class="ng-binding">rencontres</a>
+      <!--<a href="" uib-tab-heading-transclude="" class="ng-binding">rencontres</a>-->
+      <a ng-click="filters.category_id = 1; filterEvents()">rencontres</a>
     </li>
-    <li class="active">
-      <a href="" uib-tab-heading-transclude="" class="ng-binding">ateliers</a>
+    <li>
+      <a ng-click="filters.category_id = 2; filterEvents()">ateliers</a>
     </li>
     <li>
       <a ui-sref="app.public.trainings_list" uib-tab-heading-transclude="" class="ng-binding">initiations</a>
     </li>
   </ul>
 
-  <!-- FILTERS to be hidden -->
-  <div class="row m-b-md">
-    <div class="col-md-3 m-b" ng-show="categories.length > 0">
-      <select ng-model="filters.category_id" ng-change="filterEvents()" class="form-control" ng-options="c.id as c.name for c in categories">
-        <option value="" translate>{{ 'all_categories' }}</option>
-      </select>
-    </div>
-    <div class="col-md-3 m-b" ng-show="themes.length > 0">
-      <select ng-model="filters.theme_id" ng-change="filterEvents()" class="form-control" ng-options="t.id as t.name for t in themes">
-        <option value="" translate>{{ 'all_themes' }}</option>
-      </select>
-    </div>
-    <div class="col-md-3 m-b" ng-show="ageRanges.length > 0">
-      <select ng-model="filters.age_range_id" ng-change="filterEvents()" class="form-control" ng-options="a.id as a.name for a in ageRanges">
-        <option value="" translate>{{ 'for_all' }}</option>
-      </select>
-    </div>
-  </div>
+  # <!-- FILTERS to be hidden -->
+  # <div class="row m-b-md">
+  #   <div class="col-md-3 m-b" ng-show="categories.length > 0">
+  #     <select ng-model="filters.category_id" ng-change="filterEvents()" class="form-control" ng-options="c.id as c.name for c in categories">
+  #       <option value="" translate>{{ 'all_categories' }}</option>
+  #     </select>
+  #   </div>
+  #   <div class="col-md-3 m-b" ng-show="themes.length > 0">
+  #     <select ng-model="filters.theme_id" ng-change="filterEvents()" class="form-control" ng-options="t.id as t.name for t in themes">
+  #       <option value="" translate>{{ 'all_themes' }}</option>
+  #     </select>
+  #   </div>
+  #   <div class="col-md-3 m-b" ng-show="ageRanges.length > 0">
+  #     <select ng-model="filters.age_range_id" ng-change="filterEvents()" class="form-control" ng-options="a.id as a.name for a in ageRanges">
+  #       <option value="" translate>{{ 'for_all' }}</option>
+  #     </select>
+  #   </div>
+  # </div>
 
   <!-- EVENT LIST -->
   <div ng-repeat="month in monthOrder">
-    <div class="row m-b-md" ng-repeat="event in (eventsGroupByMonth[month].length/4 | array)">
+    <div class="row m-b-md">
       
       <!-- Event card -->
-      <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3" ng-repeat="event in eventsGroupByMonth[month].slice(4*$index, 4*$index + 4)" ng-click="showEvent(event)">
+      <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3" ng-repeat="event in events.slice(4*$index, 4*$index + 4)" ng-click="showEvent(event)">
         <div class="card" ui-sref="app.public.events_show({id: event.id})">
           <div class="card-header" style="background-image: url({{event.event_image_small}});" >
             <img src="data:image/png;base64," data-src="holder.js/100%x100%/text:&#xf03e;/font:FontAwesome/icon" bs-holder ng-if="!event.event_image" class="img-responsive">
