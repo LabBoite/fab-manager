@@ -340,7 +340,7 @@ angular.module('application.router', ['ui.router'])
           machinesPromise: ['Machine', function (Machine) { return Machine.query().$promise; }],
           translations: ['Translations', function (Translations) { return Translations.query(['app.public.machines_list', 'app.shared.training_reservation_modal', 'app.shared.request_training_modal']).$promise; }],
           spacesPromise: ['Space', function (Space) { return Space.query().$promise; }],
-          translations: ['Translations', function (Translations) { return Translations.query(['app.public.spaces_list']).$promise; }]
+          translations: ['Translations', function (Translations) { return Translations.query(['app.public.spaces_list', 'app.public.machines_list']).$promise; }]
         }
       })
 
