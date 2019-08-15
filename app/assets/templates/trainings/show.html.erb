@@ -1,33 +1,40 @@
-<section class="col-lg-10 col-md-offset-1 p-n wrapper">
+<section class="container wrapper">
+  
+  <div class="col-lg-12">
 
     <!-- BACK -->
-    <div class="col-lg-12 m-b-md">
+    <div class="col-lg-12 m-b">
       <a ui-sref="app.public.events_list">{{ 'all_the_events' | translate }}</a>
     </div>
 
     <!-- MAIN -->
-    <div class="col-sm-12 col-md-12 col-lg-8 b-r-lg">
-        <div class="article" >
+    <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+        <div class="article">
           <div class="article-thumbnail" ng-if="training.training_image">
             <img ng-src="{{training.training_image}}" alt="{{training.name}}" class="img-responsive">
           </div>
-          <h2>{{ training.name }}</h2>
+          <h1>{{ training.name }}</h1>
           <p ng-bind-html="training.description | toTrusted"></p>
         </div>
     </div>
 
     <!-- SIDE INFOS -->
-    <div class="col-sm-12 col-md-12 col-lg-4">
-      <section class="panel m">
-          <div class="panel-heading b-b small">
+    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+
+      <!-- Infos -->
+      <section class="panel">
+          <div class="panel-heading">
             <h2>{{ 'training' | translate }}</h2>
             <div class="txt-orange">{{ 'msg_training_condition' | translate }}</div>
           </div>
           <!-- Reservation button -->
           <div class="panel-footer no-padder ng-scope">
-            <a ng-click="reserveTraining(training, $event)" class="link-button link-button-block" ng-if="!isAuthorized('admin')" translate>{{ 'book_this_training' }}</a>
+            <a ng-click="reserveTraining(training, $event)" class="button-public link-button link-button-block" ng-if="!isAuthorized('admin')" translate>{{ 'book_this_training' }}</a>
           </div>
       </section>
+
     </div>
+
+  </div>
 
 </section>

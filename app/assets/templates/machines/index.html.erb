@@ -1,30 +1,27 @@
-<section class="col-lg-10 col-md-offset-1 p-n wrapper">
-
-  <!-- INTRO -->
+<section class="container wrapper">
   <div class="col-lg-12">
+    <!-- INTRO -->
     <h2>Espace fablab</h2>
-    <p>Cet espace est dédié à la conception, à la fabrication et au prototypage. Son accès est réservé aux adhérents ainsi qu’aux aux projets d’associations, d’entreprises ou d’enseignants encadrés</p>
-  </div>
+    <p class="m-b">Cet espace est dédié à la conception, à la fabrication et au prototypage. Son accès est réservé aux adhérents ainsi qu’aux aux projets d’associations, d’entreprises ou d’enseignants encadrés</p>
 
-  <!-- MACHINES LIST -->
-  <div class="row m-b-md" ng-repeat="machine in (machines.length/4 | array)">
-    <!-- Machine card -->
-    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3" ng-repeat="machine in machines.slice(4*$index, 4*$index + 4)" ng-click="showMachine(machine)">
-      <div class="card">
-        <div class="card-header" ng-if="!machine.machine_image">
-          <img src="data:image/png;base64," data-src="holder.js/100%x100%/text:&#xf03e;/font:FontAwesome/icon" bs-holder class="img-responsive">
-        </div>
-        <div class="card-header" style="background-image:url({{machine.machine_image}})" ng-if="machine.machine_image"></div>
-        <div class="card-body">
-          <h2>{{machine.name}}</h2>
+    <!-- MACHINES LIST -->
+    <div class="row" ng-repeat="machine in (machines.length/4 | array)">
+      <!-- Machine card -->
+      <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3" ng-repeat="machine in machines.slice(4*$index, 4*$index + 4)" ng-click="showMachine(machine)">
+        <div class="card">
+          <div class="card-header" ng-if="!machine.machine_image">
+            <img src="data:image/png;base64," data-src="holder.js/100%x100%/text:&#xf03e;/font:FontAwesome/icon" bs-holder class="img-responsive">
+          </div>
+          <div class="card-header" style="background-image:url({{machine.machine_image}})" ng-if="machine.machine_image"></div>
+          <div class="card-body">
+            <h2>{{machine.name}}</h2>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- ADMIN CONTROLS -->
-  <div class="col-md-12">
-    <a class="link-button button-admin" ui-sref="app.admin.machines_new" role="button" translate>{{ 'machines_list.add_a_machine' }}</a>
-  </div>
+    <!-- ADMIN CONTROLS -->
+    <a class="link-button button-admin" ui-sref="app.admin.machines_new" role="button" translate ng-if="isAuthorized('admin')">{{ 'machines_list.add_a_machine' }}</a>
 
+  </div>
 </section>

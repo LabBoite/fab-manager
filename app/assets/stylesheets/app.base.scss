@@ -13,6 +13,15 @@ body {
   font-family: 'Open Sans', Arial, sans-serif;
 }
 
+h1 {
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: normal;
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #E1580A;
+}
+
 h2 {
   font-weight: 700;
   font-size: 24px;
@@ -72,7 +81,6 @@ p {
   font-size: rem-calc($font-size-base);
   line-height: rem-calc(24);
   color: #777777;
-  margin-bottom: 30px;
 
   &.intro, .intro {
      font-size: rem-calc(16);

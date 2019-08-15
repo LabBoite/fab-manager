@@ -1,3 +1,77 @@
+// XS Small devices (landscape phones, 767px and under)
+@media (max-width: 767px) {
+	.container {
+		width: 92%;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 0;
+	}
+
+	.wrapper{
+		padding-top: 50px;
+	}
+
+	.home-claim {
+		font-size: 28px;
+	}
+}
+
+// SM Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991px) {
+	.container {
+		width: 92%;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 0;
+	}
+
+	.wrapper{
+		padding-top: 50px;
+	}
+
+	.home-claim {
+		font-size: 32px;
+	}
+}
+
+// MD Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199px) {
+	.container {
+		width: 92%;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 0;
+	}
+
+	.wrapper{
+		padding-top: 60px;
+	}
+
+	.home-claim {
+		font-size: 35px;
+	}
+}
+
+// LG Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+	.container {
+		width: 88%;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 0;
+	}
+
+	.wrapper{
+		padding-top: 60px;
+	}
+
+	.home-claim {
+		font-size: 40px;
+	}
+}
+
+
+
 .footer {
 	margin-top: 60px;
 	background: #E1580A;
@@ -137,26 +211,28 @@
 
 /* Homepage */
 .home-intro {
+	display: flex;
+	text-align: left;
+	flex-direction: column;
+	justify-content: flex-end;
 	background: #CCCCCC;
 	height: 380px;
 }
 
-.homeIntroContent {
-	bottom: 0;
-	margin-bottom: 53px;
-	text-align: left;
-
-	h1 {
-		color: #FFFFFF;
-		font-weight: normal;
-		font-size: 38px;
-		line-height: 115%;
-	}
-
-	.claimEmphase {
-		font-weight: 700;
-	}
+.home-content {
+	margin-bottom: 45px;
 }
+
+.home-claim {
+	margin-bottom: 30px;
+	font-weight: normal;
+	line-height: 115%;
+	color: #FFFFFF;
+}
+
+
+
+
 
 .home-sponsors {
 	img {
@@ -164,20 +240,11 @@
 	}
 }
 
-body.container{
-	padding: 0;
-}
-
 .aside-md{
 	width: 250px;
 }
 
 @media (min-width: 768px) {
-	body.container{
-		@include box-shadow(0 3px 60px rgba(0,0,0,0.3));
-		border-left: 1px solid darken($border-color, 10%);
-		border-right: 1px solid darken($border-color, 10%);
-	}
 	.app{
 		&,
 		body{

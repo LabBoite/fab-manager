@@ -218,8 +218,9 @@ fr:
 
       machines_show:
         # détail d'une machine
-        book_this_machine: "Réserver cette machine"
-        files_to_download: "Fichiers à télécharger"
+        all_the_tools: "tous les outils"
+        book_this_machine: "Je réserve"
+        files_to_download: "Documents"
         projects_using_the_machine: "Projets utilisant la machine"
         _or_the_: " ou la "
         do_you_really_want_to_delete_this_machine: "Êtes-vous sur de vouloir supprimer cette machine ?"
@@ -282,12 +283,12 @@ fr:
         msg_workshop_condition: "gratuit sur inscription"
         msg_meeting_condition: "en accès libre"
         event_description: "Description de l'évènement"
-        downloadable_documents: "Documents à télécharger"
+        downloadable_documents: "Documents"
         information_and_booking: "Informations et réservation"
         beginning: "Début :"
         ending: "Fin :"
         opening_hours: "Horaires"
-        tickets_still_availables: "place(s) encore disponibles"
+        tickets_still_availables: "place(s) disponibles"
         sold_out: "Événement complet"
         free_entry: "Accès libre"
         cancelled: "Annulé"
@@ -327,11 +328,12 @@ fr:
       space_show:
         # affichage des détails d'un espace
         space_show:
-          book_this_space: "Réserver cet espace"
+          all_the_tools: "tous les outils"
+          book_this_space: "Je réserve"
           unauthorized_operation: "Opération non autorisée"
           confirmation_required: "Confirmation requise"
           do_you_really_want_to_delete_this_space: "Voulez-vous vraiment supprimer cet espace ?"
           the_space_cant_be_deleted_because_it_is_already_reserved_by_some_users: "L'espace ne peut pas être supprimé car il a déjà été réservé par des utilisateurs."
           characteristics: "Caractéristiques"
-          files_to_download: "Fichiers à télécharger"
+          files_to_download: "Documents"
           projects_using_the_space: "Projets utilisant l'espace"

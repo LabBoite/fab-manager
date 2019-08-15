@@ -1,33 +1,35 @@
-<section class="col-lg-10 col-md-offset-1 p-n wrapper">
+<section class="container wrapper">
+  <div class="col-lg-12">
 
-  <ul class="nav nav-tabs m-b-md">
-    <li>
-      <a href="" uib-tab-heading-transclude="" class="ng-binding">rencontres</a>
-    </li>
-    <li>
-      <a ui-sref="app.public.events_list" uib-tab-heading-transclude="" class="ng-binding">ateliers</a>
-    </li>
-    <li class="active">
-      <a href="" uib-tab-heading-transclude="" class="ng-binding">initiations</a>
-    </li>
-  </ul>
-  
-  <!-- EVENT LIST -->
-  <div class="row m-b-md" ng-repeat="training in (trainings.length/4 | array)">
+    <ul class="nav nav-tabs m-b">
+      <li>
+        <a href="" uib-tab-heading-transclude="" class="ng-binding">rencontres</a>
+      </li>
+      <li>
+        <a ui-sref="app.public.events_list" uib-tab-heading-transclude="" class="ng-binding">ateliers</a>
+      </li>
+      <li class="active">
+        <a href="" uib-tab-heading-transclude="" class="ng-binding">initiations</a>
+      </li>
+    </ul>
+    
+    <!-- EVENT LIST -->
+    <div class="row" ng-repeat="training in (trainings.length/4 | array)">
 
-    <!-- Event card -->
-    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3" ng-repeat="training in trainings.slice(4*$index, 4*$index + 4)">
-      <div class="card">
-        <div class="card-header" ng-if="!training.training_image" ng-click="showTraining(training)">
-          <img src="data:image/png;base64," data-src="holder.js/100%x100%/text:&#xf03e;/font:FontAwesome/icon" bs-holder class="img-responsive">
-        </div>
-        <div class="card-header" style="background-image:url({{training.training_image}})" ng-if="training.training_image" ng-click="showTraining(training)">
-        </div>
-        <div class="card-body">
-          <h2 class="m-b">{{training.name}}</h2>
+      <!-- Event card -->
+      <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3" ng-repeat="training in trainings.slice(4*$index, 4*$index + 4)">
+        <div class="card">
+          <div class="card-header" ng-if="!training.training_image" ng-click="showTraining(training)">
+            <img src="data:image/png;base64," data-src="holder.js/100%x100%/text:&#xf03e;/font:FontAwesome/icon" bs-holder class="img-responsive">
+          </div>
+          <div class="card-header" style="background-image:url({{training.training_image}})" ng-if="training.training_image" ng-click="showTraining(training)">
+          </div>
+          <div class="card-body">
+            <h2 class="m-b">{{training.name}}</h2>
+          </div>
         </div>
       </div>
-    </div>
 
+    </div>
   </div>
 </section>

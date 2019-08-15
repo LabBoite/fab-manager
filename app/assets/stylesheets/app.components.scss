@@ -1,3 +1,34 @@
+// XS Small devices (landscape phones, 767px and under)
+@media (max-width: 767px) {
+	.article {
+    margin-bottom: 50px;
+  }
+}
+
+// SM Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991px) {
+	.article {
+    margin-bottom: 50px;
+  }
+}
+
+// MD Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199px) {
+	.article {
+    margin-bottom: 60px;
+  }
+}
+
+// LG Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+	.article {
+    margin-bottom: 60px;
+  }
+}
+
+
+
+
 .widget {
 	h1, h2, h3, h6 {
 		margin: 0;
@@ -23,12 +54,6 @@
 
 	.widget-content {
 		font-size: rem-calc(14);
-	}
-
-	.list-group-item {
-		&.no-b {
-			padding: 10px 15px;
-		}
 	}
 }
 
@@ -62,6 +87,7 @@
 .card {
   position: relative;
   display: block;
+  margin-bottom: 30px;
   background-color: #F4F4F4;
   border: none;
   border-radius: 0;
@@ -153,13 +179,13 @@
 // ARTICLE
 .article {
   max-width: $screen-md-min;
-  margin: 0 auto;
 
   .article-thumbnail {
     overflow: hidden;
+    margin-bottom: 30px;
 
     img {
-      max-height: 400px;
+      width: 100%;
     }
   }
   img {
@@ -168,6 +194,7 @@
     height: auto;
   }
 }
+
 
 .label-staging {
 	position: absolute;
@@ -267,6 +294,16 @@
   .panel-content {
     padding: 15px;
   }
+
+  .list-group-item {
+    margin: 0;
+    padding-right: 0;
+    padding-left: 0;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    background: transparent;
+    border: none;
+	}
 }
 
 .pricing-panel {
