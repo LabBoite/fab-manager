@@ -147,7 +147,7 @@ fr:
           i_change: "Je change"
 
       notifications:
-        notifications_center: "Centre de notifications"
+        notifications_center: "Notifications"
         mark_all_as_read: "Tout marquer comme lu"
         notif_title: "Intitulé"
         no_new_notifications: "Aucune nouvelle notification."

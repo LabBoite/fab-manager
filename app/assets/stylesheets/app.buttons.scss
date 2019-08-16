@@ -5,12 +5,39 @@
   text-transform: uppercase;
   color: #FFFFFF;
   font-weight: 800;
+  border: none;
 }
 
-.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open > .btn-default.dropdown-toggle {
-  background-color: #B74208;
+.btn-default:hover, {
+  background-color: #CA4F09;
   color: #FFFFFF;
 }
+
+.btn-default:focus, .btn-default:active {
+  background-color: #BF4B09;
+  color: #FFFFFF;
+}
+
+.btn-small {
+  background-color: #FDF2EB;
+  padding: 7px 10px;
+  font-size: 15px;
+  color: #E1580A;
+  font-weight: 600;
+  border: none;
+}
+
+.btn-small:hover, {
+  background-color: #FBE6DA;
+  color: #E1580A;
+}
+
+.btn-small:focus, .btn-small:active {
+  background-color: #F9DECE;
+  color: #E1580A;
+}
+
+
 
 .btn{
 	> i{
