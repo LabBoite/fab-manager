@@ -1,22 +1,87 @@
-/*primary nav*/
+// XS Small devices (landscape phones, 767px and under)
+@media (max-width: 767px) {
 
-.header-public {
-	height: $header-md-height;
-	background-color: #f5f5f5;
+	.header-logo {
+		justify-content: space-between;
+		width: 100%;
+		margin-top: 25px;
+		margin-bottom: 25px;
+		padding: 0;
+		img {
+			width: 88px;
+			height: 40px;
+		}
+	}
 }
 
-.header-admin {
-	background-color: #58BAAB;
+// SM Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991px) {
+
+	.header-logo {
+		justify-content: space-between;
+		width: 100%;
+		margin-top: 25px;
+		margin-bottom: 25px;
+		padding: 0;
+		img {
+			width: 88px;
+			height: 40px;
+		}
+	}
 }
 
-.navbar-public.navbar-nav{
+// MD Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199px) {
+
+	.header-logo {
+		justify-content: flex-start;
+		width: 100%;
+		margin-top: 45px;
+		margin-bottom: 15px;
+		padding-right: 15px;
+		padding-left: 15px;
+		img {
+			width: 88px;
+			height: 40px;
+		}
+	}
+}
+
+// LG Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+
+	.header-logo {
+		justify-content: flex-start;
+		width: 100%;
+		margin-top: 45px;
+		margin-bottom: 15px;
+		padding-right: 15px;
+		padding-left: 15px;
+		img {
+			width: 88px;
+			height: 40px;
+		}
+	}
+}
+
+
+/*-- Navbar --*/
+
+.navbar-nav{
 	> li{
 		font-size: 16px;
 		> a{
-			color: #A0A0A0;
+			color: #777777;
 		}
 		> a:hover {
 			color: #E1580A;
+			background: transparent;
+		}
+		> a:focus {
+			background: transparent;
+		}
+		> a:active {
+			color: #777777;
 			background: transparent;
 		}
 		> .navbar-webesite {
@@ -28,27 +93,30 @@
 	}
 }
 
-.navbar-admin.navbar-nav{
-	> li{
-		font-weight: 600;
-		font-size: 13px;
-		> h1 {
-			font-size: 13px;
-			color: #000000;
-			padding: 10px 15px;
-			margin: 0 !important;
+
+/*-- Dropdown --*/
+
+.dropdown-menu {
+	border: none;
+	li {
+		a {
+			padding: 5px 15px;
+			color: #777777;
 		}
-		> a{
-			color: #FFFFFF;
-			padding: 10px 15px;
-		}
-		> a:hover {
-			color: #000000;
-			background: transparent;
+		a:hover {
+			background: #F9F9F9;
+			color: #E1580A;
 		}
 	}
 }
 
+.dropdown-menu .divider {
+	margin: 5px 0;
+}
+
+
+
+/*original*/
 
 .navbar-header{
 	position: relative;
@@ -312,8 +380,8 @@
 				.header-md &{
 					padding-top: floor(($header-md-height - $line-height-computed)/2 - 1);
 					padding-bottom: floor(($header-md-height - $line-height-computed)/2 - 1);
-					padding-left: 17px;
-					padding-right: 17px;
+					padding-left: 15px;
+					padding-right: 15px;
 				}
 			}
 		}

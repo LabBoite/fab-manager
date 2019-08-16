@@ -196,31 +196,6 @@
 }
 
 
-.label-staging {
-	position: absolute;
-	top: 50px;
-}
-
-.notification-open {
-  a {
-    position: relative;
-    .badge {
-      position: absolute;
-      top: 40px; right: 12px;
-    }
-    .menu-badge {
-      position: absolute;
-      top: 0; right: 0;
-      padding: 2px 4px 1px 3px;
-      border: 2px solid white;
-    }
-  }
-  .fa { color: black; font-size: rem-calc(24); }
-}
-
-.user-profile-nav {
-  .fa { color: black; font-size: rem-calc(24); }
-}
 
 // PANEL
 .panel {
