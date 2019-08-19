@@ -115,6 +115,43 @@
 }
 
 
+/*-- Nav pills --*/ 
+
+.nav-stacked > li {
+	margin-bottom: 5px;
+}
+
+.nav-pills {
+	font-size: 16px;
+	>li {
+		> a {
+			font-weight: 400;
+		}
+		> a:hover {
+			background: #F9F9F9;
+		}
+	}
+}
+
+.nav-proile {
+	color: #58BAAB;
+
+	> li {
+		> a {
+			color: #58BAAB;
+		}
+		> a:hover {
+			background: #F9F9F9;
+		}
+	}
+	>li.active > a, li.active > a:hover {
+		font-weight: 700;
+		background: #58BAAB;
+		color: #FFFFFF;
+	}
+}
+
+
 
 /*original*/
 

@@ -1,40 +1,80 @@
 .btn-default {
-  background-color: #E1580A;
   padding: 15px;
   font-size: 15px;
   text-transform: uppercase;
-  color: #FFFFFF;
   font-weight: 800;
   border: none;
 }
 
-.btn-default:hover, {
-  background-color: #CA4F09;
-  color: #FFFFFF;
-}
-
-.btn-default:focus, .btn-default:active {
-  background-color: #BF4B09;
-  color: #FFFFFF;
-}
-
 .btn-small {
-  background-color: #FDF2EB;
   padding: 7px 10px;
   font-size: 15px;
-  color: #E1580A;
   font-weight: 600;
   border: none;
 }
 
-.btn-small:hover, {
-  background-color: #FBE6DA;
+
+.btn-public.btn-medium {
+  background-color: #E1580A;
+  color: #FFFFFF;
+}
+
+.btn-public.btn-medium:hover {
+  background-color: #CA4F09;
+  color: #FFFFFF;
+}
+
+.btn-public.btn-medium:focus, .btn-public.btn-medium:active {
+  background-color: #9D3D07;
+  color: #FFFFFF;
+}
+
+
+.btn-profile.btn-medium {
+  background-color: #58BAAB;
+  color: #FFFFFF;
+}
+
+.btn-profile.btn-medium:hover {
+  background-color: #4FA79A;
+  color: #FFFFFF;
+}
+
+.btn-profile.btn-medium:focus, .btn-profile.btn-medium:active {
+  background-color: #3D8277;
+  color: #FFFFFF;
+}
+
+
+.btn-public.btn-light {
+  background-color: #FCEEE6;
   color: #E1580A;
 }
 
-.btn-small:focus, .btn-small:active {
+.btn-public.btn-light:hover {
   background-color: #F9DECE;
   color: #E1580A;
+}
+
+.btn-public.btn-light:focus, .btn-public.btn-light:active {
+  background-color: #F6CDB5;
+  color: #E1580A;
+}
+
+
+.btn-profile.btn-light {
+  background-color: #EEF8F6;
+  color: #58BAAB;
+}
+
+.btn-profile.btn-light:hover {
+  background-color: #DEF1EE;
+  color: #58BAAB;
+}
+
+.btn-profile.btn-light:focus, .btn-profile.btn-light:active {
+  background-color: #CDEAE6;
+  color: #58BAAB;
 }
 
 

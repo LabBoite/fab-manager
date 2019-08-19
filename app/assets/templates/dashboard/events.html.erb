@@ -1,61 +1,53 @@
-<div>
-
-  <section class="heading">
-    <div class="row no-gutter">
-      <ng-include src="'<%= asset_path 'dashboard/nav.html' %>'"></ng-include>
-    </div>
-
-  </section>
-
-
-  <div class="row no-gutter">
-
-    <div class="col-md-6">
-      <div class="widget panel b-a m m-t-lg">
-        <div class="panel-heading b-b">
-          <h4 class="text-u-c"><i class="fa fa-tag m-r-xs"></i> {{ 'your_next_events' | translate }}</h4>
-        </div>
-        <div class="widget-content bg-light wrapper r-b">
-          <ul class="list-unstyled" ng-if="user.events_reservations.length > 0">
-            <li ng-repeat="r in user.events_reservations | eventsReservationsFilter:'future'" class="m-b">
-              <a class="font-sbold" ui-sref="app.public.events_show({id: r.reservable.id})">{{r.reservable.title}}</a>
-              -
-              <span class="label label-warning wrapper-sm">{{ r.start_at | amDateFormat:'LLL' }} - {{ r.end_at | amDateFormat:'LT' }}</span>
-              <br/>
-              <span translate
-                    translate-values="{NUMBER: r.nb_reserve_places}"
-                    translate-interpolation="messageformat">
-                {{ 'NUMBER_normal_places_reserved' }}
-              </span>
-              <span ng-repeat="ticket in r.tickets">
-                <br/>
-                <span translate
-                      translate-values="{NUMBER: ticket.booked, NAME: ticket.price_category.name}"
-                      translate-interpolation="messageformat">
-                  {{ 'NUMBER_of_NAME_places_reserved' }}
-                </span>
-              </span>
-            </li>
-          </ul>
-          <div ng-if="(user.events_reservations | eventsReservationsFilter:'future').length == 0" translate>{{ 'no_events_to_come' }}</div>
-        </div>
+<section class="container wrapper">
+  <div class="col-lg-12">
+    <div class="row">
+      
+      <div class="hidden-xs hidden-sm col-md-3 col-lg-3">
+          <ng-include src="'<%= asset_path 'dashboard/nav.html' %>'"></ng-include>
       </div>
-    </div>
-    <div class="col-md-6">
-      <div class="widget panel b-a m m-t-lg">
-        <div class="panel-heading b-b">
-          <h4 class="text-u-c"><i class="fa fa-tag m-r-xs"></i> {{ 'your_previous_events' | translate }}</h4>
-        </div>
-        <div class="widget-content bg-light auto wrapper r-b">
-          <ul class="list-unstyled" ng-if="user.events_reservations.length > 0">
-            <li ng-repeat="r in user.events_reservations | eventsReservationsFilter:'passed'" class="m-b">
-              <span class="font-sbold">{{r.reservable.title}}</span> - <span class="label label-info text-white wrapper-sm">{{ r.start_at | amDateFormat:'LLL' }} - {{ r.end_at | amDateFormat:'LT' }}</span>
-            </li>
-          </ul>
-          <div ng-if="(user.events_reservations | eventsReservationsFilter:'passed').length == 0" translate>{{ 'no_passed_events' }}</div>
-        </div>
-      </div>
-    </div>
 
+      <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+        <h1 class="txt-green">{{ 'my_events' | translate }}</h2>
+        
+        <div class="row">
+          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <h5>{{ 'your_previous_events' | translate }}</h5>
+            <div ng-if="user.events_reservations.length > 0">
+              <div class="event-item" ng-repeat="r in user.events_reservations | eventsReservationsFilter:'passed'">
+                  <div class="event-content">
+                    <div class="event-icon"><i class="fa fa-gear"></i></div>
+                    <div class="event-data">
+                      <span class="event-name">{{r.reservable.title}}</span><br/>
+                      <span class="event-date">{{ r.start_at | amDateFormat:'LLL' }} - {{ r.end_at | amDateFormat:'LT' }}</span>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <div class="event-item" ng-if="(user.events_reservations | eventsReservationsFilter:'passed').length == 0" translate>
+                {{ 'no_passed_events' }}
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <h5>{{ 'your_next_events' | translate }}</h5>
+            <div ng-if="user.events_reservations.length > 0">
+              <div class="event-item" ng-repeat="r in user.events_reservations | eventsReservationsFilter:'future'">
+                <div class="event-content">
+                  <div class="event-icon"><i class="fa fa-gear"></i></div>
+                  <div class="event-data">
+                    <span class="event-name">{{r.reservable.title}}</span><br/>
+                    <span class="event-date">{{ r.start_at | amDateFormat:'LLL' }} - {{ r.end_at | amDateFormat:'LT' }}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="event-item" ng-if="(user.events_reservations | eventsReservationsFilter:'future').length == 0" translate>
+              {{ 'no_events_to_come' }}
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
   </div>
-</div>
+</section>

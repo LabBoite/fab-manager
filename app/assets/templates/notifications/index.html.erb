@@ -1,70 +1,59 @@
 <section class="container wrapper">
   <div class="col-lg-12">
+    <div class="row">
+      
+      <div class="hidden-xs hidden-sm col-md-3 col-lg-3">
+          <ng-include src="'<%= asset_path 'dashboard/nav.html' %>'"></ng-include>
+      </div>
+
+      <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+        <section>
+          <h1 class="txt-green" translate>{{ 'notifications_center' }}</h1>
+          <button type="button" class="btn-small btn-profile btn-light m-b" ng-click="markAllAsRead()" ng-disabled="totalUnread == 0">{{ 'mark_all_as_read' | translate }} ({{totalUnread}})</button>
+          
+          <div ng-if="notificationsUnread.length > 0">
+            <div class="event-item" ng-repeat="notification in notificationsUnread">
+              <div class="event-content">
+                <div class="event-icon">
+                  <button class="btn-small btn-profile btn-medium" ng-click="markAsRead(notification, $event)">
+                    <i class="fa fa-check"></i>
+                  </button>
+                </div>
+                <div class="event-data">
+                  <span class="event-name" ng-bind-html="notification.message.description"></span><br/>
+                  <span class="event-date">{{ notification.created_at | amDateFormat:'LLL' }}</span><br/>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="event-item" ng-if="notificationsUnread.length == 0" translate>
+            {{ 'no_new_notifications' }}
+          </div>
+        </section>
+
+        <section class="wrapper">
+          <div ng-hide="notificationsRead.length == 0 && notificationsUnread.length < total">
+            <h5 translate>{{ 'archives' }}</h5>
+            <div class="event-item read" ng-repeat="n in notificationsRead | orderBy:'created_at':true" ng-if="notificationsRead.length > 0">
+              <div class="event-content">
+                <div class="event-data">
+                  <span class="event-name" ng-bind-html="n.message.description"></span><br/>
+                  <span class="event-date">{{ n.created_at | amDateFormat:'LLL' }}</span><br/>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="event-item" ng-if="notificationsRead.length == 0" translate>
+            {{ 'no_archived_notifications' }}
+          </div>
     
-    <div class="m-b">
-      <h1 translate>{{ 'notifications_center' }}</h1>
-      <button type="button" class="btn-small" ng-click="markAllAsRead()" ng-disabled="totalUnread == 0">{{ 'mark_all_as_read' | translate }} ({{totalUnread}})</button>
+          <a class="btn-small btn-profile btn-light" ng-click="addMoreNotifications()" ng-if="paginateActive" translate>{{ 'load_the_next_notifications' }}</a>
+    
+          </div>
+        </section>
+
+      </div>
+
     </div>
-
-    <table class="table">
-      <thead>
-        <tr>
-          <th style="width:10%"></th>
-          <th style="width:70%" translate>{{ 'notif_title' }}</th>
-          <th style="width:20%" translate>{{ 'date' }}</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="unread" ng-repeat="notification in notificationsUnread" ng-if="notificationsUnread.length > 0">
-          <td>
-            <button class="btn-small" ng-click="markAsRead(notification, $event)">
-              <i class="fa fa-check"></i>
-            </button>
-          </td>
-          <td ng-bind-html="notification.message.description"></td>
-          <td>{{ notification.created_at | amDateFormat:'LLL' }}</td>
-        </tr>
-        <tr class="unread" ng-if="notificationsUnread.length == 0">
-          <td colspan="3" translate>{{ 'no_new_notifications' }}</td>
-        </tr>
-      </tbody>
-    </table>
-  
   </div>
 </section>
-
-<section class="container wrapper">
-<div class="col-lg-12">
-
-  <div ng-hide="notificationsRead.length == 0 && notificationsUnread.length < total">
-    <h5 translate>{{ 'archives' }}</h5>
-
-    <table class="table">
-      <thead>
-        <tr>
-          <th style="width:10%"></th>
-          <th style="width:70%"></th>
-          <th style="width:20%"></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="read" ng-repeat="n in notificationsRead | orderBy:'created_at':true" ng-if="notificationsRead.length > 0">
-          <td></td>
-          <td ng-bind-html="n.message.description"></td>
-          <td>{{ n.created_at | amDateFormat:'LLL' }}</td>
-        </tr>
-        <tr ng-if="notificationsRead.length == 0">
-          <td colspan="3" translate>{{ 'no_archived_notifications' }}</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <a class="btn btn-default" ng-click="addMoreNotifications()" ng-if="paginateActive" translate>{{ 'load_the_next_notifications' }}</a>
-
-  </div>
-</section>
-
-
-
-

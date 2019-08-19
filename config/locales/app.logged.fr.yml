@@ -85,14 +85,16 @@ fr:
           collaborator: "Collaborateur"
         trainings:
           # tableau de bord : mes formations
-          your_next_trainings: "Vos prochaines formations"
-          your_previous_trainings: "Vos formations passées"
-          your_approved_trainings: "Vos formations validées"
+          my_trainings: "Mes initiations"
+          your_next_trainings: "À venir"
+          your_previous_trainings: "Passées"
+          your_approved_trainings: "Approuvées"
         events:
           # tableau de bord : mes évènements
-          your_next_events: "Vos prochains évènements"
+          my_events: "Mes évènements"
+          your_next_events: "À venir"
           no_events_to_come: "Aucun évènement à venir"
-          your_previous_events: "Vos évènements passés"
+          your_previous_events: "Passés"
           NUMBER_normal_places_reserved: "{NUMBER} {NUMBER, plural, =0{} =1{place normale réservée} other{places normales réservées}}"  # messageFormat interpolation
           NUMBER_of_NAME_places_reserved: "{NUMBER} {NUMBER, plural, =0{} =1{place {NAME} réservée} other{places {NAME} réservées}}"  # messageFormat interpolation
         invoices:
@@ -147,7 +149,7 @@ fr:
           i_change: "Je change"
 
       notifications:
-        notifications_center: "Notifications"
+        notifications_center: "Mes notifications"
         mark_all_as_read: "Tout marquer comme lu"
         notif_title: "Intitulé"
         no_new_notifications: "Aucune nouvelle notification."
