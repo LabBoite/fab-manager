@@ -1,15 +1,17 @@
   <div class="" id="loginModal">
+    <a href="#" ng-click="openSignup($event)" class="modal-message" translate>
+      {{ 'no_account_message' }}
+    </a>
+    
     <div class="modal-header">
-      <img ng-src="{{logoBlack.custom_asset_file_attributes.attachment_url}}" alt="{{logo.custom_asset_file_attributes.attachment}}" class="modal-logo"/>
-      <h1 translate>
+      <h1 translate class="txt-orange">
         {{ 'connection' }}
       </h1>
     </div>
+
     <div class="modal-body">
       <uib-alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</uib-alert>
-
-      <div class="panel panel-default bg-light">
-        <div class="panel-body">
+        <div class="form-light-orange">
           <form name="loginForm" class="form-horizontal" ng-keydown="loginForm.$valid && $event.which == 13 && login()">
             <div class="form-group" ng-class="{'has-error': emailError}">
               <div class="col-sm-12">
@@ -41,26 +43,19 @@
                          placeholder="{{ 'your_password' | translate }}"
                          ng-minlength="8"/>
                 </div>
-                <a href="#" ng-click="openResetPassword($event)" class="text-xs">{{ 'password_forgotten' | translate }}</a>
-                <div class="alert alert-warning m-t-sm m-b-none text-xs p-sm" ng-show='isCapsLockOn' role="alert">
-                  <i class="fa fa-warning"></i>
-                  {{ 'caps_lock_is_on' | translate }}
-                </div>
               </div>
+            </div>
+            <a href="#" ng-click="openResetPassword($event)" class="text-xs">{{ 'password_forgotten' | translate }}</a>
+            <div class="alert alert-warning m-t m-b-none" ng-show='isCapsLockOn' role="alert">
+              <i class="fa fa-warning"></i>
+              {{ 'caps_lock_is_on' | translate }}
             </div>
 
           </form>
-
         </div>
-        <div class="panel-footer no-padder">
-          <button class="btn btn-valid btn-warning btn-block p-l btn-lg text-u-c r-b" ng-click="login()" ng-disabled="loginForm.$invalid" translate>{{ 'confirm' }}</button>
-        </div>
-      </div>
-      <p class="text-center font-sbold">
-        <span translate>{{ 'not_registered_to_the_fablab' }}</span>
-        <br/>
-        <a href="#" ng-click="openSignup($event)" class="text-u-l" translate>{{ 'create_an_account' }}</a></br>
-      </p>
+    </div>
+    <div>
+      <button class="btn-big btn-block btn-public btn-medium" ng-click="login()" ng-disabled="loginForm.$invalid" translate>{{ 'confirm' }}</button>
     </div>
 
   </div>

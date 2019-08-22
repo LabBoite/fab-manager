@@ -109,7 +109,8 @@ fr:
         your_password_was_successfully_changed: "Votre mot de passe a bien été modifié."
 
         # fenêtre de connexion
-        connection: "Connexion"
+        connection: "Se connecter"
+        no_account_message: "Vous n'avez pas de compte ? Inscrivez-vous"
         password_forgotten: "Mot de passe oublié ?"
         not_registered_to_the_fablab: "Vous n'êtes pas inscrit au FAB LAB ?"
         create_an_account: "Créer un compte"

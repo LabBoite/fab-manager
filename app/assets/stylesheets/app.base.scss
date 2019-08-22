@@ -9,7 +9,7 @@ body {
 }
 
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  margin-top: 0;
+  margin: 0;
   font-family: 'Open Sans', Arial, sans-serif;
 }
 
@@ -17,8 +17,6 @@ h1 {
   font-weight: 700;
   font-size: 24px;
   letter-spacing: normal;
-  margin-top: 0;
-  margin-bottom: 15px;
 }
 
 h2 {
@@ -26,23 +24,18 @@ h2 {
   font-size: 24px;
   letter-spacing: normal;
   margin-top: 0;
-  margin-bottom: 15px;
 }
 
 h3 {
   font-weight: 600;
   font-size: 19px;
   letter-spacing: normal;
-  margin-top: 0;
-  margin-bottom: 15px;
 }
 
 h4 {
   font-weight: 600;
   font-size: 16px;
   letter-spacing: normal;
-  margin-top: 0;
-  margin-bottom: 15px;
   color: #777777;
 }
 
@@ -50,8 +43,6 @@ h5 {
   font-weight: 600;
   font-size: 15px;
   letter-spacing: normal;
-  margin-top: 0;
-  margin-bottom: 15px;
   color: #777777;
   text-transform: uppercase;
 }
@@ -60,8 +51,6 @@ h6 {
   font-weight: 600;
   font-size: 15px;
   letter-spacing: normal;
-  margin-top: 0;
-  margin-bottom: 7px;
 }
 
 .title_h7 {
