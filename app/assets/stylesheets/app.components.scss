@@ -433,7 +433,14 @@ a.modal-message:hover {
     padding-bottom: 7px;
     background: transparent;
     border: none;
-	}
+  }
+  
+  .panel-divider {
+    width: 100%;
+    border-bottom: solid 1px #EAEAEA;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .pricing-panel {
