@@ -63,6 +63,7 @@ fr:
 
         # fenêtre de création de compte
         create_your_account: "Créer votre compte"
+        already_have_account: "Vous avez déjà un compte ? Connectez-vous"
         man: "Homme"
         woman: "Femme"
         gender_is_required: "Le genre est requis."
@@ -80,7 +81,7 @@ fr:
         type_your_password_again: "Ressaisissez votre mot de passe"
         password_confirmation_is_required: "La confirmation du mot de passe est requise."
         password_does_not_match_with_confirmation: "Le mot de passe ne concorde pas avec la confirmation."
-        i_am_an_organization: "Je suis une structure"
+        i_am_an_organization: "Je représente une structure"
         name_of_your_organization: "Nom de votre structure"
         organization_name_is_required: "Le nom de la structure est requis."
         address_of_your_organization: "Adresse de votre structure"

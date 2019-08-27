@@ -7,11 +7,11 @@
       </div>
 
       <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
-        <h1 class="txt-green">{{ 'my_events' | translate }}</h2>
+        <h1 class="txt-green m-b">{{ 'my_events' | translate }}</h2>
         
         <div class="row">
           <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-            <h5>{{ 'your_previous_events' | translate }}</h5>
+            <h5 class="m-b-sm">{{ 'your_previous_events' | translate }}</h5>
             <div ng-if="user.events_reservations.length > 0">
               <div class="event-item" ng-repeat="r in user.events_reservations | eventsReservationsFilter:'passed'">
                   <div class="event-content">
@@ -28,7 +28,7 @@
             </div>
           </div>
           <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-            <h5>{{ 'your_next_events' | translate }}</h5>
+            <h5 class="m-b-sm">{{ 'your_next_events' | translate }}</h5>
             <div ng-if="user.events_reservations.length > 0">
               <div class="event-item" ng-repeat="r in user.events_reservations | eventsReservationsFilter:'future'">
                 <div class="event-content">

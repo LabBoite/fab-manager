@@ -8,7 +8,7 @@
 
       <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
         <section>
-          <h1 class="txt-green" translate>{{ 'notifications_center' }}</h1>
+          <h1 class="txt-green m-b-sm" translate>{{ 'notifications_center' }}</h1>
           <button type="button" class="btn-small btn-profile btn-light m-b" ng-click="markAllAsRead()" ng-disabled="totalUnread == 0">{{ 'mark_all_as_read' | translate }} ({{totalUnread}})</button>
           
           <div ng-if="notificationsUnread.length > 0">
@@ -33,7 +33,7 @@
 
         <section class="wrapper">
           <div ng-hide="notificationsRead.length == 0 && notificationsUnread.length < total">
-            <h5 translate>{{ 'archives' }}</h5>
+            <h5 class="m-b-sm" translate>{{ 'archives' }}</h5>
             <div class="event-item read" ng-repeat="n in notificationsRead | orderBy:'created_at':true" ng-if="notificationsRead.length > 0">
               <div class="event-content">
                 <div class="event-data">

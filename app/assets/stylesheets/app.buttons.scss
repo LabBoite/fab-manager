@@ -10,6 +10,7 @@
   text-transform: uppercase;
   font-weight: 800;
   border: none;
+  cursor: pointer;
 }
 
 .btn-small {
@@ -17,6 +18,7 @@
   font-size: 15px;
   font-weight: 600;
   border: none;
+  cursor: pointer;
 }
 
 .btn-big {
@@ -25,6 +27,7 @@
   font-weight: 800;
   border: none;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 
@@ -91,6 +94,40 @@
   color: #58BAAB;
 }
 
+.btn-public.btn-light {
+  background-color: #FCEEE6;
+  color: #E1580A;
+}
+
+.btn-neutral.btn-light {
+  background-color: #FFFFFF;
+  color: #777777;
+}
+
+.btn-neutral.btn-light:hover {
+  background-color: #FFFFFF;
+  color: #777777;
+}
+
+.btn-neutral.btn-light:focus, .btn-neutral.btn-light:active {
+  background-color: #FFFFFF;
+  color: #777777;
+}
+
+.btn-neutral.btn-medium {
+  background-color: #F9F9F9;
+  color: #777777;
+}
+
+.btn-neutral.btn-medium:hover {
+  background-color: #F9F9F9;
+  color: #777777;
+}
+
+.btn-neutral.btn-medium:focus, .btn-neutral.btn-medium:active {
+  background-color: #F9F9F9;
+  color: #777777;
+}
 
 
 .btn{

@@ -9,17 +9,20 @@ body {
 }
 
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  margin: 0;
   font-family: 'Open Sans', Arial, sans-serif;
 }
 
 h1 {
+  margin: 0;
+  padding: 0;
   font-weight: 700;
   font-size: 24px;
   letter-spacing: normal;
 }
 
 h2 {
+  margin: 0;
+  padding: 0;
   font-weight: 700;
   font-size: 24px;
   letter-spacing: normal;
@@ -27,12 +30,16 @@ h2 {
 }
 
 h3 {
+  margin: 0;
+  padding: 0;
   font-weight: 600;
   font-size: 19px;
   letter-spacing: normal;
 }
 
 h4 {
+  margin: 0;
+  padding: 0;
   font-weight: 600;
   font-size: 16px;
   letter-spacing: normal;
@@ -40,6 +47,8 @@ h4 {
 }
 
 h5 {
+  margin: 0;
+  padding: 0;
   font-weight: 600;
   font-size: 15px;
   letter-spacing: normal;
@@ -48,6 +57,8 @@ h5 {
 }
 
 h6 {
+  margin: 0;
+  padding: 0;
   font-weight: 600;
   font-size: 15px;
   letter-spacing: normal;
@@ -64,7 +75,7 @@ h6 {
 p {
   font-weight: 400;
   font-size: rem-calc($font-size-base);
-  line-height: rem-calc(24);
+  //line-height: rem-calc(24);
   color: #777777;
 
   &.intro, .intro {

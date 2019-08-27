@@ -1,32 +1,3 @@
-// XS Small devices (landscape phones, 767px and under)
-@media (max-width: 767px) {
-	.article {
-    margin-bottom: 50px;
-  }
-}
-
-// SM Medium devices (tablets, 768px and up)
-@media (min-width: 768px) and (max-width: 991px) {
-	.article {
-    margin-bottom: 50px;
-  }
-}
-
-// MD Large devices (desktops, 992px and up)
-@media (min-width: 992px) and (max-width: 1199px) {
-	.article {
-    margin-bottom: 60px;
-  }
-}
-
-// LG Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
-	.article {
-    margin-bottom: 60px;
-  }
-}
-
-
 /*-- EVENTS --*/
 
 .event-item {
@@ -122,6 +93,15 @@ a.modal-message:hover {
     letter-spacing: normal;
     margin-top: 0;
   }
+
+  .modal-header-msg {
+    font-weight: 400;
+    font-size: 13px;
+    color: #777777;
+    line-height: auto;
+    letter-spacing: normal;
+    margin-top: 0;
+  }
 }
 
 .modal-body {
@@ -135,9 +115,15 @@ a.modal-message:hover {
 
 /*-- FORMS --*/
 
-.form-light-orange {
+.form-light-orange, .form-light-green {
   background: #FFFFFF;
+}
 
+.form-medium-orange, .form-medium-green {
+  background: #F9F9F9;
+}
+
+.form-light-orange {
   .input-group-addon {
     background: #E1580A;
     color: #FFFFFF;
@@ -148,11 +134,34 @@ a.modal-message:hover {
     color: #777777;
     box-shadow: none;
   }
+
+  .form-control {
+    background: #E5E5E5;
+    color: #777777;
+    box-shadow: none;
+  }
+}
+
+.form-medium-orange {
+  .input-group-addon {
+    background: #E1580A;
+    color: #FFFFFF;
+  }
+
+  input {
+    background: #FFFFFF;
+    color: #777777;
+    box-shadow: none;
+  }
+
+  .form-control {
+    background: #FFFFFF;
+    color: #777777;
+    box-shadow: none;
+  }
 }
 
 .form-light-green {
-  background: #FFFFFF;
-
   .input-group-addon {
     background: #58BAAB;
     color: #FFFFFF;
@@ -160,6 +169,31 @@ a.modal-message:hover {
 
   input {
     background: #E5E5E5;
+    color: #777777;
+    box-shadow: none;
+  }
+
+  .form-control {
+    background: #E5E5E5;
+    color: #777777;
+    box-shadow: none;
+  }
+}
+
+.form-medium-green {
+  .input-group-addon {
+    background: #58BAAB;
+    color: #FFFFFF;
+  }
+
+  input {
+    background: #FFFFFF;
+    color: #777777;
+    box-shadow: none;
+  }
+
+  .form-control {
+    background: #FFFFFF;
     color: #777777;
     box-shadow: none;
   }
@@ -320,11 +354,11 @@ a.modal-message:hover {
 
 // PANEL
 .panel {
+  background: #f9f9f9;
   color: #777777;
   box-shadow: none;
   -webkit-box-shadow: none;
   border: none;
-  margin-bottom: 15px;
 
   h2 {
     font-weight: 700;

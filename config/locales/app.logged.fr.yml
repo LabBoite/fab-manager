@@ -34,6 +34,7 @@ fr:
         settings:
           edit_profile:
             # tableau de bord : éditer mon profil
+            my_settings: "Mes paramètres"
             last_activity_on_: "Dernière activité le"
             i_want_to_change_group: "Je veux changer de groupe !"
             your_subscription_expires_on_: "Votre abonnement expire le"
@@ -57,7 +58,7 @@ fr:
             confirm_delete_your_account: "Êtes-vous sûr de vouloir supprimer votre compte ?"
             all_data_will_be_lost: "Toutes vos données seront détruites et ne pourront pas être récupérées."
             invoicing_data_kept: "Conformément à la réglementation, les données relatives à vos facturations seront conservées de manière séparée pendant 10 ans."
-            statistic_data_anonymized: "Certaines données (sexe, date de naissance, groupe) seront anonymisées et conservées à des fins statistiques."
+            statistic_data_anonymized: "Certaines données (sexe, groupe) seront anonymisées et conservées à des fins statistiques."
             no_further_access_to_projects: "Vos projets publiés seront anonymisés et vous n'aurez plus de possibilité de les modifier."
             your_user_account_has_been_successfully_deleted_goodbye: "Votre compte utilisateur a bien été supprimé. Au revoir."
             an_error_occured_preventing_your_account_from_being_deleted: "Une erreur est survenue qui a empêché la suppression de votre compte."

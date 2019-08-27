@@ -202,7 +202,6 @@ Application.Controllers.controller('EditProfileController', ['$scope', '$rootSco
               msg: $sce.trustAsHtml(
                 _t('edit_profile.confirm_delete_your_account') + '<br/>' +
                 '<strong>' + _t('edit_profile.all_data_will_be_lost') + '</strong><br/><br/>' +
-                _t('edit_profile.invoicing_data_kept') + '<br/>' +
                 _t('edit_profile.statistic_data_anonymized') + '<br/>' +
                 _t('edit_profile.no_further_access_to_projects')
               )

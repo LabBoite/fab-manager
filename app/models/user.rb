@@ -159,7 +159,7 @@ class User < ActiveRecord::Base
 
   def need_completion?
     statistic_profile.gender.nil? || profile.first_name.blank? || profile.last_name.blank? || username.blank? ||
-      email.blank? || encrypted_password.blank? || group_id.nil? || statistic_profile.birthday.blank? || profile.phone.blank?
+      email.blank? || encrypted_password.blank? || group_id.nil?
   end
 
   ## Retrieve the requested data in the User and user's Profile tables
