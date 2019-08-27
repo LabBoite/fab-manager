@@ -102,6 +102,14 @@ a:visited, a:focus, a:hover {
   text-decoration: none;
 }
 
+a.link-profile {
+  color: #58baab;
+}
+
+a.link-profile:hover, a.link-profile:focus, a.link-profile:active {
+  color: #4ba79a;
+}
+
 a.link-button {
   display: inline-block;
   padding: 15px;

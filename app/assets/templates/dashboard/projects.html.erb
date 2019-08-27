@@ -1,83 +1,30 @@
-<div>
+<section class="container wrapper">
+  <div class="col-lg-12">
+    <div class="row">
 
-  <section class="heading">
-    <div class="row no-gutter">
-      <ng-include src="'<%= asset_path 'dashboard/nav.html' %>'"></ng-include>
+      <div class="hidden-xs hidden-sm col-md-3 col-lg-3">
+        <ng-include src="'<%= asset_path 'dashboard/nav.html' %>'"></ng-include>
+      </div>
+
+      <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+        <h1 class="txt-green m-b">{{ 'my_projects' | translate }}</h2>
+
+        <div ng-if="user.all_projects.length == 0" translate>{{ 'you_dont_have_any_projects' }}</div>
+
+        <!-- Project item -->
+        <div ng-if="user.all_projects.length > 0">
+          <div class="event-item" ng-repeat="project in user.all_projects">
+            <div class="event-content">
+              <div class="event-icon"><i class="fa fa-gear"></i></div>
+              <div class="event-data">
+                <span class="event-name"><a class="link-profile" ui-sref="app.public.projects_show({id:project.slug})">{{project.name}}</a></span><br/>
+              </div>
+            </div>
+          </div>
+        </div>
+          
+      </div>
+
     </div>
-  </section>
-
-
-  <div class="row no-gutter">
-
-      <div class="row m-t-md">
-        <a class="btn btn-lg btn-warning bg-white b-2x rounded m-t-sm upper text-sm col-lg-offset-10" ui-sref="app.logged.projects_new" role="button" translate>{{ 'add_a_project' }}</a>
-      </div>
-
-      <div class="wrapper" ng-if="user.all_projects.length == 0" translate>{{ 'you_dont_have_any_projects' }}</div>
-      <div class="widget panel b-a m m-t-lg" ng-repeat="project in user.all_projects">
-        <div class="panel-heading b-b clearfix">
-          <h4 class="text-u-c font-sbold pull-left">{{project.name}}</h4>
-          <span class="m-l-sm label label-success text-white">{{project.author_id == currentUser.id ? 'author' : 'collaborator' | translate}}</span>
-          <span class="badge" ng-if="project.state == 'draft'" translate>{{ 'rough_draft' }}</span>
-          <div class="pull-right">
-            <a class="btn btn-warning bg-white b-2x rounded upper text-sm text-black" ui-sref="app.public.projects_show({id:project.slug})" role="button" translate>{{ 'consult' }}</a>
-          </div>
-        </div>
-        <div class="widget-content bg-light clearfix">
-
-          <div class="col-sm-12 col-md-4 col-lg-4">
-            <div class="widget panel b-a r-n m-t-md">
-              <div class="panel-heading b-b small">
-                <h3 translate>{{ 'description' }}</h3>
-              </div>
-              <div class="widget-content no-bg wrapper text-black-light">
-                <div ng-bind-html="project.description | humanize : 180 | toTrusted"></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-sm-12 col-md-4 col-lg-4">
-            <div class="widget panel b-a r-n m-t-md">
-              <div class="panel-heading b-b small">
-                <h3 translate>{{ 'machines_and_materials' }}</h3>
-              </div>
-              <div class="widget-content no-bg wrapper">
-                <h3 class="text-black-light font-sbold"><i class="fa fa-rocket red"></i> {{ 'machines' | translate }} :</h3>
-                <ul class="list-unstyled m-l-md text-black-light">
-                  <li ng-repeat="m in project.machines">{{m.name}}</li>
-                </ul>
-                <h3 class="text-black-light font-sbold"><i class="fa fa-cog red"></i> {{ 'materials' | translate }} :</h3>
-                <ul class="list-unstyled m-l-md text-black-light">
-                  <li ng-repeat="c in project.components">{{c.name}}</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-sm-12 col-md-4 col-lg-4">
-            <div class="widget panel b-a r-n m-t-md">
-              <div class="panel-heading b-b small">
-                <h3 translate>{{ 'collaborators' }}</h3>
-              </div>
-              <div class="widget-content list-group-lg no-bg auto wrapper">
-                <li class="list-group-item no-b clearfix" ng-repeat="collaborator in project.project_users">
-                  <span class="pull-left thumb-sm avatar m-r-lg">
-                    <fab-user-avatar ng-model="collaborator.user_avatar" avatar-class="thumb-50"></fab-user-avatar>
-
-                    <i class="on b-white bottom" ng-if="collaborator.is_valid"></i>
-                    <i class="off b-white bottom" ng-if="!collaborator.is_valid"></i>
-                  </span>
-                  <span class="clear"><span>{{collaborator.full_name}}</span>
-                    <small class="text-muted clear text-ellipsis text-c">{{collaborator.username}}</small>
-                  </span>
-
-                </li>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
   </div>
-</div>
+</section>

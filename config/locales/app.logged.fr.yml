@@ -81,6 +81,7 @@ fr:
             sync_my_profile: "Synchroniser mon profil"
         projects:
           # tableau de bord : mes projets
+          my_projects: "Mes projets"
           you_dont_have_any_projects: "Vous n'avez aucun projet."
           author: "Auteur"
           collaborator: "Collaborateur"
