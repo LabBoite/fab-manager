@@ -1,7 +1,7 @@
 <section class="container wrapper">
   <div class="col-lg-12">
     <!-- INTRO -->
-    <h2>Espace fablab</h2>
+    <h2 class="txt-orange m-b-sm">Espace fablab</h2>
     <p class="m-b">Cet espace est dédié à la conception, à la fabrication et au prototypage. Son accès est réservé aux adhérents ainsi qu’aux aux projets d’associations, d’entreprises ou d’enseignants encadrés</p>
 
     <!-- MACHINES LIST -->
@@ -21,7 +21,7 @@
     </div>
 
     <!-- ADMIN CONTROLS -->
-    <a class="link-button button-admin" ui-sref="app.admin.machines_new" role="button" translate ng-if="isAuthorized('admin')">{{ 'machines_list.add_a_machine' }}</a>
+    <a class="btn-profile btn-small btn-medium" ui-sref="app.admin.machines_new" role="button" translate ng-if="isAuthorized('admin')">{{ 'machines_list.add_a_machine' }}</a>
 
   </div>
 </section>

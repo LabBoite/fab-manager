@@ -3,69 +3,76 @@
     <div class="col-lg-12">
 
         <!-- BACK -->
-        <div class="col-lg-12 m-b">
-            <a ui-sref="app.public.tools">{{ 'all_the_tools' | translate }}</a>
-        </div>
-
-        <!-- MAIN -->
-        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
-            <div class="article">
-                <div class="article-thumbnail" ng-if="space.space_image">
-                    <img ng-src="{{space.space_image}}" alt="{{space.name}}" class="img-responsive">
-                </div>
-                <h1>{{ space.name }}</h1>
-                <p ng-bind-html="space.description | toTrusted"></p>
+        <div class="row">
+            <div class="col-lg-12 m-b">
+                <a ui-sref="app.public.tools">{{ 'all_the_tools' | translate }}</a>
             </div>
         </div>
 
-        <!-- SIDE INFOS -->
-        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4"></div>
-
-            <!-- Specs -->
-            <div class="panel">
-                <div class="panel-heading">
-                    <h3 translate>{{ 'space_show.characteristics' }}</h3>
-                </div>
-                <div class="panel-content">
-                    <h3></h3>
-                    <p ng-bind-html="space.characteristics | toTrusted"></p>
-                </div>
-                <!-- Reservation button -->
-                <div class="panel-footer no-padder ng-scope">
-                    <a ng-click="reserveSpace($event)" class="button-public link-button link-button-block" ng-if="!isAuthorized('admin')" translate>{{ 'space_show.book_this_space' }}</a>
+        <div class="row">
+            <!-- MAIN -->
+            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                <div class="article">
+                    <div class="article-thumbnail" ng-if="space.space_image">
+                        <img ng-src="{{space.space_image}}" alt="{{space.name}}" class="img-responsive">
+                    </div>
+                    <h1 class="txt-orange m-b-sm">{{ space.name }}</h1>
+                    <p ng-bind-html="space.description | toTrusted"></p>
                 </div>
             </div>
 
-            <!-- Files -->
-            <section class="panel" ng-if="space.space_files_attributes">
-                <div class="panel-heading">
-                    <span class="badge bg-warning pull-right">{{space.space_files_attributes.length}}</span>
-                    <h3 translate>{{ 'space_show.files_to_download' }}</h3>
-                </div>
-                <ul class="pannel-content list-group">       
-                    <li ng-repeat="file in machine.machine_files_attributes" class="list-group-item">
-                        <a target="_blank" ng-href="{{file.attachment_url}}">{{file.attachment | humanize : 25}}</a>
-                    </li>
-                </ul>
-            </section>
+            <!-- SIDE INFOS -->
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
 
-            <!-- Projects -->
-            <section class="panel" ng-if="space.space_projects">
-                <div class="panel-heading">
-                    <h2 translate>{{ 'space_show.projects_using_the_space' }}</h2>
+                <!-- Specs -->
+                <div class="panel">
+                    <div class="panel-heading">
+                        <h3 translate>{{ 'space_show.characteristics' }}</h3>
+                    </div>
+                    <div class="panel-content" ng-if="space.characteristics">
+                        <h3></h3>
+                        <p ng-bind-html="space.characteristics | toTrusted"></p>
+                    </div>
+                    <!-- Reservation button -->
+                    <div class="panel-footer no-padder ng-scope">
+                        <a ng-click="reserveSpace($event)" class="button-public link-button link-button-block" ng-if="!isAuthorized('admin')" translate>{{ 'space_show.book_this_space' }}</a>
+                    </div>
                 </div>
-                <ul class="panel-content list-group">
-                    <li ng-repeat="project in machine.machine_projects" class="list-group-item">
-                        <a ui-sref="app.public.projects_show({id:project.slug})">{{project.name}}</a>
-                    </li>
-                </ul>
-            </section>
 
+                <!-- Files -->
+                <section class="panel" ng-if="space.space_files_attributes">
+                    <div class="panel-heading">
+                        <span class="badge bg-warning pull-right">{{space.space_files_attributes.length}}</span>
+                        <h3 translate>{{ 'space_show.files_to_download' }}</h3>
+                    </div>
+                    <ul class="pannel-content list-group">       
+                        <li ng-repeat="file in machine.machine_files_attributes" class="list-group-item">
+                            <a target="_blank" ng-href="{{file.attachment_url}}">{{file.attachment | humanize : 25}}</a>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Projects -->
+                <section class="panel" ng-if="space.space_projects">
+                    <div class="panel-heading">
+                        <h2 translate>{{ 'space_show.projects_using_the_space' }}</h2>
+                    </div>
+                    <ul class="panel-content list-group">
+                        <li ng-repeat="project in machine.machine_projects" class="list-group-item">
+                            <a ui-sref="app.public.projects_show({id:project.slug})">{{project.name}}</a>
+                        </li>
+                    </ul>
+                </section>
+
+            </div>
         </div>
 
-    <a ui-sref="app.admin.space_edit({id:space.slug})" ng-if="isAuthorized('admin')" class="link-button button-admin">{{ 'edit' | translate }}</a>
-    <a ng-click="deleteSpace($event)" ng-if="isAuthorized('admin')" class="link-button button-admin">{{ 'delete' | translate }}</a>
-
+        <div class="row">
+            <div class="col-lg-12 m-b">
+                    <a ui-sref="app.admin.space_edit({id:space.slug})" ng-if="isAuthorized('admin')" class="btn-profile btn-small btn-medium">{{ 'edit' | translate }}</a>
+                    <a ng-click="deleteSpace($event)" ng-if="isAuthorized('admin')" class="btn-profile btn-small btn-medium">{{ 'delete' | translate }}</a>
+            </div>
+        </div>
     </div>
 
 </section>

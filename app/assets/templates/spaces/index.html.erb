@@ -2,7 +2,7 @@
   <div class="col-lg-12">
     
     <!-- INTRO  -->
-    <h2>Espace libre</h2>
+    <h2 class="txt-orange m-b-sm">Espace libre</h2>
     <p class="m-b">Disposant d’un point d’accès à internet (wi-fi) espace vous permet de travailler en co-working. Des espaces de détente ont également été aménagés. L’accès à cet espace est gratuit et ouvert à tous.</p>
 
     <!-- SPACES LIST -->
@@ -22,7 +22,7 @@
     </div>
 
     <!-- ADMIN CONTROLS -->
-    <a class="link-button button-admin" ui-sref="app.admin.space_new" role="button" translate ng-if="isAuthorized('admin')">{{ 'spaces_list.add_a_space' }}</a>
+    <a class="btn-profile btn-small btn-medium" ui-sref="app.admin.space_new" role="button" translate ng-if="isAuthorized('admin')">{{ 'spaces_list.add_a_space' }}</a>
 
   </div>
 </section>
