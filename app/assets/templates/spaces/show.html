@@ -29,7 +29,7 @@
                     <div class="panel-heading">
                         <h3 translate>{{ 'space_show.characteristics' }}</h3>
                     </div>
-                    <div class="panel-content" ng-if="space.characteristics">
+                    <div class="panel-content p-l" ng-if="space.characteristics">
                         <h3></h3>
                         <p ng-bind-html="space.characteristics | toTrusted"></p>
                     </div>
@@ -45,9 +45,9 @@
                         <span class="badge bg-warning pull-right">{{space.space_files_attributes.length}}</span>
                         <h3 translate>{{ 'space_show.files_to_download' }}</h3>
                     </div>
-                    <ul class="pannel-content list-group">       
+                    <ul class="panel-content list-group">       
                         <li ng-repeat="file in machine.machine_files_attributes" class="list-group-item">
-                            <a target="_blank" ng-href="{{file.attachment_url}}">{{file.attachment | humanize : 25}}</a>
+                            <a class="p-l" target="_blank" ng-href="{{file.attachment_url}}">{{file.attachment | humanize : 25}}</a>
                         </li>
                     </ul>
                 </section>
@@ -55,11 +55,12 @@
                 <!-- Projects -->
                 <section class="panel" ng-if="space.space_projects">
                     <div class="panel-heading">
+                        <span class="badge bg-warning pull-right">{{space.space_projects.length}}</span>
                         <h2 translate>{{ 'space_show.projects_using_the_space' }}</h2>
                     </div>
                     <ul class="panel-content list-group">
                         <li ng-repeat="project in machine.machine_projects" class="list-group-item">
-                            <a ui-sref="app.public.projects_show({id:project.slug})">{{project.name}}</a>
+                            <a class="p-l" ui-sref="app.public.projects_show({id:project.slug})">{{project.name}}</a>
                         </li>
                     </ul>
                 </section>
