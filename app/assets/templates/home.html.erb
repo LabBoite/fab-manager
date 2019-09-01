@@ -10,7 +10,7 @@
         <div class="home-claim">
           LabBoîte est un atelier de <span class="font-bold">conception</span><br/> et de <span class="font-bold">fabrication partagé<span>
         </div>
-        <a class="link-button btn-default">Découvrir le lieu</a>
+        <a class="btn-public btn-default btn-medium">Découvrir le lieu</a>
       </div>
     </div>
   </div>
@@ -19,7 +19,7 @@
 <!-- NEXT EVENTS -->
 <section class="container wrapper">
   <div class="col-lg-12">
-    <h2>{{ 'fablab_s_next_events' | translate }}</h2>
+    <h2 class="txt-orange m-b">{{ 'fablab_s_next_events' | translate }}</h2>
     <div class="row" ng-repeat="event in (upcomingEvents.length/4 | array)">  
       
       <!-- Event card -->
@@ -44,7 +44,7 @@
 <!-- SPONSORS -->
 <section class="container wrapper">
   <div class="col-lg-12">
-    <h2>{{ 'fablab_s_sponsors' | translate }}</h2>
+    <h2 class="txt-orange m-b">{{ 'fablab_s_sponsors' | translate }}</h2>
     <div class="home-sponsors">
       <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2">
         <img src="/sponsor_agglo.png" />
