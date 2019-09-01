@@ -22,7 +22,7 @@ Application.Controllers.controller('HeaderNavController', ['$scope', function ($
       linkIcon: 'tags'
     },
     {
-      state: 'app.public.spaces_list',
+      state: 'app.public.place',
       linkText: 'place',
       linkIcon: 'rocket'
     },
@@ -37,7 +37,7 @@ Application.Controllers.controller('HeaderNavController', ['$scope', function ($
       linkIcon: 'th'
     },
     {
-      state: 'app.public.spaces_list',
+      state: 'app.public.contact',
       linkText: 'contact',
       linkIcon: 'rocket'
     }

@@ -344,6 +344,26 @@ angular.module('application.router', ['ui.router'])
         }
       })
 
+      // place
+      .state('app.public.place', {
+        url: '/place',
+        views: {
+          'main@': {
+            templateUrl: '<%= asset_path "place/index.html.erb" %>',
+          }
+        }
+      })
+
+      // contact
+      .state('app.public.contact', {
+        url: '/contact',
+        views: {
+          'main@': {
+            templateUrl: '<%= asset_path "contact/index.html.erb" %>',
+          }
+        }
+      })
+
       // machines
       .state('app.public.machines_list', {
         url: '/machines',

@@ -252,8 +252,9 @@
 	}
 }
 
-/* Homepage */
-.home-intro {
+/*-- Display pages --*/
+
+.hero-global {
 	display: flex;
 	text-align: left;
 	flex-direction: column;
@@ -262,26 +263,115 @@
 	height: 380px;
 }
 
-.home-content {
+.hero-content {
 	margin-bottom: 45px;
 }
 
-.home-claim {
+.hero-claim {
 	margin-bottom: 30px;
 	font-weight: normal;
 	line-height: 115%;
 	color: #FFFFFF;
 }
 
+.poster {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	padding: 15px;
+	margin-bottom: 30px;
+	background: #CCCCCC;
+	height: 350px;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	transition: all 0.3s;
 
-
-
-
-.home-sponsors {
-	img {
-		max-width: 100%;
+	.poster-title {
+		font-size: 19px;
+		line-height: 120%;
+		color: #FFFFFF;
 	}
 }
+
+.poster:hover {
+	transform: scale(1.03);
+	-webkit-box-shadow: 0px 5px 30px 0px rgba(0,0,0,0.15);
+	-moz-box-shadow: 0px 5px 30px 0px rgba(0,0,0,0.15);
+	box-shadow: 0px 5px 30px 0px rgba(0,0,0,0.15);
+}
+
+
+/*-- Contact --*/
+
+.contact-infos {
+	background: #f9f9f9;
+}
+
+.contact-adress, .contact-opening {
+	padding: 30px;
+}
+
+.contact-adress-title {
+	font-weight: 900;
+	font-size: 11px;
+	letter-spacing: normal;
+	color: #777777;
+	text-transform: uppercase;
+}
+
+.contact-adress-content {
+	font-weight: 400;
+	font-size: 15px;
+	letter-spacing: normal;
+	color: #777777;
+}
+
+.contact-opening-title {
+	font-weight: 600;
+	font-size: 15px;
+	letter-spacing: normal;
+	color: #E1580A;
+}
+
+.contact-opening-content {
+	font-weight: 400;
+	font-size: 15px;
+	letter-spacing: normal;
+	color: #777777;
+}
+
+.contact-map {
+	background: #CCCCCC;
+	width: 100%;
+	height: 450px;
+}
+
+.contact-team-photo {
+	width: 100%;
+}
+
+.contact-team-name {
+	font-weight: 600;
+	font-size: 17px;
+	letter-spacing: normal;
+	color: #E1580A;
+}
+
+.contact-team-role {
+	font-weight: 400;
+	font-size: 15px;
+	letter-spacing: normal;
+	color: #E1580A;
+}
+
+.contact-team-mail {
+	font-weight: 400;
+	font-size: 15px;
+	letter-spacing: normal;
+}
+
+
 
 .aside-md{
 	width: 250px;
