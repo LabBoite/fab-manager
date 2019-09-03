@@ -17,14 +17,14 @@ Application.Controllers.controller('HeaderNavController', ['$scope', function ($
   // Common links (public application)
   $scope.navLinks = [
     {
-      state: 'app.public.events_list',
-      linkText: 'events_registrations',
-      linkIcon: 'tags'
-    },
-    {
       state: 'app.public.place',
       linkText: 'place',
       linkIcon: 'rocket'
+    },
+    {
+      state: 'app.public.events_list',
+      linkText: 'events_registrations',
+      linkIcon: 'tags'
     },
     {
       state: 'app.public.tools',

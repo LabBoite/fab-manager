@@ -3,17 +3,17 @@
 
     <!-- NAV -->
     <ul class="nav nav-tabs m-b">
-      <li ng-class="{'active': filters.category_id == '1'}" style="cursor:pointer;">
-        <!--<a href="" uib-tab-heading-transclude="" class="ng-binding">rencontres</a>-->
-        <a ng-click="filters.category_id = 1; filterEvents()">rencontres</a>
-      </li>
-      <li ng-class="{'active': filters.category_id == '2'}" style="cursor:pointer;">
-        <a ng-click="filters.category_id = 2; filterEvents()">ateliers</a>
+      <li class="active">
+        <a>ateliers · rencontres</a>
       </li>
       <li>
         <a ui-sref="app.public.trainings_list" uib-tab-heading-transclude="" class="ng-binding">initiations</a>
       </li>
     </ul>
+
+    <div class="col-lg-12 no-padder m-b">
+      <p>Les ateliers et les rencontres sont <span class="txt-orange font-bold">ouverts à tous<span></p>
+    </div>
 
     <!-- FILTERS to be hidden -->
     <!--<div class="row m-b-md">

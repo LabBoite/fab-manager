@@ -43,7 +43,7 @@ fr:
         projects_gallery: "Projets"
         subscriptions: "Abonnements"
         public_calendar: "Calendrier"
-        place: "Lieu"
+        place: "Comment ça marche ?"
         contact: "Contact"
 
         # menu de gauche (partie admin)
@@ -152,6 +152,7 @@ fr:
         create_an_account: "Créer un compte"
         discover_members: "Découvrir les membres"
         fablab_s_sponsors: "Nos partenaires"
+        more_info: "En savoir plus"
 
         # résumé des prochains évènements sur la page d'acceuil
         fablab_s_next_events: "Prochains évènements"

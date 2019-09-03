@@ -609,11 +609,27 @@
   cursor: pointer;
 }
 
-.nav-tabs > li > a:hover {
-	background: #F4F4F4;
-	border-left: 1px solid #F4F4F4;
-	border-top: 1px solid #F4F4F4;
-	border-right: 1px solid #F4F4F4;
+.nav-tabs > li {
+	font-size: 17px;
+}
+
+.nav-tabs > li > a {
+	color: #aaaaaa;
+}
+
+.nav-tabs > li > a:hover,
+.nav-tabs > li > a:focus {
+	color: #777777;
+	background: #FFFFFF;
+	border-left: 1px solid #FFFFFF;
+	border-top: 1px solid #FFFFFF;
+	border-right: 1px solid #FFFFFF;
+}
+
+.nav-tabs > li.active > a, 
+.nav-tabs > li.active > a:hover, 
+.nav-tabs > li.active > a:focus {
+	color: #E1580A;
 }
 
 
