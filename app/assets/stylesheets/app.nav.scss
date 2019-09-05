@@ -122,10 +122,10 @@
 }
 
 .nav-pills {
-	font-size: 16px;
+	font-size: 17px;
 	>li {
 		> a {
-			font-weight: 400;
+			font-weight: 600;
 		}
 		> a:hover {
 			background: #F9F9F9;
@@ -133,15 +133,16 @@
 	}
 }
 
-.nav-proile {
+.nav-pills.nav-proile.nav-dark {
 	color: #58BAAB;
 
 	> li {
 		> a {
-			color: #58BAAB;
+			color: #aaaaaa;
 		}
 		> a:hover {
-			background: #F9F9F9;
+			color: #58BAAB;
+			background: transparent;
 		}
 	}
 	>li.active > a, li.active > a:hover {
@@ -150,6 +151,112 @@
 		color: #FFFFFF;
 	}
 }
+
+.nav-pills.nav-proile.nav-light {
+	color: #58BAAB;
+
+	> li {
+		> a {
+			color: #aaaaaa;
+		}
+		> a:hover {
+			color: #58BAAB;
+			background: transparent;
+		}
+	}
+	>li.active > a, li.active > a:hover {
+		font-weight: 700;
+		background: #eef8f6;
+		color: #58BAAB;
+	}
+}
+
+
+.nav-pills.nav-public.nav-dark {
+	color: #E1580A;
+
+	> li {
+		> a {
+			color: #aaaaaa;
+		}
+		> a:hover {
+			color: #E1580A;
+			background: transparent;
+		}
+	}
+	>li.active > a, li.active > a:hover {
+		font-weight: 700;
+		background: #E1580A;
+		color: #FFFFFF;
+	}
+}
+
+.nav-pills.nav-public.nav-light {
+	color: #E1580A;
+
+	> li {
+		> a {
+			color: #aaaaaa;
+		}
+		> a:hover {
+			color: #E1580A;
+			background: transparent;
+		}
+	}
+	>li.active > a, li.active > a:hover {
+		font-weight: 700;
+		background: #fceee6;
+		color: #E1580A;
+	}
+}
+
+
+/*-- NAV TABS --*/
+
+.nav-tabs-text {
+	font-size: 20px;
+	padding-top: 60px;
+	padding-bottom: 30px;
+	border-bottom: 2px solid #F9F9F9;
+	text-align: left;
+}
+
+.nav-tabs-text {
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	
+		li {
+			display: inline;
+			
+			a {
+				font-weight: 600;
+				margin-left: 15px;
+				margin-right: 15px;
+			}
+		}
+	}
+}
+
+.nav-tabs-text.nav-public {
+	ul {
+		li {
+			a {
+				color: #aaaaaa;
+			}
+			a:hover {
+				color: #E1580A;
+			}
+		}
+		li.active a, li.active a:hover {
+			font-weight: 700;
+			color: #E1580A;
+		}
+	}
+}
+
+
 
 
 
@@ -604,13 +711,14 @@
 	}
 }
 
-// overrides bootstrap
+
+
+
+
+
+
 .nav-justified > li, .nav-tabs.nav-justified > li {
   cursor: pointer;
-}
-
-.nav-tabs > li {
-	font-size: 17px;
 }
 
 .nav-tabs > li > a {
