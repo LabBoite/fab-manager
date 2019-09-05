@@ -9,12 +9,11 @@
       <!-- Machine card -->
       <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3" ng-repeat="machine in machines.slice(4*$index, 4*$index + 4)" ng-click="showMachine(machine)">
         <div class="card">
-          <div class="card-header" ng-if="!machine.machine_image">
-            <img src="data:image/png;base64," data-src="holder.js/100%x100%/text:&#xf03e;/font:FontAwesome/icon" bs-holder class="img-responsive">
+          <div class="card-header" style="background-image: url('/thumb_blank.png'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+            <div class="card-header-bg" style="background-image:url({{machine.machine_image}});"></div>
           </div>
-          <div class="card-header" style="background-image:url({{machine.machine_image}})" ng-if="machine.machine_image"></div>
           <div class="card-body">
-            <h2>{{machine.name}}</h2>
+            <div class="card-title">{{machine.name}}</div> 
           </div>
         </div>
       </div>

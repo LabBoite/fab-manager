@@ -115,7 +115,12 @@
 }
 
 
-/*-- Nav pills --*/ 
+/*-- NAV PILLS --*/ 
+
+
+.nav-stacked {
+	padding-right: 15px;
+}
 
 .nav-stacked > li {
 	margin-bottom: 5px;
@@ -125,7 +130,7 @@
 	font-size: 17px;
 	>li {
 		> a {
-			font-weight: 600;
+			font-weight: 500;
 		}
 		> a:hover {
 			background: #F9F9F9;
@@ -133,27 +138,8 @@
 	}
 }
 
-.nav-pills.nav-proile.nav-dark {
-	color: #58BAAB;
-
-	> li {
-		> a {
-			color: #aaaaaa;
-		}
-		> a:hover {
-			color: #58BAAB;
-			background: transparent;
-		}
-	}
-	>li.active > a, li.active > a:hover {
-		font-weight: 700;
-		background: #58BAAB;
-		color: #FFFFFF;
-	}
-}
-
-.nav-pills.nav-proile.nav-light {
-	color: #58BAAB;
+.nav-pills.nav-proile {
+	color: #aaaaaa;
 
 	> li {
 		> a {
@@ -171,28 +157,8 @@
 	}
 }
 
-
-.nav-pills.nav-public.nav-dark {
-	color: #E1580A;
-
-	> li {
-		> a {
-			color: #aaaaaa;
-		}
-		> a:hover {
-			color: #E1580A;
-			background: transparent;
-		}
-	}
-	>li.active > a, li.active > a:hover {
-		font-weight: 700;
-		background: #E1580A;
-		color: #FFFFFF;
-	}
-}
-
-.nav-pills.nav-public.nav-light {
-	color: #E1580A;
+.nav-pills.nav-public {
+	color: #aaaaaa;
 
 	> li {
 		> a {

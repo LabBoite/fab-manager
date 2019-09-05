@@ -10,12 +10,11 @@
       <!-- Space card -->
       <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3" ng-repeat="space in spaces.slice(4*$index, 4*$index + 4)" ng-click="showSpace(space)">
         <div class="card">
-          <div class="card-header" ng-if="!space.space_image">
-            <img src="data:image/png;base64," data-src="holder.js/100%x100%/text:&#xf03e;/font:FontAwesome/icon" bs-holder class="img-responsive">
+          <div class="card-header" style="background-image: url('/thumb_blank.png'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+            <div class="card-header-bg" style="background-image:url({{space.space_image}});"></div>
           </div>
-          <div class="card-header" style="background-image:url({{space.space_image}})" ng-if="space.space_image"></div>
           <div class="card-body">
-            <h2>{{space.name}}</h2>
+            <div class="card-title">{{space.name}}</div> 
           </div>
         </div>
       </div>

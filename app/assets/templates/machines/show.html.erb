@@ -5,7 +5,7 @@
     <!-- BACK -->
     <div class="row">
       <div class="col-lg-12 m-b">
-        <a ui-sref="app.public.tools">{{ 'all_the_tools' | translate }}</a>
+        <a ui-sref="app.public.tools">{{ 'all_tools' | translate }}</a>
       </div>
     </div>
 
@@ -45,9 +45,9 @@
             <span class="badge bg-warning pull-right">{{machine.machine_files_attributes.length}}</span>
             <h3 translate>{{ 'files_to_download' }}</h3>
           </div>
-          <ul class="panel-content list-group">       
+          <ul class="panel-content list-group p-l">       
             <li ng-repeat="file in machine.machine_files_attributes" class="list-group-item">
-              <a class="p-l" target="_blank" ng-href="{{file.attachment_url}}">{{file.attachment | humanize : 25}}</a>
+              <a target="_blank" ng-href="{{file.attachment_url}}">{{file.attachment | humanize : 25}}</a>
             </li>             
           </ul>
         </section>
@@ -58,9 +58,9 @@
             <span class="badge bg-warning pull-right">{{machine.machine_projects.length}}</span>
             <h3 translate>{{ 'projects_using_the_machine' }}</h3>
           </div>
-          <ul class="panel-content list-group">
+          <ul class="panel-content list-group p-l">
             <li ng-repeat="project in machine.machine_projects" class="list-group-item">
-              <a class="p-l" ui-sref="app.public.projects_show({id:project.slug})">{{project.name}}</a>
+              <a ui-sref="app.public.projects_show({id:project.slug})">{{project.name}}</a>
             </li>
           </ul>
         </section>

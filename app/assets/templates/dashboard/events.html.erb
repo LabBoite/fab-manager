@@ -3,10 +3,12 @@
     <div class="row">
       
       <div class="hidden-xs hidden-sm col-md-3 col-lg-3">
-          <ng-include src="'<%= asset_path 'dashboard/nav.html' %>'"></ng-include>
+        <ng-include src="'<%= asset_path 'dashboard/nav.html' %>'"></ng-include>
       </div>
 
-      <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+      
+      <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 min-h">
+        
         <h1 class="txt-green m-b">{{ 'my_events' | translate }}</h2>
         
         <div class="row">
@@ -14,17 +16,17 @@
             <h5 class="m-b-sm">{{ 'your_previous_events' | translate }}</h5>
             <div ng-if="user.events_reservations.length > 0">
               <div class="event-item" ng-repeat="r in user.events_reservations | eventsReservationsFilter:'passed'">
-                  <div class="event-content">
-                    <div class="event-icon"><i class="fa fa-gear"></i></div>
-                    <div class="event-data">
-                      <span class="event-name">{{r.reservable.title}}</span><br/>
-                      <span class="event-date">{{ r.start_at | amDateFormat:'LLL' }} - {{ r.end_at | amDateFormat:'LT' }}</span>
-                    </div>
+                <div class="event-content">
+                  <div class="event-icon"><i class="fa fa-gear"></i></div>
+                  <div class="event-data">
+                    <span class="event-name">{{r.reservable.title}}</span><br/>
+                    <span class="event-date">{{ r.start_at | amDateFormat:'LLL' }} - {{ r.end_at | amDateFormat:'LT' }}</span>
                   </div>
+                </div>
               </div>
             </div>
             <div class="event-item" ng-if="(user.events_reservations | eventsReservationsFilter:'passed').length == 0" translate>
-                {{ 'no_passed_events' }}
+              {{ 'no_passed_events' }}
             </div>
           </div>
           <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
@@ -45,7 +47,7 @@
             </div>
           </div>
         </div>
-
+      
       </div>
 
     </div>

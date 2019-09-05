@@ -152,6 +152,7 @@ fr:
         create_an_account: "Créer un compte"
         discover_members: "Découvrir les membres"
         fablab_s_sponsors: "Nos partenaires"
+        fablab_s_patrons: "Nos mécènes"
         more_info: "En savoir plus"
 
         # résumé des prochains évènements sur la page d'acceuil
@@ -222,7 +223,7 @@ fr:
 
       machines_show:
         # détail d'une machine
-        all_the_tools: "tous les outils"
+        all_tools: "tous les outils"
         book_this_machine: "Je réserve"
         files_to_download: "Documents"
         projects_using_the_machine: "Projets utilisant la machine"
@@ -332,7 +333,7 @@ fr:
       space_show:
         # affichage des détails d'un espace
         space_show:
-          all_the_tools: "tous les outils"
+          all_tools: "tous les outils"
           book_this_space: "Je réserve"
           unauthorized_operation: "Opération non autorisée"
           confirmation_required: "Confirmation requise"
