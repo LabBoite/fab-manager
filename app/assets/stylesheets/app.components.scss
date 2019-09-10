@@ -120,7 +120,7 @@ a.modal-message:hover {
 }
 
 .form-medium-orange, .form-medium-green {
-  background: #F9F9F9;
+  background: #f9f9f9;
 }
 
 .form-light-orange {
@@ -130,13 +130,13 @@ a.modal-message:hover {
   }
 
   input {
-    background: #E5E5E5;
+    background: #f2f2f2;
     color: #777777;
     box-shadow: none;
   }
 
   .form-control {
-    background: #E5E5E5;
+    background: #f2f2f2;
     color: #777777;
     box-shadow: none;
   }
@@ -168,13 +168,13 @@ a.modal-message:hover {
   }
 
   input {
-    background: #E5E5E5;
+    background: #f2f2f2;
     color: #777777;
     box-shadow: none;
   }
 
   .form-control {
-    background: #E5E5E5;
+    background: #f2f2f2;
     color: #777777;
     box-shadow: none;
   }
@@ -522,6 +522,16 @@ a.modal-message:hover {
 
 .table {
   color: #777777;
+}
+
+.table.table-profile {
+  a {
+    color: #58BAAB;
+  }
+
+  a:hover, a:focus, a:active {
+    color: #4ba79a;
+  }
 }
 
 .unread {

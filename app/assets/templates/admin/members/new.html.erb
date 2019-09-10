@@ -1,67 +1,46 @@
 <div>
-
-  <section class="heading b-b">
-    <div class="row no-gutter">
-      <div class="col-md-1 hidden-xs">
-        <section class="heading-btn">
-          <a ng-click="cancel()"><i class="fa fa-long-arrow-left"></i></a>
-        </section>
+  <section class="container wrapper">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <div class="row m-b">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <div class="btn btn-profile btn-small btn-ultralight" ng-click="cancel()" translate>retour</div>
+        </div>
       </div>
-      <div class="col-md-8 b-l b-r">
-        <section class="heading-title">
-          <h1 translate>{{ 'members_new.add_a_member' }}</h1>
-        </section>
-
+      <div class="row m-b">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <h1 class="txt-green" translate>{{ 'members_new.add_a_member' }}</h1>
+        </div>
       </div>
-
-      <div class="col-md-3">
-        <section class="heading-actions wrapper">
-         <div class="btn btn-lg btn-block btn-default m-t-xs" ng-click="cancel()" translate>
-           {{ 'cancel' }}
-         </div>
-        </section>
-
-      </div>
-
     </div>
 
-  </section>
+    <div class="col-xs-12 col-sm-12 col-md-10 col-lg-8">
 
-
-  <div class="row no-gutter">
-    <div class=" col-sm-12 col-md-9 b-r nopadding">
-
-      <form role="form" name="userForm" class="form-horizontal" novalidate  action="{{ actionUrl }}" ng-upload="submited(content)" upload-options-enable-rails-csrf="true">
-
-        <section class="panel panel-default bg-light m-lg">
-          <div class="panel-body m-r">
-
-            <div class="row m-t">
-              <div class="col-sm-6 col-sm-offset-5">
-                <div class="form-group checkbox-group">
-                  <input type="checkbox"
-                         name="organization"
-                         id="organization"
-                         ng-model="user.organization"
-                         ng-change="toggleOrganization()"
-                         value="false"/>
-                  <label for="organization" translate>{{ 'members_new.user_is_an_organization' }}</label>
+          <form role="form" name="userForm" class="form-horizontal" novalidate  action="{{ actionUrl }}" ng-upload="submited(content)" upload-options-enable-rails-csrf="true">
+            <section class="panel">
+              <div class="panel-body p-lg">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                  <div class="form-group checkbox-group">
+                    <input type="checkbox"
+                      name="organization"
+                      id="organization"
+                      ng-model="user.organization"
+                      ng-change="toggleOrganization()"
+                      value="false"/>
+                    <label for="organization" translate>{{ 'members_new.user_is_an_organization' }}</label>
+                  </div>
                 </div>
+                <ng-include src="'<%= asset_path 'shared/_member_form.html' %>'"></ng-include>
+                <ng-include src="'<%= asset_path 'admin/members/_form.html' %>'"></ng-include>
+              </div>   <!-- ./panel-body  -->
+              <div class="panel-footer no-padder">
+                <input type="submit" value="{{ 'save' | translate }}" class="btn-big btn-block btn-profile btn-medium" ng-disabled="userForm.$invalid"/>
               </div>
-            </div>
-
-            <ng-include src="'<%= asset_path 'shared/_member_form.html' %>'"></ng-include>
-
-            <ng-include src="'<%= asset_path 'admin/members/_form.html' %>'"></ng-include>
-          </div>   <!-- ./panel-body  -->
-
-
-          <div class="panel-footer no-padder">
-            <input type="submit" value="{{ 'save' | translate }}" class="r-b btn-valid btn btn-warning btn-block p-lg btn-lg text-u-c" ng-disabled="userForm.$invalid"/>
-          </div>
-        </section>
-      </form>
+            </section>
+          </form>
+          
+        </div>
+      </div>
 
     </div>
-  </div>
+  </section>
 </div>
