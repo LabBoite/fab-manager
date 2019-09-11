@@ -96,10 +96,19 @@ p {
 a {
   font-weight: 600;
   text-decoration: none;
+  cursor: pointer;
 }
 
 a:visited, a:focus, a:hover {
   text-decoration: none;
+}
+
+a.link-public {
+  color: #E1580A;
+}
+
+a.link-public:hover, a.link-public:focus, a.link-public:active {
+  color: #cc4f00;
 }
 
 a.link-profile {

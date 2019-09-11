@@ -1,20 +1,25 @@
 <div>
   <section class="container wrapper">
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    
+    <div class="col-lg-12">
+    
+      <!-- BACK -->
       <div class="row m-b">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-          <div class="btn btn-profile btn-small btn-ultralight" ng-click="cancel()" translate>retour</div>
+        <div class="col-lg-12">
+          <a class="link-profile m-b" ng-click="cancel()"><i class="fa fa-chevron-left"></i> {{ 'cancel' | translate }}</a>
         </div>
       </div>
+
+      <!-- TITLE -->
       <div class="row m-b">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="col-lg-12">
           <h1 class="txt-green" translate>{{ 'members_new.add_a_member' }}</h1>
         </div>
       </div>
-    </div>
 
-    <div class="col-xs-12 col-sm-12 col-md-10 col-lg-8">
-
+      <!-- FORM -->
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-10 col-lg-8">
           <form role="form" name="userForm" class="form-horizontal" novalidate  action="{{ actionUrl }}" ng-upload="submited(content)" upload-options-enable-rails-csrf="true">
             <section class="panel">
               <div class="panel-body p-lg">
@@ -37,10 +42,10 @@
               </div>
             </section>
           </form>
-          
         </div>
       </div>
 
     </div>
+    
   </section>
 </div>

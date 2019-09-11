@@ -160,6 +160,12 @@
 }
 
 
+button[disabled],
+html input[disabled] {
+  cursor: not-allowed;
+}
+
+
 .btn{
 	> i{
 		&.pull-left,

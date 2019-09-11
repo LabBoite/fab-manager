@@ -525,6 +525,10 @@ a.modal-message:hover {
 }
 
 .table.table-profile {
+  th {
+    color: #58BAAB;
+  }
+
   a {
     color: #58BAAB;
   }
@@ -532,6 +536,10 @@ a.modal-message:hover {
   a:hover, a:focus, a:active {
     color: #4ba79a;
   }
+}
+
+.table-align-right {
+  text-align: right;
 }
 
 .unread {

@@ -55,9 +55,9 @@ Application.Controllers.controller('HeaderNavController', ['$scope', function ($
   Fablab.adminNavLinks = Fablab.adminNavLinks || [];
   const adminNavLinks = [
     {
-      state: 'app.admin.trainings',
-      linkText: 'trainings_monitoring',
-      linkIcon: 'graduation-cap'
+      state: 'app.admin.members',
+      linkText: 'manage_the_users',
+      linkIcon: 'users'
     },
     {
       state: 'app.admin.calendar',
@@ -65,19 +65,9 @@ Application.Controllers.controller('HeaderNavController', ['$scope', function ($
       linkIcon: 'calendar'
     },
     {
-      state: 'app.admin.members',
-      linkText: 'manage_the_users',
-      linkIcon: 'users'
-    },
-    {
-      state: 'app.admin.invoices',
-      linkText: 'manage_the_invoices',
-      linkIcon: 'file-pdf-o'
-    },
-    {
-      state: 'app.admin.pricing',
-      linkText: 'subscriptions_and_prices',
-      linkIcon: 'money'
+      state: 'app.admin.trainings',
+      linkText: 'trainings_monitoring',
+      linkIcon: 'graduation-cap'
     },
     {
       state: 'app.admin.events',
@@ -103,6 +93,16 @@ Application.Controllers.controller('HeaderNavController', ['$scope', function ($
       state: 'app.admin.settings',
       linkText: 'customization',
       linkIcon: 'gear'
+    },
+    {
+      state: 'app.admin.invoices',
+      linkText: 'manage_the_invoices',
+      linkIcon: 'file-pdf-o'
+    },
+    {
+      state: 'app.admin.pricing',
+      linkText: 'subscriptions_and_prices',
+      linkIcon: 'money'
     },
     {
       state: 'app.admin.open_api_clients',
