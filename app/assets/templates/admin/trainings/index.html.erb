@@ -1,116 +1,118 @@
-<section class="heading b-b">
-  <div class="row no-gutter">
-    <div class="col-xs-2 col-sm-2 col-md-1">
-      <section class="heading-btn">
-        <a href="#" ng-click="backPrevLocation($event)"><i class="fa fa-long-arrow-left "></i></a>
-      </section>
-    </div>
-    <div class="col-xs-10 col-sm-10 col-md-8 b-l">
-      <section class="heading-title">
-        <h1 translate>{{ 'trainings_monitoring' }}</h1>
-      </section>
-    </div>
+<div>
+  <section class="container wrapper">
+    
+    <div class="col-lg-12">
 
-  </div>
-</section>
+      <!-- TITLE -->
+      <div class="row m-b">
+        <div class="col-lg-12">
+          <h1 class="txt-green" translate>{{ 'trainings_monitoring' }}</h1>
+        </div>
+      </div>
 
+      <div class="row">
+        <div class="col-sm-12 col-md-12">
 
-<section class="m-lg">
-  <div class="row">
+          <!-- TRAINING -->
+          <uib-tabset justified="true">
+            <uib-tab heading="{{ 'trainings' | translate }}">
 
-    <div class="col-md-12">
-      <uib-tabset justified="true">
-        <uib-tab heading="{{ 'trainings' | translate }}">
-          <div class="m-t m-b">
-            <button type="button" class="btn btn-warning" ui-sref="app.admin.trainings_new">
-              <i class="fa fa-plus m-r"></i>
-              <span translate>{{ 'add_a_new_training' }}</span>
-            </button>
-            <div class="form-group pull-right">
-              <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-filter"></i></span>
-                <select ng-model="trainingFiltering" class="form-control">
-                  <option ng-repeat="status in filterDisabled" value="{{status}}" translate>{{ 'status_'+status }}</option>
-                </select>
-              </div>
-            </div>
-          </div>
-
-          <table class="table">
-            <thead>
-              <tr>
-                <th style="width:20%" translate>{{ 'name' }}</th>
-                <th style="width:40%" translate>{{ 'associated_machines' }}</th>
-                <th style="width:20%" translate>{{ 'number_of_tickets' }}</th>
-                <th style="width:20%"></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr ng-repeat="training in trainings | filterDisabled:trainingFiltering" ng-class="{'disabled-line' : training.disabled && trainingFiltering === 'all'}">
-                <td>{{ training.name }}</td>
-                <td>{{ showMachines(training) }}</td>
-                <td>{{ training.nb_total_places }}</td>
-                <td>
-                  <div class="buttons">
-                    <button class="btn btn-default" ui-sref="app.admin.trainings_edit({id:training.id})">
-                      <i class="fa fa-edit"></i> {{ 'edit' | translate }}
-                    </button>
-                    <button class="btn btn-danger" ng-click="removeTraining($index, training)">
-                      <i class="fa fa-trash-o"></i>
-                    </button>
+              <!-- Filter by status -->
+              <div class="row m-b m-t-lg">
+                  <div class="col-md-3">
+                      <div class="form-group form-light-green">
+                        <div class="input-group">
+                          <span class="input-group-addon"><i class="fa fa-filter"></i></span>
+                          <select ng-model="trainingFiltering" class="form-control">
+                            <option ng-repeat="status in filterDisabled" value="{{status}}" translate>{{ 'status_'+status }}</option>
+                          </select>
+                        </div>
+                      </div>
                   </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </uib-tab>
+              </div>
+              
+              <!-- Add group -->
+              <div class="row m-b">
+                <div class="col-md-12">
+                  <button type="button" class="btn-profile btn-small btn-medium" ui-sref="app.admin.trainings_new">
+                    <i class="fa fa-plus m-r"></i>
+                    <span translate>{{ 'add_a_new_training' }}</span>
+                  </button>
+                </div>
+              </div>
 
-        <uib-tab heading="{{ 'trainings_monitoring' | translate }}">
-          <div class="m-lg">
-            <label for="training_select" translate>{{ 'select_a_training' }}</label>
-            <select ng-options="training as training.name for training in trainings" ng-model="monitoring.training" class="form-control" ng-change="selectTrainingToMonitor()" name="training_select">
-            </select>
-          </div>
+              <!-- Table -->
+              <table class="table table-profile">
+                <thead>
+                  <tr>
+                    <th style="width:20%" translate>{{ 'name' }}</th>
+                    <th style="width:40%" translate>{{ 'associated_machines' }}</th>
+                    <th style="width:20%" translate>{{ 'number_of_tickets' }}</th>
+                    <th style="width:20%"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr ng-repeat="training in trainings | filterDisabled:trainingFiltering" ng-class="{'disabled-line' : training.disabled && trainingFiltering === 'all'}">
+                    <td>{{ training.name }}</td>
+                    <td>{{ showMachines(training) }}</td>
+                    <td>{{ training.nb_total_places }}</td>
+                    <td>
+                      <div class="table-align-right">
+                        <button class="btn btn-profile btn-small btn-ultralight" ui-sref="app.admin.trainings_edit({id:training.id})">
+                          <i class="fa fa-edit"></i> {{ 'edit' | translate }}
+                        </button>
+                        <button class="btn btn-danger" ng-click="removeTraining($index, training)">
+                          <i class="fa fa-trash-o"></i>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </uib-tab>
 
-          <table class="table">
-            <thead>
-              <tr>
-                <th style="width:35%" translate>{{ 'training' }}</th>
-                <th style="width:65%" translate>{{ 'date' }}</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr ng-repeat="(training_name, years) in groupedAvailabilities">
-                  <td>{{training_name}}</td>
-                  <td>
-                      <uib-accordion close-others="true">
-                        <uib-accordion-group ng-repeat="months in years | toArray | orderBy:'$key':true" heading="{{ 'year_NUMBER' | translate:{NUMBER:months.$key} }}" is-open="accordions[training_name][months.$key].isOpenFirst" ng-if="!months.name" class="light-accordion">
+            <!-- AUTHORISATION -->
+            <uib-tab heading="{{ 'trainings_authorisation' | translate }}">
 
-                            <uib-accordion close-others="true">
-                              <uib-accordion-group ng-repeat="days in months | toArray | orderBy:'$key':true" heading="{{ 'month_of_NAME' | translate:{NAME:formatMonth(days.$key)} }}" is-open="accordions[training_name][months.$key][days.$key].isOpenFirst" ng-if="days.$key" class="light-accordion">
+              <!-- Select a training -->
+              <div class="row m-b m-t-lg">
+                <div class="col-md-10">
+                  <div class="form-group form-light-green">
+                    <label for="training_select" translate>{{ 'select_a_training' }}</label>
+                    <select ng-options="training as training.name for training in trainings" ng-model="monitoring.training" class="form-control" ng-change="selectTrainingToMonitor()" name="training_select"></select>
+                  </div>
+                </div>
+              </div>
 
-                                  <uib-accordion close-others="true">
-                                      <uib-accordion-group ng-repeat="(day, availabilities) in days" heading="{{formatDay(day, days.$key, months.$key)}}" is-open="accordions[training_name][months.$key][days.$key][day].isOpenFirst" class="light-accordion">
-                                          <ul class="list-unstyled">
-                                              <li ng-repeat="a in availabilities">
-                                                  <a ng-click="showReservations(years.training, a)" class="btn btn-default">{{ a.start_at | amDateFormat:'LLL' }} - {{ a.end_at | amDateFormat:'LT' }}</a> <span class="label label-success" translate translate-values="{NUMBER:a.reservation_users.length}" translate-interpolation="messageformat"> {{ 'NUMBER_reservation' }}</span>
-                                              </li>
-                                          </ul>
-                                      </uib-accordion-group>
-                                  </uib-accordion>
+              <div class="row m-b m-t-lg">
+                <div ng-repeat="(training_name, years) in groupedAvailabilities">
+                  <div class="calendar-profile">
+                    <div class="col-md-12" ng-repeat="months in years | toArray | orderBy:'$key':true" ng-if="!months.name">
+                      <div class="calendar-title title-year">{{ 'year_NUMBER' | translate:{NUMBER:months.$key} }}</div>
+                      <div class="row m-b">
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3" ng-repeat="days in months | toArray | orderBy:'$key':true" ng-if="days.$key">
+                          <div class="calendar-title title-month">{{ 'month_of_NAME' | translate:{NAME:formatMonth(days.$key)} }}</div>
+                          <div ng-repeat="(day, availabilities) in days">
+                            <ul class="list-unstyled">
+                              <li ng-repeat="a in availabilities">
+                                <a ng-click="showReservations(years.training, a)" class="btn btn-profile btn-small btn-ultralight">{{ a.start_at | amDateFormat:'LLL' }} - {{ a.end_at | amDateFormat:'LT' }}</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
 
-                              </uib-accordion-group>
-                            </uib-accordion>
+            </uib-tab>
+          </uib-tabset>
 
-                        </uib-accordion-group>
-                      </uib-accordion>
-                  </td>
-              </tr>
-            </tbody>
-          </table>
-        </uib-tab>
-      </uib-tabset>
+        </div>
+      </div>
+    
     </div>
 
-  </div>
-</section>
+  </section>
+
+</div>

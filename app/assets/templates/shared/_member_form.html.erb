@@ -22,7 +22,7 @@
           <div class="m-t-sm">
             <input type="hidden" name="user[profile_attributes][user_avatar_attributes][id]" ng-value="user.profile.user_avatar.id">
             <input type="hidden" name="user[profile_attributes][user_avatar_attributes][_destroy]" ng-value="true" ng-if="user.profile.user_avatar._destory">
-            <span class="btn btn-small btn-neutral btn-light btn-file"
+            <span class="btn btn-profile btn-small btn-white btn-file"
                   ng-click="user.profile.user_avatar._destory = false"
                   ng-hide="preventField['profile.avatar'] && user.profile.user_avatar.attachment_url && !userForm['user[profile_attributes][user_avatar_attributes]'].$dirty">
                 <span class="fileinput-new" translate>{{ 'add_an_avatar' }}</span>

@@ -48,6 +48,7 @@ fr:
 
         # menu de gauche (partie admin)
         trainings_monitoring: "Formations"
+        trainings_authorisation: "Habilitation"
         select_a_training: "Sélectionnez une formation"
         manage_the_calendar: "Calendrier"
         manage_the_users: "Utilisateurs"

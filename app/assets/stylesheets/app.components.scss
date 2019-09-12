@@ -446,6 +446,10 @@ a.modal-message:hover {
     margin: 0;
     padding: 0;
   }
+
+  .panel-body {
+    border: none;
+  }
 }
 
 .pricing-panel {
@@ -745,14 +749,63 @@ padding: 10px;
 }
 
 
-// angular-bootstrap accordions (enlightened version)
-.light-accordion > .panel-heading {
-  padding-top: 0.2em;
-  padding-bottom: 0.2em;
+/*-- ACCORDION --*/
+
+.light-accordion.panel {
+  background: #FFF;
+  border-left: solid 3px #eaeaea;
 }
+
+.light-accordion.panel {
+  
+  .panel-heading {
+    background: #FFF;
+    border: none;
+  }
+}
+
+.light-accordion > .panel-heading {
+  padding: 10px 15px 10px 15px;
+}
+
 .light-accordion > .panel-heading > .panel-title {
   font-size: 12pt;
 }
+
+.panel-default > .panel-heading + .panel-collapse > .panel-body {
+  border: none;
+}
+
+
+/*-- CALENDAR --*/
+
+.calendar-public {
+  color: #E1580A;
+}
+
+.calendar-profile {
+  color: #58BAAB;
+}
+
+.calendar-title {
+  width: 100%;
+  padding-bottom: 7px;
+  border-bottom: 2px solid #eaeaea;
+  margin-bottom: 15px;
+  letter-spacing: normal;
+  text-transform: uppercase;
+}
+
+.calendar-title.title-year {
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.calendar-title.title-month {
+  font-size: 15px;
+  font-weight: 600;
+}
+
 
 .app-generator {
   position: absolute;
