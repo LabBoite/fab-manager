@@ -1,75 +1,94 @@
-<div class="col-md-6 m-b m-t">
-  <select ng-model="eventsScope.selected" class="form-control" ng-change="changeScope()">
-    <option value="" translate>{{ 'all_events' }}</option>
-    <option value="passed" translate>{{ 'passed_events' }}</option>
-    <option value="future" translate>{{ 'events_to_come' }}</option>
-    <option value="future_asc" translate>{{ 'events_to_come_asc' }}</option>
-  </select>
+<!-- FILTER BY MEMBER -->
+<div class="row m-b m-t-lg">
+    <div class="col-md-3">
+        <div class="form-group form-light-green">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-filter"></i></span>
+                <select ng-model="eventsScope.selected" class="form-control" ng-change="changeScope()">
+                  <option value="" translate>{{ 'all_events' }}</option>
+                  <option value="passed" translate>{{ 'passed_events' }}</option>
+                  <option value="future" translate>{{ 'events_to_come' }}</option>
+                  <option value="future_asc" translate>{{ 'events_to_come_asc' }}</option>
+                </select>
+            </div>
+        </div>
+    </div>
 </div>
 
-<table class="table">
-  <thead>
-  <tr>
-    <th style="width:30%" translate>{{ 'title' }}</th>
-    <th style="width:30%" translate>{{ 'dates' }}</th>
-	  <th style="width:10%" translate>{{ 'booking' }}</th>
-    <th style="width:30%"></th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr height="80px" ng-repeat="event in events">
+<!-- ADD GROUP -->
+<div class="row m-b">
+  <div class="col-md-12">
+    <a class="btn-profile btn-small btn-medium" ui-sref="app.admin.events_new" role="button">
+      <i class="fa fa-plus m-r"></i>
+      <span translate>{{ 'add_an_event' }}</span>
+    </a>
+  </div>
+</div>
 
-    <td style="vertical-align:middle">
-      <a ui-sref="app.public.events_show({id: event.id})">{{ event.title }} </a>
-    </td>
+<!-- TABLE -->
+<div class="row m-b">
+  <div class="col-md-12">
 
-    <td style="vertical-align:middle">
+    <table class="table">
+      <thead>
+        <tr>
+          <th style="width:30%" translate>{{ 'title' }}</th>
+          <th style="width:30%" translate>{{ 'dates' }}</th>
+          <th style="width:10%" translate>{{ 'booking' }}</th>
+          <th style="width:30%"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr height="80px" ng-repeat="event in events">
+          <td style="vertical-align:middle">
+            <a ui-sref="app.public.events_show({id: event.id})">{{ event.title }} </a>
+          </td>
+          <td style="vertical-align:middle">
+            <!--One day event-->
+            <span ng-if="(event.start_date | amDateFormat:'LL')==(event.end_date | amDateFormat:'LL')">
+            {{ 'on_DATE' | translate:{DATE:(event.start_date | amDateFormat:'LL')} }}
+                <span ng-if="event.all_day == 'false'">
+                  {{ 'from_TIME' | translate:{TIME:(event.start_date | amDateFormat:'LT')} }}
+                  <span class="text-sm font-thin" translate>{{ 'to_time' }}</span>
+                  {{event.end_date | amDateFormat:'LT'}}
+                </span>
+            </span>
+            <!--Multiple days event-->
+            <span ng-if="(event.start_date | amDateFormat:'LL')!=(event.end_date | amDateFormat:'LL')">
+              {{'from_DATE' | translate:{DATE:(event.start_date | amDateFormat:'LL')} }}
+              {{'to_date' | translate}} {{event.end_date | amDateFormat:'LL'}}
+              <br ng-if="event.all_day == 'false'"/>
+              <span ng-if="event.all_day == 'false'">
+                {{ 'from_TIME' | translate:{TIME:(event.start_date | amDateFormat:'LT')} }}
+              <span class="text-sm font-thin" translate>{{ 'to_time' }}</span>
+                {{event.end_date | amDateFormat:'LT'}}
+              </span>
+            </span>
+          </td>
+          <td style="vertical-align:middle">
+            <span class="ng-binding" ng-if="event.nb_total_places > 0">{{ event.nb_total_places - event.nb_free_places }} / {{ event.nb_total_places }}</span>
+            <span class="badge font-sbold cancelled" ng-if="event.nb_total_places == -1" translate>{{ 'cancelled' }}</span>
+            <span class="badge font-sbold" ng-if="!event.nb_total_places" translate>{{ 'free_entry' }}</span>
+          </td>
+          <td style="vertical-align:middle">
+            <div class="table-align-right">
+              <a class="btn btn-profile btn-small btn-ultralight" ui-sref="app.admin.event_reservations({id: event.id})">
+                <i class="fa fa-bookmark"></i> {{ 'view_reservations' | translate }}
+              </a>
+              <a class="btn btn-profile btn-small btn-ultralight" ui-sref="app.admin.events_edit({id: event.id})">
+                <i class="fa fa-edit"></i> {{ 'edit' | translate }}
+              </a>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
 
-      <!--One day event-->
-	  <span ng-if="(event.start_date | amDateFormat:'LL')==(event.end_date | amDateFormat:'LL')">
-		{{ 'on_DATE' | translate:{DATE:(event.start_date | amDateFormat:'LL')} }}
-        <span ng-if="event.all_day == 'false'">
-          {{ 'from_TIME' | translate:{TIME:(event.start_date | amDateFormat:'LT')} }}
-          <span class="text-sm font-thin" translate>{{ 'to_time' }}</span>
-          {{event.end_date | amDateFormat:'LT'}}
-        </span>
-	  </span>
-
-      <!--Multiple days event-->
-	  <span ng-if="(event.start_date | amDateFormat:'LL')!=(event.end_date | amDateFormat:'LL')">
-	    {{'from_DATE' | translate:{DATE:(event.start_date | amDateFormat:'LL')} }}
-	    {{'to_date' | translate}} {{event.end_date | amDateFormat:'LL'}}
-        <br ng-if="event.all_day == 'false'"/>
-        <span ng-if="event.all_day == 'false'">
-          {{ 'from_TIME' | translate:{TIME:(event.start_date | amDateFormat:'LT')} }}
-          <span class="text-sm font-thin" translate>{{ 'to_time' }}</span>
-          {{event.end_date | amDateFormat:'LT'}}
-        </span>
-      </span>
-    </td>
-
-	<td style="vertical-align:middle">
-	  <span class="ng-binding" ng-if="event.nb_total_places > 0">{{ event.nb_total_places - event.nb_free_places }} / {{ event.nb_total_places }}</span>
-	  <span class="badge font-sbold cancelled" ng-if="event.nb_total_places == -1" translate>{{ 'cancelled' }}</span>
-      <span class="badge font-sbold" ng-if="!event.nb_total_places" translate>{{ 'free_entry' }}</span>
-	</td>
-
-    <td style="vertical-align:middle">
-      <div class="buttons">
-        <a class="btn btn-default" ui-sref="app.admin.event_reservations({id: event.id})">
-          <i class="fa fa-bookmark"></i> {{ 'view_reservations' | translate }}
-        </a>
-        <a class="btn btn-default" ui-sref="app.admin.events_edit({id: event.id})">
-          <i class="fa fa-edit"></i> {{ 'edit' | translate }}
-        </a>
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <a class="btn-small btn-profile btn-light" ng-click="loadMoreEvents()" ng-if="paginateActive" translate>{{ 'load_the_next_events' }}</a>
       </div>
-    </td>
-  </tr>
-  </tbody>
-</table>
+    </div>
 
-<div class="row">
-  <div class="col-lg-12 text-center">
-    <a class="btn btn-warning" ng-click="loadMoreEvents()" ng-if="paginateActive" translate>{{ 'load_the_next_events' }}</a>
   </div>
 </div>
