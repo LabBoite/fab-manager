@@ -85,6 +85,11 @@ Application.Controllers.controller('HeaderNavController', ['$scope', function ($
       linkIcon: 'tasks'
     },
     {
+      state: 'app.admin.manage_abuses',
+      linkText: 'manage_the_abuses',
+      linkIcon: 'tasks'
+    },
+    {
       state: 'app.admin.statistics',
       linkText: 'statistics',
       linkIcon: 'bar-chart-o'

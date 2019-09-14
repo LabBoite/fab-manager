@@ -38,14 +38,16 @@
               </td>
               <td>
                 <!-- form -->
-                <form editable-form name="rowform" onbeforesave="saveElement('category', $data, category.id)" ng-show="rowform.$visible" class="form-buttons form-inline" shown="inserted.category == category">
-                  <button type="submit" ng-disabled="rowform.$waiting" class="btn btn-warning">
-                    <i class="fa fa-check"></i>
-                  </button>
-                  <button type="button" ng-disabled="rowform.$waiting" ng-click="cancelElement('category', rowform, $index)" class="btn btn-default">
-                    <i class="fa fa-times"></i>
-                  </button>
-                </form>
+                <div class="table-align-right">
+                  <form editable-form name="rowform" onbeforesave="saveElement('category', $data, category.id)" ng-show="rowform.$visible" class="form-buttons form-inline" shown="inserted.category == category">
+                    <button type="submit" ng-disabled="rowform.$waiting" class="btn btn-warning">
+                      <i class="fa fa-check"></i>
+                    </button>
+                    <button type="button" ng-disabled="rowform.$waiting" ng-click="cancelElement('category', rowform, $index)" class="btn btn-default">
+                      <i class="fa fa-times"></i>
+                    </button>
+                  </form>
+                </div>
                 <div class="table-align-right" ng-show="!rowform.$visible">
                   <button class="btn btn-profile btn-small btn-ultralight" ng-click="rowform.$show()">
                     <i class="fa fa-edit"></i> <span class="hidden-xs hidden-sm" translate>{{ 'edit' }}</span>

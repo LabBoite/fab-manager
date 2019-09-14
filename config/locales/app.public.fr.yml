@@ -58,6 +58,7 @@ fr:
         manage_the_tools: "Outils"
         manage_the_spaces: "Espaces"
         manage_the_projects_elements: "Projets"
+        manage_the_abuses: "Signalements"
         statistics: "Statistiques"
         customization: "Personnalisation"
         open_api_clients: "OpenAPI"
