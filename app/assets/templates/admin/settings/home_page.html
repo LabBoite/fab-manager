@@ -1,28 +1,33 @@
-<div class="panel panel-default m-t-md">
-    <div class="panel-body">
+<div class="panel m-t-lg">
+    <div class="panel-body p-lg">
         <div class="row">
-            <div class="col-md-6">
-                <h4 translate>{{ 'settings.news_of_the_home_page' }}</h4>
-                <div ng-model="homeBlogpostSetting.value" class="well" medium-editor options='{"placeholder": "{{ "settings.type_your_news_here" | translate }}",
-                  "buttons": ["bold", "italic", "anchor", "header1", "header2" ]}'></div>
-                <span class="help-block text-info text-xs"><i class="fa fa-lightbulb-o"></i> {{ 'settings.leave_it_empty_to_not_bring_up_any_news_on_the_home_page' | translate }}</span>
-                <button name="button" class="btn btn-warning" ng-click="save(homeBlogpostSetting)" translate>{{ 'save' }}</button>
+            <div class="col-xs-12 col-s-12 col-md-8 col-lg-6">
+                <div class="settings-item">
+                    <div class="settings-label m-b-sm" translate>{{ 'settings.news_of_the_home_page' }}</div>
+                    <div ng-model="homeBlogpostSetting.value" class="well" medium-editor options='{"placeholder": "{{ "settings.type_your_news_here" | translate }}", "buttons": ["bold", "italic", "anchor", "header1", "header2" ]}'></div>
+                    <span class="help-block text-info text-xs"><i class="fa fa-lightbulb-o"></i> {{ 'settings.leave_it_empty_to_not_bring_up_any_news_on_the_home_page' | translate }}</span>
+                    <button name="button" class="btn btn-profile btn-small btn-medium" ng-click="save(homeBlogpostSetting)" translate>{{ 'save' }}</button>
+                </div>
             </div>
-            <div class="col-md-6">
-                <h4 translate>{{ 'settings.twitter_stream' }}</h4>
-                <form role="form" class="form-inline" name="twitterForm" novalidate>
-                    <div class="form-group">
-                        <div class="input-group">
-                            <div class="input-group-addon">
-                                <i class="fa fa-twitter"></i>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-s-12 col-md-8 col-lg-6">
+                <div class="settings-item">
+                    <div class="settings-label m-b-sm" translate>{{ 'settings.twitter_stream' }}</div>
+                    <form role="form" class="form-inline" name="twitterForm" novalidate>
+                        <div class="form-group form-medium-green">
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-twitter"></i>
+                                </div>
+                                <input type="text" ng-model="twitterSetting.value" class="form-control" placeholder="{{ 'settings.name_of_the_twitter_account' | translate }}"/>
                             </div>
-                            <input type="text" ng-model="twitterSetting.value" class="form-control" placeholder="{{ 'settings.name_of_the_twitter_account' | translate }}"/>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <button name="button" class="btn btn-warning" ng-click="save(twitterSetting)" translate>{{ 'save' }}</button>
-                    </div>
-                </form>
+                        <div class="form-group">
+                            <button name="button" class="btn btn-profile btn-small btn-medium" ng-click="save(twitterSetting)" translate>{{ 'save' }}</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
