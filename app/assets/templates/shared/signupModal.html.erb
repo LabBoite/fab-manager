@@ -129,6 +129,7 @@
               </div>
             </div>
 
+<<<<<<< HEAD
             <div class="form-group required-row" ng-class="{'has-error': signupForm.group_id.$dirty && signupForm.group_id.$invalid}">
               <div class="col-sm-12">
                 <div>
@@ -139,6 +140,15 @@
                 </div>
                 <span class="help-block" ng-show="signupForm.group_id.$dirty && signupForm.group_id.$error.required" translate>{{ 'user_s_profile_is_required' }}</span>
               </div>
+=======
+        <div class="form-group required-row" ng-class="{'has-error': signupForm.group_id.$dirty && signupForm.group_id.$invalid}">
+          <div class="col-sm-12">
+            <div>
+              <select ng-model="user.group_id" class="form-control" name="group_id" ng-options="g.id as g.name for g in enabledGroups" required>
+                <option value="" translate>{{ 'your_user_s_profile' }}</option>
+              </select>
+              <span class="exponent exponent-select help-cursor" title="{{ 'used_for_invoicing' | translate }}"><i class="fa fa-asterisk" aria-hidden="true"></i></span>
+>>>>>>> upstream/master
             </div>
 
             <div class="form-group" ng-class="{'has-error': signupForm.is_allow_contact.$dirty && signupForm.is_allow_contact.$invalid}">
