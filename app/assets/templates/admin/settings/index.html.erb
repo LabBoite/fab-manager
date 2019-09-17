@@ -1,46 +1,40 @@
-<section class="heading b-b">
-  <div class="row no-gutter">
-    <div class="col-xs-2 col-sm-2 col-md-1">
-      <section class="heading-btn">
-        <a href="#" ng-click="backPrevLocation($event)"><i class="fa fa-long-arrow-left "></i></a>
-      </section>
-    </div>
-    <div class="col-xs-10 col-sm-10 col-md-8 b-l">
-      <section class="heading-title">
-        <h1 translate>{{ 'settings.customize_the_application' }}</h1>
-      </section>
-    </div>
+<div>
+    <section class="container wrapper">
+      
+      <div class="col-lg-12">
+  
+        <!-- TITLE -->
+        <div class="row m-b">
+          <div class="col-lg-12">
+            <h1 class="txt-green" translate>{{ 'settings.customize_the_application' }}</h1>
+          </div>
+        </div>
+  
+        <div class="row">
+          <div class="col-sm-12 col-md-12">
 
-  </div>
-</section>
+            <uib-tabset justified="true">
+              <uib-tab heading="{{ 'settings.general' | translate }}">
+                <ng-include src="'<%= asset_path 'admin/settings/general.html' %>'"></ng-include>
+              </uib-tab>
+              <uib-tab heading="{{ 'settings.home_page' | translate }}">
+                <ng-include src="'<%= asset_path 'admin/settings/home_page.html' %>'"></ng-include>
+              </uib-tab>
+              <uib-tab heading="{{ 'settings.about' | translate }}">
+                <ng-include src="'<%= asset_path 'admin/settings/about.html' %>'"></ng-include>
+              </uib-tab>
+              <uib-tab heading="{{ 'settings.privacy.title' | translate }}">
+                <ng-include src="'<%= asset_path 'admin/settings/privacy.html' %>'"></ng-include>
+              </uib-tab>
+              <uib-tab heading="{{ 'settings.reservations' | translate }}">
+                <ng-include src="'<%= asset_path 'admin/settings/reservations.html' %>'"></ng-include>
+              </uib-tab>
+            </uib-tabset>
 
-<section class="m-lg">
-  <div class="row">
-
-    <div class="col-md-12">
-      <uib-tabset justified="true">
-
-        <uib-tab heading="{{ 'settings.general' | translate }}">
-          <ng-include src="'<%= asset_path 'admin/settings/general.html' %>'"></ng-include>
-        </uib-tab>
-
-        <uib-tab heading="{{ 'settings.home_page' | translate }}">
-          <ng-include src="'<%= asset_path 'admin/settings/home_page.html' %>'"></ng-include>
-        </uib-tab>
-
-        <uib-tab heading="{{ 'settings.about' | translate }}">
-          <ng-include src="'<%= asset_path 'admin/settings/about.html' %>'"></ng-include>
-        </uib-tab>
-
-        <uib-tab heading="{{ 'settings.privacy.title' | translate }}">
-          <ng-include src="'<%= asset_path 'admin/settings/privacy.html' %>'"></ng-include>
-        </uib-tab>
-
-        <uib-tab heading="{{ 'settings.reservations' | translate }}">
-          <ng-include src="'<%= asset_path 'admin/settings/reservations.html' %>'"></ng-include>
-        </uib-tab>
-      </uib-tabset>
-    </div>
-
-  </div>
-</section>
+          </div>
+        </div>
+      
+      </div>
+      
+    </section>
+</div>

@@ -1,347 +1,429 @@
-<div class="panel panel-default m-t-md">
-    <div class="panel-heading">
-        <span class="font-sbold" translate>{{ 'settings.title' }}</span>
-    </div>
-    <div class="panel-body">
-        <div class="row m-t-lg">
-            <div class="col-md-4">
-                <form role="form" novalidate>
-                    <label for="fablabName" class="control-label m-r" translate>{{ 'settings.fablab_title' }}</label>
-                    <div class="form-group">
-                        <div class="input-group">
-                            <div class="input-group-addon"><i class="fa fa-font"></i></div>
-                            <input type="text" id="fablabName" ng-model="fablabName.value" class="form-control" placeholder="{{ 'settings.fablab_name' | translate }}"/>
-                        </div>
-                    </div>
-                    <button name="button" class="btn btn-warning" ng-click="save(fablabName)" translate>{{ 'save' }}</button>
-                </form>
-            </div>
+<!-- TITLE -->
+<div class="panel m-t-lg">
 
-            <div class="col-md-4 col-md-offset-1">
-                <form role="form" novalidate>
-                    <h4 class="control-label m-r" translate>{{ 'settings.title_concordance' }}</h4>
-                    <div class="form-group">
-                        <label for="nameGenreMale">
-                          <input type="radio" name="nameGenre" id="nameGenreMale" ng-model="nameGenre.value" ng-value="'male'" />
-                          {{ 'settings.male' | translate }} <span style="font-weight: normal">{{ 'settings.eg' | translate }} <cite>{{ 'settings.about' | translate }} <strong translate>{{ 'settings.male_preposition' }}</strong> {{fablabName.value}}</cite></span>
-                        </label>
-                        <br/>
-                        <label for="nameGenreFemale">
-                          <input type="radio" name="nameGenre" id="nameGenreFemale" ng-model="nameGenre.value" ng-value="'female'" />
-                          {{ 'settings.female' | translate }} <span style="font-weight: normal">{{ 'settings.eg' | translate }} <cite>{{ 'settings.about' | translate }} <strong translate>{{ 'settings.female_preposition' }}</strong> {{fablabName.value}}</cite></span>
-                        </label>
-                        <br/>
-                        <label for="nameGenreNeutral">
-                          <input type="radio" name="nameGenre" id="nameGenreNeutral" ng-model="nameGenre.value" ng-value="'neutral'" />
-                          {{ 'settings.neutral' | translate }} <span style="font-weight: normal">{{ 'settings.eg' | translate }} <cite>{{ 'settings.about' | translate }} <strong translate>{{ 'settings.neutral_preposition' }}</strong> {{fablabName.value}}</cite></span>
-                        </label>
-                    </div>
-                    <button name="button" class="btn btn-warning" ng-click="save(nameGenre)" translate>{{ 'save' }}</button>
-                </form>
-            </div>
+        <div class="panel-heading">
+            <h3 class="txt-green" translate>{{ 'settings.title' }}</h3>
         </div>
-    </div>
-</div>
 
-<div class="panel panel-default m-t-lg">
-    <div class="panel-heading">
-        <span class="font-sbold" translate>{{ 'settings.customize_information_messages' }}</span>
-    </div>
-    <div class="panel-body">
-
-
-        <div class="row">
-            <div class="col-md-3">
-                <h4 translate>{{ 'settings.message_of_the_machine_booking_page' }}</h4>
-                <div ng-model="machineExplicationsAlert.value" medium-editor options='{"placeholder": "{{ "settings.type_the_message_content" | translate }}",
-                      "buttons": ["bold", "italic", "unorderedlist", "header2" ]
-                      }'>
-
-                </div>
-                <button name="button" class="btn btn-warning" ng-click="save(machineExplicationsAlert)" translate>{{ 'save' }}</button>
-            </div>
-            <div class="col-md-3">
-                <h4 translate>{{ 'settings.warning_message_of_the_training_booking_page'}}</h4>
-                <div ng-model="trainingExplicationsAlert.value" medium-editor options='{"placeholder": "{{ "settings.type_the_message_content" | translate }}",
-                      "buttons": ["bold", "italic", "unorderedlist", "header2" ]
-                      }'>
-
-                </div>
-                <button name="button" class="btn btn-warning" ng-click="save(trainingExplicationsAlert)" translate>{{ 'save' }}</button>
-            </div>
-            <div class="col-md-3">
-                <h4 translate>{{ 'settings.information_message_of_the_training_reservation_page'}}</h4>
-                <div ng-model="trainingInformationMessage.value" medium-editor options='{"placeholder": "{{ "settings.type_the_message_content" | translate }}",
-                        "buttons": ["bold", "italic", "unorderedlist", "header2" ]
-                      }'>
-
-                </div>
-                <button name="button" class="btn btn-warning" ng-click="save(trainingInformationMessage)" translate>{{ 'save' }}</button>
-            </div>
-            <div class="col-md-3">
-                <h4 translate>{{ 'settings.message_of_the_subscriptions_page' }}</h4>
-                <div ng-model="subscriptionExplicationsAlert.value" medium-editor options='{"placeholder": "{{ "settings.type_the_message_content" | translate }}",
-                      "buttons": ["bold", "italic", "unorderedlist", "header2" ]
-                      }'>
-                </div>
-                <button name="button" class="btn btn-warning" ng-click="save(subscriptionExplicationsAlert)" translate>{{ 'save' }}</button>
-            </div>
-            <div class="col-md-3">
-                <h4 translate>{{ 'settings.message_of_the_events_page' }}</h4>
-                <div ng-model="eventExplicationsAlert.value" medium-editor options='{"placeholder": "{{ "settings.type_the_message_content" | translate }}",
-                      "buttons": ["bold", "italic", "unorderedlist", "header2" ]
-                      }'>
-                </div>
-                <button name="button" class="btn btn-warning" ng-click="save(eventExplicationsAlert)" translate>{{ 'save' }}</button>
-            </div>
-            <div class="col-md-3" ng-hide="fablabWithoutSpaces">
-                <h4 translate>{{ 'settings.message_of_the_spaces_page' }}</h4>
-                <div ng-model="spaceExplicationsAlert.value" medium-editor options='{"placeholder": "{{ "settings.type_the_message_content" | translate }}",
-                      "buttons": ["bold", "italic", "unorderedlist", "header2" ]
-                      }'>
-                </div>
-                <button name="button" class="btn btn-warning" ng-click="save(spaceExplicationsAlert)" translate>{{ 'save' }}</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="panel panel-default m-t-lg">
-    <div class="panel-heading">
-        <span class="font-sbold" translate>{{ 'settings.legal_documents'}}</span>
-    </div>
-    <div class="panel-body">
-        <div class="alert alert-warning m-t" translate>
-            {{ 'settings.if_these_documents_are_not_filled_no_consent_about_them_will_be_asked_to_the_user' }}
-        </div>
-        <div class="row">
-            <form class="col-md-6" method="post" action="{{actionUrl.cgv}}" novalidate name="cgvForm" ng-upload="submited(content)" ng-submit="addLoader('cgv')" upload-options-enable-rails-csrf="true" unsaved-warning-form>
-                <input type="hidden" name="custom_asset[name]" value="cgv-file">
-                <input name="_method" type="hidden" ng-value="methods.cgv">
-                <label for="tnc_file" class="control-label m-r" translate>{{ 'settings.general_terms_and_conditions' }}</label>
-                <div class="form-group">
-                    <div class="fileinput input-group" data-provides="fileinput" ng-class="fileinputClass(cgvFile.custom_asset_file_attributes.attachment)">
-                        <div class="form-control" data-trigger="fileinput">
-                            <i class="glyphicon glyphicon-file fileinput-exists"></i> <span class="fileinput-filename">{{cgvFile.custom_asset_file_attributes.attachment}}</span>
-                        </div>
-                                      <span class="input-group-addon btn btn-default btn-file">
-                                          <span class="fileinput-new" translate>{{ 'browse' }}</span>
-                                          <span class="fileinput-exists" translate>{{ 'change' }}</span>
-                                          <input type="file"
-                                                 id="tnc_file"
-                                                 name="custom_asset[custom_asset_file_attributes][attachment]"
-                                                 accept=".pdf"
-                                                 required />
-                                      </span>
-                    </div>
-                </div>
-                <button name="button" type="submit" ng-class="{'btn-loading':loader.cgv}" ng-disabled="cgvForm.$invalid" class="btn btn-warning" translate>{{ 'save' }}</button>
-            </form>
-        </div>
-        <div class="row m-t-xl">
-            <form class="col-md-6" method="post" action="{{actionUrl.cgu}}" novalidate name="cguForm" ng-upload="submited(content)" ng-submit="addLoader('cgu')" upload-options-enable-rails-csrf="true" unsaved-warning-form>
-                <input type="hidden" name="custom_asset[name]" value="cgu-file">
-                <input name="_method" type="hidden" ng-value="methods.cgu">
-                <label for="tos_file" class="control-label m-r" translate>{{ 'settings.terms_of_service' }}</label>
-                <div class="form-group">
-                    <div class="fileinput input-group" data-provides="fileinput" ng-class="fileinputClass(cguFile.custom_asset_file_attributes.attachment)">
-                        <div class="form-control" data-trigger="fileinput">
-                            <i class="glyphicon glyphicon-file fileinput-exists"></i> <span class="fileinput-filename">{{cguFile.custom_asset_file_attributes.attachment}}</span>
-                        </div>
-                                      <span class="input-group-addon btn btn-default btn-file">
-                                          <span class="fileinput-new" translate>{{ 'browse' }}</span>
-                                          <span class="fileinput-exists" translate>{{ 'change' }}</span>
-                                          <input type="file"
-                                                 id="tos_file"
-                                                 name="custom_asset[custom_asset_file_attributes][attachment]"
-                                                 accept=".pdf"
-                                                 required />
-                                      </span>
-                    </div>
-                </div>
-                <button name="button" type="submit" ng-class="{'btn-loading':loader.cgu}" ng-disabled="cguForm.$invalid" class="btn btn-warning" translate>{{ 'save' }}</button>
-            </form>
-        </div>
-    </div>
-</div>
-
-<div class="panel panel-default m-t-lg">
-    <div class="panel-heading">
-        <span class="font-sbold" translate>{{ 'settings.customize_the_graphics' }}</span>
-    </div>
-    <div class="panel-body">
-        <div class="alert alert-warning m-t">
-            <span translate>{{ 'settings.for_an_optimal_rendering_the_logo_image_must_be_at_the_PNG_format_with_a_transparent_background_and_with_an_aspect_ratio_3.5_times_wider_than_the_height' }}</span><br/>
-            <span translate>{{ 'settings.concerning_the_favicon_it_must_be_at_ICO_format_with_a_size_of_16x16_pixels' }}</span><br/>
-            <br/>
-            <span translate>{{ 'settings.remember_to_refresh_the_page_for_the_changes_to_take_effect' }}</span>
-        </div>
-        <div class="row">
-            <div class="col-md-4">
-                <form class="custom-logo-container" method="post" action="{{actionUrl.logo}}" novalidate name="logoForm" ng-upload="submited(content)" upload-options-enable-rails-csrf="true" unsaved-warning-form>
-                    <input type="hidden" name="custom_asset[name]" value="logo-file">
-                    <input name="_method" type="hidden" ng-value="methods.logo">
-                    <h3 class="m-l" translate>{{ 'settings.logo_white_background' }}</h3>
-                    <div class="custom-logo" style="background-image: url({{customLogo}});">
-                        <img src="data:image/png;base64," data-src="holder.js/100%x100%/text:&#xf03e;/font:FontAwesome/icon-xs" bs-holder ng-show="!customLogo" class="img-responsive">
-                        <img base-sixty-four-image="customLogo" ng-show="customLogo && customLogo.base64">
-                        <img ng-src="{{customLogo.custom_asset_file_attributes.attachment_url}}" alt="{{customLogo.custom_asset_file_attributes.attachment}}" ng-show="customLogo && customLogo.custom_asset_file_attributes" />
-                        <div class="tools-box">
-                            <div class="btn-group">
-                                <div class="btn btn-default btn-file">
-                                    <i class="fa fa-edit"></i> {{ 'settings.change_the_logo' | translate }}
-                                    <input type="file"
-                                           accept="image/png,image/x-png"
-                                           name="custom_asset[custom_asset_file_attributes][attachment]"
-                                           ng-model="customLogo"
-                                           base-sixty-four-input
-                                           required />
+        <div class="panel-body p-lg">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                    <div class="settings-item">
+                        <form role="form" novalidate>
+                            <label for="fablabName" class="settings-label m-b-sm" translate>{{ 'settings.fablab_title' }}</label>
+                            <div class="form-group form-medium-green">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <div class="input-group-addon"><i class="fa fa-font"></i></div>
+                                        <input type="text" id="fablabName" ng-model="fablabName.value" class="form-control" placeholder="{{ 'settings.fablab_name' | translate }}"/>
+                                    </div>
                                 </div>
                             </div>
+                            <button name="button" class="btn-profile btn-small btn-medium" ng-click="save(fablabName)" translate>{{ 'save' }}</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                    <div class="settings-item">
+                        <form role="form" novalidate>
+                            <div class="settings-label m-b-sm" translate>{{ 'settings.title_concordance' }}</div>
+                            <div class="form-group">
+                                <label for="nameGenreMale">
+                                    <input type="radio" name="nameGenre" id="nameGenreMale" ng-model="nameGenre.value" ng-value="'male'" />
+                                    {{ 'settings.male' | translate }} <span style="font-weight: normal">{{ 'settings.eg' | translate }} <cite>{{ 'settings.about' | translate }} <strong translate>{{ 'settings.male_preposition' }}</strong> {{fablabName.value}}</cite></span>
+                                </label>
+                                <br/>
+                                <label for="nameGenreFemale">
+                                    <input type="radio" name="nameGenre" id="nameGenreFemale" ng-model="nameGenre.value" ng-value="'female'" />
+                                    {{ 'settings.female' | translate }} <span style="font-weight: normal">{{ 'settings.eg' | translate }} <cite>{{ 'settings.about' | translate }} <strong translate>{{ 'settings.female_preposition' }}</strong> {{fablabName.value}}</cite></span>
+                                </label>
+                                <br/>
+                                <label for="nameGenreNeutral">
+                                    <input type="radio" name="nameGenre" id="nameGenreNeutral" ng-model="nameGenre.value" ng-value="'neutral'" />
+                                    {{ 'settings.neutral' | translate }} <span style="font-weight: normal">{{ 'settings.eg' | translate }} <cite>{{ 'settings.about' | translate }} <strong translate>{{ 'settings.neutral_preposition' }}</strong> {{fablabName.value}}</cite></span>
+                                </label>
+                            </div>
+                            <button name="button" class="btn-profile btn-small btn-medium" ng-click="save(nameGenre)" translate>{{ 'save' }}</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</div>
+
+
+<!-- MESSAGES -->
+<div class="panel m-t-lg">
+
+    <div class="panel-heading">
+        <h3 class="txt-green" translate>{{ 'settings.customize_information_messages' }}</h3>
+    </div>
+
+    <div class="panel-body p-lg">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <div class="settings-item">
+                    <div class="settings-label m-b-sm" translate>{{ 'settings.message_of_the_machine_booking_page' }}</div>
+                    <div class="m-t-sm m-b-sm">
+                        <div ng-model="machineExplicationsAlert.value" medium-editor options='{"placeholder": "{{ "settings.type_the_message_content" | translate }}",
+                            "buttons": ["bold", "italic", "unorderedlist", "header2" ]
+                            }'>
                         </div>
                     </div>
-                    <button name="button" type="submit" class="btn btn-warning m-t m-l" ng-disabled="logoForm.$invalid" translate>{{ 'save' }}</button>
-                </form>
+                    <button name="button" class="btn-profile btn-small btn-medium" ng-click="save(machineExplicationsAlert)" translate>{{ 'save' }}</button>
+                </div>
             </div>
-            <div class="col-md-4">
-                <form class="custom-logo-container" method="post" action="{{actionUrl.logoBlack}}" novalidate name="logoBlackForm" ng-upload="submited(content)" upload-options-enable-rails-csrf="true" unsaved-warning-form>
-                    <input type="hidden" name="custom_asset[name]" value="logo-black-file">
-                    <input name="_method" type="hidden" ng-value="methods.logoBlack">
-                    <h3 class="m-l" translate>{{ 'settings.logo_black_background' }}</h3>
-                    <div class="custom-logo bg-dark" style="background-image: url({{customLogoBlack}});">
-                        <img src="data:image/png;base64," data-src="holder.js/100%x100%/text:&#xf03e;/font:FontAwesome/icon-black-xs" bs-holder ng-show="!customLogoBlack" class="img-responsive">
-                        <img base-sixty-four-image="customLogoBlack" ng-show="customLogoBlack && customLogoBlack.base64">
-                        <img ng-src="{{customLogoBlack.custom_asset_file_attributes.attachment_url}}" alt="{{customLogoBlack.custom_asset_file_attributes.attachment}}" ng-show="customLogoBlack && customLogoBlack.custom_asset_file_attributes" />
-                        <div class="tools-box">
-                            <div class="btn-group">
-                                <div class="btn btn-default btn-file">
-                                    <i class="fa fa-edit"></i> {{ 'settings.change_the_logo' | translate }}
-                                    <input type="file"
-                                           accept="image/png,image/x-png"
-                                           name="custom_asset[custom_asset_file_attributes][attachment]"
-                                           ng-model="customLogoBlack"
-                                           base-sixty-four-input
-                                           required />
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <div class="settings-item">
+                    <div class="settings-label m-b-sm" translate>{{ 'settings.warning_message_of_the_training_booking_page'}}</div>
+                    <div class="m-t-sm m-b-sm">
+                        <div ng-model="trainingExplicationsAlert.value" medium-editor options='{"placeholder": "{{ "settings.type_the_message_content" | translate }}",
+                            "buttons": ["bold", "italic", "unorderedlist", "header2" ]
+                            }'>
+                        </div>
+                    </div>
+                    <button name="button" class="btn-profile btn-small btn-medium" ng-click="save(trainingExplicationsAlert)" translate>{{ 'save' }}</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <div class="settings-item">
+                    <div class="settings-label m-b-sm" translate>{{ 'settings.information_message_of_the_training_reservation_page'}}</div>
+                    <div class="m-t-sm m-b-sm">
+                        <div ng-model="trainingInformationMessage.value" medium-editor options='{"placeholder": "{{ "settings.type_the_message_content" | translate }}",
+                                "buttons": ["bold", "italic", "unorderedlist", "header2" ]
+                            }'>
+                        </div>
+                    </div>
+                    <button name="button" class="btn-profile btn-small btn-medium" ng-click="save(trainingInformationMessage)" translate>{{ 'save' }}</button>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <div class="settings-item">
+                    <div class="settings-label m-b-sm" translate>{{ 'settings.message_of_the_subscriptions_page' }}</div>
+                    <div class="m-t-sm m-b-sm">
+                        <div ng-model="subscriptionExplicationsAlert.value" medium-editor options='{"placeholder": "{{ "settings.type_the_message_content" | translate }}",
+                            "buttons": ["bold", "italic", "unorderedlist", "header2" ]
+                            }'>
+                        </div>
+                    </div>
+                    <button name="button" class="btn-profile btn-small btn-medium" ng-click="save(subscriptionExplicationsAlert)" translate>{{ 'save' }}</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <div class="settings-item">
+                    <div class="settings-label m-b-sm" translate>{{ 'settings.message_of_the_events_page' }}</div>
+                    <div class="m-t-sm m-b-sm">
+                        <div ng-model="eventExplicationsAlert.value" medium-editor options='{"placeholder": "{{ "settings.type_the_message_content" | translate }}",
+                            "buttons": ["bold", "italic", "unorderedlist", "header2" ]
+                            }'>
+                        </div>
+                    </div>
+                    <button name="button" class="btn-profile btn-small btn-medium" ng-click="save(eventExplicationsAlert)" translate>{{ 'save' }}</button>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" ng-hide="fablabWithoutSpaces">
+                <div class="settings-item">
+                    <div class="settings-label m-b-sm" translate>{{ 'settings.message_of_the_spaces_page' }}</div>
+                    <div class="m-t-sm m-b-sm">
+                        <div ng-model="spaceExplicationsAlert.value" medium-editor options='{"placeholder": "{{ "settings.type_the_message_content" | translate }}",
+                            "buttons": ["bold", "italic", "unorderedlist", "header2" ]
+                            }'>
+                        </div>
+                    </div>
+                    <button name="button" class="btn-profile btn-small btn-medium" ng-click="save(spaceExplicationsAlert)" translate>{{ 'save' }}</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- LEGAL -->
+<div class="panel m-t-lg">
+
+        <div class="panel-heading">
+            <h3 class="txt-green" translate>{{ 'settings.legal_documents'}}</h3>
+        </div>
+
+        <div class="panel-body p-lg">
+            <div class="alert alert-warning" translate>
+                {{ 'settings.if_these_documents_are_not_filled_no_consent_about_them_will_be_asked_to_the_user' }}
+            </div> 
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                    <div class="settings-item">
+                        <form method="post" action="{{actionUrl.cgv}}" novalidate name="cgvForm" ng-upload="submited(content)" ng-submit="addLoader('cgv')" upload-options-enable-rails-csrf="true" unsaved-warning-form>
+                            <input type="hidden" name="custom_asset[name]" value="cgv-file">
+                            <input name="_method" type="hidden" ng-value="methods.cgv">
+                            <label for="tnc_file" class="settings-label m-b-sm" translate>{{ 'settings.general_terms_and_conditions' }}</label>
+                            <div class="form-group form-medium-green">
+                                <div class="fileinput input-group" data-provides="fileinput" ng-class="fileinputClass(cgvFile.custom_asset_file_attributes.attachment)">
+                                    <div class="form-control" data-trigger="fileinput">
+                                        <i class="glyphicon glyphicon-file fileinput-exists"></i> <span class="fileinput-filename">{{cgvFile.custom_asset_file_attributes.attachment}}</span>
+                                    </div>
+                                    <span class="input-group-addon btn btn-profile btn-small btn-medium btn-file">
+                                        <span class="fileinput-new" translate>{{ 'browse' }}</span>
+                                        <span class="fileinput-exists" translate>{{ 'change' }}</span>
+                                        <input type="file"
+                                            id="tnc_file"
+                                            name="custom_asset[custom_asset_file_attributes][attachment]"
+                                            accept=".pdf"
+                                            required />
+                                    </span>
                                 </div>
                             </div>
+                            <button name="button" type="submit" ng-class="{'btn-loading':loader.cgv}" ng-disabled="cgvForm.$invalid" class="btn-profile btn-small btn-medium" translate>{{ 'save' }}</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="settings-item">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                        <div class="settings-item">
+                            <form method="post" action="{{actionUrl.cgu}}" novalidate name="cguForm" ng-upload="submited(content)" ng-submit="addLoader('cgu')" upload-options-enable-rails-csrf="true" unsaved-warning-form>
+                                <input type="hidden" name="custom_asset[name]" value="cgu-file">
+                                <input name="_method" type="hidden" ng-value="methods.cgu">
+                                <label for="tos_file" class="settings-label m-b-sm" translate>{{ 'settings.terms_of_service' }}</label>
+                                <div class="form-group form-medium-green">
+                                    <div class="fileinput input-group" data-provides="fileinput" ng-class="fileinputClass(cguFile.custom_asset_file_attributes.attachment)">
+                                        <div class="form-control" data-trigger="fileinput">
+                                            <i class="glyphicon glyphicon-file fileinput-exists"></i> <span class="fileinput-filename">{{cguFile.custom_asset_file_attributes.attachment}}</span>
+                                        </div>
+                                        <span class="input-group-addon btn btn-profile btn-small btn-medium btn-file">
+                                            <span class="fileinput-new" translate>{{ 'browse' }}</span>
+                                            <span class="fileinput-exists" translate>{{ 'change' }}</span>
+                                            <input type="file"
+                                                id="tos_file"
+                                                name="custom_asset[custom_asset_file_attributes][attachment]"
+                                                accept=".pdf"
+                                                required />
+                                        </span>
+                                    </div>
+                                </div>
+                                <button name="button" type="submit" ng-class="{'btn-loading':loader.cgu}" ng-disabled="cguForm.$invalid" class="btn-profile btn-small btn-medium" translate>{{ 'save' }}</button>
+                            </form>
                         </div>
                     </div>
-                    <button name="button" type="submit" class="btn btn-warning m-t m-l" ng-disabled="logoBlackForm.$invalid" translate>{{ 'save' }}</button>
-                </form>
+                </div>
             </div>
-            <div class="col-md-4">
-                <form class="custom-favicon-container" method="post" action="{{actionUrl.favicon}}" novalidate name="faviconForm" ng-upload="submited(content)" upload-options-enable-rails-csrf="true" unsaved-warning-form>
-                    <input type="hidden" name="custom_asset[name]" value="favicon-file">
-                    <input name="_method" type="hidden" ng-value="methods.favicon">
-                    <h3 class="m-l" translate>{{ 'settings.favicon' }}</h3>
-                    <div class="custom-favicon" style="background-image: url({{customFavicon}});">
-                        <img src="data:image/png;base64," data-src="holder.js/32x32/text:&#xf03e;/font:FontAwesome/icon-xs" bs-holder ng-show="!customFavicon" class="img-responsive">
-                        <img base-sixty-four-image="customFavicon" ng-show="customFavicon && customFavicon.base64">
-                        <img ng-src="{{customFavicon.custom_asset_file_attributes.attachment_url}}" alt="{{customFavicon.custom_asset_file_attributes.attachment}}" ng-show="customFavicon && customFavicon.custom_asset_file_attributes" />
-                        <div class="tools-box">
+
+        </div>
+        
+</div>
+
+
+<!-- ORDERING -->
+<div class="panel m-t-lg">
+
+        <div class="panel-heading">
+            <h3 class="txt-green" translate>{{ 'settings.elements_ordering' }}</h3>
+        </div>
+
+        <div class="panel-body p-lg">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                    <div class="settings-item">
+                        <div class="form-group form-medium-green">
+                            <label for="machinesSortBy" class="settings-label m-b-sm" translate>{{ 'settings.display_machines_sorted_by' }}</label>
+                            <select id="machinesSortBy"
+                                    class="form-control"
+                                    ng-model="machinesSortBy.value">
+                                <option value="default" translate>{{ 'settings.sort_by.default' }}</option>
+                                <option value="name" translate>{{ 'settings.sort_by.name' }}</option>
+                                <option value="created_at" translate>{{ 'settings.sort_by.created_at' }}</option>
+                                <option value="updated_at" translate>{{ 'settings.sort_by.updated_at' }}</option>
+                            </select>
+                        </div>
+                        <button name="button" class="btn-profile btn-small btn-medium" ng-click="save(machinesSortBy)" translate>{{ 'save' }}</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</div>
+
+
+<!-- GRAPHICS -->
+<div class="panel m-t-lg">
+
+        <div class="panel-heading">
+            <h3 class="txt-green" translate>{{ 'settings.customize_the_graphics' }}</h3>
+        </div>
+
+        <div class="panel-body p-lg">
+            <div class="alert alert-warning">
+                <span translate>{{ 'settings.for_an_optimal_rendering_the_logo_image_must_be_at_the_PNG_format_with_a_transparent_background_and_with_an_aspect_ratio_3.5_times_wider_than_the_height' }}</span><br/>
+                <span translate>{{ 'settings.concerning_the_favicon_it_must_be_at_ICO_format_with_a_size_of_16x16_pixels' }}</span><br/>
+                <br/>
+                <span translate>{{ 'settings.remember_to_refresh_the_page_for_the_changes_to_take_effect' }}</span>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                    <div class="settings-item">
+                        <form class="custom-logo-container" method="post" action="{{actionUrl.logo}}" novalidate name="logoForm" ng-upload="submited(content)" upload-options-enable-rails-csrf="true" unsaved-warning-form>
+                            <input type="hidden" name="custom_asset[name]" value="logo-file">
+                            <input name="_method" type="hidden" ng-value="methods.logo">
+                            <div class="settings-label m-b-sm" translate>{{ 'settings.logo_white_background' }}</div>
+                            <div class="custom-logo" style="background-image: url({{customLogo}});">
+                                <img src="data:image/png;base64," data-src="holder.js/100%x100%/text:&#xf03e;/font:FontAwesome/icon-xs" bs-holder ng-show="!customLogo" class="img-responsive">
+                                <img base-sixty-four-image="customLogo" ng-show="customLogo && customLogo.base64">
+                                <img ng-src="{{customLogo.custom_asset_file_attributes.attachment_url}}" alt="{{customLogo.custom_asset_file_attributes.attachment}}" ng-show="customLogo && customLogo.custom_asset_file_attributes" />
+                            </div>
                             <div class="btn-group">
-                                <div class="btn btn-default btn-file">
+                                <div class="btn btn-profile btn-small btn-white btn-file m-b-sm">
+                                    <i class="fa fa-edit"></i> {{ 'settings.change_the_logo' | translate }}
+                                    <input type="file"
+                                        accept="image/png,image/x-png"
+                                        name="custom_asset[custom_asset_file_attributes][attachment]"
+                                        ng-model="customLogo"
+                                        base-sixty-four-input
+                                        required />
+                                </div>
+                            </div>
+                            <div>
+                                <button name="button" type="submit" class="btn-profile btn-small btn-medium" ng-disabled="logoForm.$invalid" translate>{{ 'save' }}</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                    <div class="settings-item">
+                        <form class="custom-logo-container" method="post" action="{{actionUrl.logoBlack}}" novalidate name="logoBlackForm" ng-upload="submited(content)" upload-options-enable-rails-csrf="true" unsaved-warning-form>
+                            <input type="hidden" name="custom_asset[name]" value="logo-black-file">
+                            <input name="_method" type="hidden" ng-value="methods.logoBlack">
+                            <div class="settings-label m-b-sm" translate>{{ 'settings.logo_black_background' }}</div>
+                            <div class="custom-logo bg-dark" style="background-image: url({{customLogoBlack}});">
+                                <img src="data:image/png;base64," data-src="holder.js/100%x100%/text:&#xf03e;/font:FontAwesome/icon-black-xs" bs-holder ng-show="!customLogoBlack" class="img-responsive">
+                                <img base-sixty-four-image="customLogoBlack" ng-show="customLogoBlack && customLogoBlack.base64">
+                                <img ng-src="{{customLogoBlack.custom_asset_file_attributes.attachment_url}}" alt="{{customLogoBlack.custom_asset_file_attributes.attachment}}" ng-show="customLogoBlack && customLogoBlack.custom_asset_file_attributes" />
+                            </div>
+                            <div class="btn-group">
+                                <div class="btn btn-profile btn-small btn-white btn-file m-b-sm">
+                                    <i class="fa fa-edit"></i> {{ 'settings.change_the_logo' | translate }}
+                                    <input type="file"
+                                        accept="image/png,image/x-png"
+                                        name="custom_asset[custom_asset_file_attributes][attachment]"
+                                        ng-model="customLogoBlack"
+                                        base-sixty-four-input
+                                        required />
+                                </div>
+                            </div>
+                            <div>
+                                <button name="button" type="submit" class="btn-profile btn-small btn-medium" ng-disabled="logoBlackForm.$invalid" translate>{{ 'save' }}</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                    <div class="settings-item">
+                        <form class="custom-favicon-container" method="post" action="{{actionUrl.favicon}}" novalidate name="faviconForm" ng-upload="submited(content)" upload-options-enable-rails-csrf="true" unsaved-warning-form>
+                            <input type="hidden" name="custom_asset[name]" value="favicon-file">
+                            <input name="_method" type="hidden" ng-value="methods.favicon">
+                            <div class="settings-label m-b-sm" translate>{{ 'settings.favicon' }}</div>
+                            <div class="custom-favicon" style="background-image: url({{customFavicon}});">
+                                <img src="data:image/png;base64," data-src="holder.js/32x32/text:&#xf03e;/font:FontAwesome/icon-xs" bs-holder ng-show="!customFavicon" class="img-responsive">
+                                <img base-sixty-four-image="customFavicon" ng-show="customFavicon && customFavicon.base64">
+                                <img ng-src="{{customFavicon.custom_asset_file_attributes.attachment_url}}" alt="{{customFavicon.custom_asset_file_attributes.attachment}}" ng-show="customFavicon && customFavicon.custom_asset_file_attributes" />
+                                <div class="tools-box">
+                                    
+                                </div>
+                            </div>
+                            <div class="btn-group">
+                                <div class="btn btn-profile btn-small btn-white btn-file m-b-sm">
                                     <i class="fa fa-edit"></i> {{ 'settings.change_the_favicon' | translate }}
                                     <input type="file"
-                                           accept="image/png,image/x-png,image/x-icon,image/ico,image/vnd.microsoft.icon"
-                                           name="custom_asset[custom_asset_file_attributes][attachment]"
-                                           ng-model="customFavicon"
-                                           base-sixty-four-input
-                                           required />
+                                        accept="image/png,image/x-png,image/x-icon,image/ico,image/vnd.microsoft.icon"
+                                        name="custom_asset[custom_asset_file_attributes][attachment]"
+                                        ng-model="customFavicon"
+                                        base-sixty-four-input
+                                        required />
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <button name="button" type="submit" class="btn btn-warning m-t m-l" ng-disabled="faviconForm.$invalid" translate>{{ 'save' }}</button>
-                </form>
-            </div>
-        </div>
-        <div class="row m-t m-l-xs">
-            <div class="col-md-4">
-                <h4 translate>{{ 'settings.main_colour' }}</h4>
-                <form role="form" class="form-inline" name="mainColorForm" novalidate>
-                    <div class="form-group">
-                        <div class="input-group">
-                            <div class="input-group-addon">
-                                <i class="fa fa-paint-brush"></i>
+                            <div>
+                                <button name="button" type="submit" class="btn-profile btn-small btn-medium" ng-disabled="faviconForm.$invalid" translate>{{ 'save' }}</button>
                             </div>
-                            <input type="text" minicolors ng-model="mainColorSetting.value" class="form-control" placeholder="{{ 'settings.primary' | translate}}"/>
-                        </div>
+                        </form>
                     </div>
-                    <div class="form-group">
-                        <button name="button" class="btn btn-warning" ng-click="save(mainColorSetting)" translate>{{ 'save' }}</button>
-                    </div>
-                </form>
+                </div>
             </div>
-            <div class="col-md-4">
-                <h4 translate>{{ 'settings.secondary_colour' }}</h4>
-                <form role="form" class="form-inline" name="secondColorForm" novalidate>
-                    <div class="form-group">
-                        <div class="input-group">
-                            <div class="input-group-addon">
-                                <i class="fa fa-paint-brush"></i>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                    <div class="settings-item">
+                        <div class="settings-label m-b-sm" translate>{{ 'settings.main_colour' }}</div>
+                        <form role="form" class="form-inline" name="mainColorForm" novalidate>
+                            <div class="form-group form-medium-green">
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-paint-brush"></i>
+                                    </div>
+                                    <input type="text" minicolors ng-model="mainColorSetting.value" class="form-control" placeholder="{{ 'settings.primary' | translate}}"/>
+                                </div>
                             </div>
-                            <input type="text" minicolors ng-model="secondColorSetting.value" class="form-control" placeholder="{{ 'settings.secondary' | translate}}"/>
-                        </div>
+                            <div class="form-group">
+                                <button name="button" class="btn-profile btn-small btn-medium" ng-click="save(mainColorSetting)" translate>{{ 'save' }}</button>
+                            </div>
+                        </form>
                     </div>
-                    <div class="form-group">
-                        <button name="button" class="btn btn-warning" ng-click="save(secondColorSetting)" translate>{{ 'save' }}</button>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                    <div class="settings-item">
+                        <div class="settings-label m-b-sm" translate>{{ 'settings.secondary_colour' }}</div>
+                        <form role="form" class="form-inline" name="secondColorForm" novalidate>
+                            <div class="form-group form-medium-green">
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-paint-brush"></i>
+                                    </div>
+                                    <input type="text" minicolors ng-model="secondColorSetting.value" class="form-control" placeholder="{{ 'settings.secondary' | translate}}"/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <button name="button" class="btn-profile btn-small btn-medium" ng-click="save(secondColorSetting)" translate>{{ 'save' }}</button>
+                            </div>
+                        </form>
                     </div>
-                </form>
+                </div>
             </div>
-        </div>
-        <div class="row m-t">
-            <div class="col-md-4">
-                <form class="custom-profile-image-container" method="post" action="{{actionUrl.profileImage}}" novalidate name="profileImageForm" ng-upload="submited(content)" upload-options-enable-rails-csrf="true" unsaved-warning-form>
-                    <input type="hidden" name="custom_asset[name]" value="profile-image-file">
-                    <input name="_method" type="hidden" ng-value="methods.profileImage">
-                    <h3 class="m-l" translate>{{ 'settings.background_picture_of_the_profile_banner' }}</h3>
-                    <div class="custom-profile-image" style="background-image: url({{profileImage}});">
-                        <img src="data:image/png;base64," data-src="holder.js/100%x100%/text:&#xf03e;/font:FontAwesome/icon-xs" bs-holder ng-show="!profileImage" class="img-responsive">
-                        <img base-sixty-four-image="profileImage" ng-show="profileImage && profileImage.base64">
-                        <img ng-src="{{profileImage.custom_asset_file_attributes.attachment_url}}" alt="{{profileImage.custom_asset_file_attributes.attachment}}" ng-show="profileImage && profileImage.custom_asset_file_attributes" />
-                        <div class="tools-box">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                    <div class="settings-item">
+                        <form class="custom-profile-image-container" method="post" action="{{actionUrl.profileImage}}" novalidate name="profileImageForm" ng-upload="submited(content)" upload-options-enable-rails-csrf="true" unsaved-warning-form>
+                            <input type="hidden" name="custom_asset[name]" value="profile-image-file">
+                            <input name="_method" type="hidden" ng-value="methods.profileImage">
+                            <div class="settings-label m-b-sm" translate>{{ 'settings.background_picture_of_the_profile_banner' }}</div>
+                            <div class="custom-profile-image" style="background-image: url({{profileImage}});">
+                                <img src="data:image/png;base64," data-src="holder.js/100%x100%/text:&#xf03e;/font:FontAwesome/icon-xs" bs-holder ng-show="!profileImage" class="img-responsive">
+                                <img base-sixty-four-image="profileImage" ng-show="profileImage && profileImage.base64">
+                                <img ng-src="{{profileImage.custom_asset_file_attributes.attachment_url}}" alt="{{profileImage.custom_asset_file_attributes.attachment}}" ng-show="profileImage && profileImage.custom_asset_file_attributes" />
+                            </div>
                             <div class="btn-group">
-                                <div class="btn btn-default btn-file">
+                                <div class="btn btn-profile btn-small btn-white btn-file m-b-sm">
                                     <i class="fa fa-edit"></i> {{ 'settings.change_the_profile_banner' | translate }}
                                     <input type="file"
-                                           accept="image/png,image/x-png"
-                                           name="custom_asset[custom_asset_file_attributes][attachment]"
-                                           ng-model="profileImage"
-                                           base-sixty-four-input
-                                           required />
+                                        accept="image/png,image/x-png"
+                                        name="custom_asset[custom_asset_file_attributes][attachment]"
+                                        ng-model="profileImage"
+                                        base-sixty-four-input
+                                        required />
                                 </div>
                             </div>
-                        </div>
+                            <div>
+                                <button name="button" type="submit" class="btn-profile btn-small btn-medium" ng-disabled="profileImageForm.$invalid" translate>{{ 'save' }}</button>
+                            </div>
+                        </form>
                     </div>
-                    <button name="button" type="submit" class="btn btn-warning m-t m-l" ng-disabled="profileImageForm.$invalid" translate>{{ 'save' }}</button>
-                </form>
+                </div>
             </div>
         </div>
-    </div>
-</div>
 
-<div class="panel panel-default m-t-lg">
-    <div class="panel-heading">
-        <span class="font-sbold" translate>{{ 'settings.elements_ordering' }}</span>
-    </div>
-    <div class="panel-body">
-        <div class="row">
-            <div class="col-md-4">
-                <h3 class="m-l" translate>{{ 'settings.machines_order' }}</h3>
-                <div class="form-group m-l">
-                    <label for="machinesSortBy" class="control-label m-r" translate>{{ 'settings.display_machines_sorted_by' }}</label>
-                    <select id="machinesSortBy"
-                            class="form-control"
-                            ng-model="machinesSortBy.value">
-                      <option value="default" translate>{{ 'settings.sort_by.default' }}</option>
-                      <option value="name" translate>{{ 'settings.sort_by.name' }}</option>
-                      <option value="created_at" translate>{{ 'settings.sort_by.created_at' }}</option>
-                      <option value="updated_at" translate>{{ 'settings.sort_by.updated_at' }}</option>
-                    </select>
-                    <button name="button" class="btn btn-warning m-t" ng-click="save(machinesSortBy)" translate>{{ 'save' }}</button>
-                </div>
-            <div class="col-md-4">
-        </div>
-    </div>
 </div>

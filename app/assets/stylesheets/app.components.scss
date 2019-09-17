@@ -340,7 +340,8 @@ a.modal-message:hover {
   }
 }
 
-// ARTICLE
+/*-- ARTICLE --*/
+
 .article {
   max-width: $screen-md-min;
 
@@ -360,52 +361,14 @@ a.modal-message:hover {
 }
 
 
+/*-- PANEL --*/
 
-// PANEL
 .panel {
   background: #f9f9f9;
   color: #777777;
   box-shadow: none;
   -webkit-box-shadow: none;
   border: none;
-
-  h2 {
-    font-weight: 700;
-    font-size: 19px;
-    letter-spacing: normal;
-    line-height: 120%;
-    color: #E1580A;
-    margin: 0;
-    padding: O;
-  }
-  h3 {
-    font-weight: 700;
-    font-size: 16px;
-    letter-spacing: normal;
-    line-height: 120%;
-    color: #777777;
-    margin: 0;
-    padding: O;
-  }
-  h4 {
-    font-weight: 600;
-    font-size: 15px;
-    letter-spacing: normal;
-    line-height: 120%;
-    color: #777777;
-    margin: 0;
-    padding: O;
-  }
-  h5 {
-    font-weight: 800;
-    font-size: 11px;
-    letter-spacing: normal;
-    line-height: 120%;
-    text-transform: uppercase;
-    color: #777777;
-    margin: 0;
-    padding: O;
-  }
 
   .panel-heading {
     border-bottom: 1px solid #EAEAEA;
@@ -451,6 +414,18 @@ a.modal-message:hover {
     border: none;
   }
 }
+
+.settings-label {
+  font-size: 15px;
+  color: #777777;
+  font-weight: 700;
+}
+
+.settings-item {
+  margin-bottom: 45px;
+}
+
+
 
 .pricing-panel {
   border: 1px solid $border-color;
@@ -930,6 +905,10 @@ padding: 10px;
   & > i.fileinput-exists {
     margin-right: 5px;
   }
+}
+
+.help-block {
+  color: #777777;
 }
 
 .help-block.error {
