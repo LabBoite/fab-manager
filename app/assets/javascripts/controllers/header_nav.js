@@ -98,21 +98,6 @@ Application.Controllers.controller('HeaderNavController', ['$scope', function ($
       state: 'app.admin.settings',
       linkText: 'customization',
       linkIcon: 'gear'
-    },
-    {
-      state: 'app.admin.invoices',
-      linkText: 'manage_the_invoices',
-      linkIcon: 'file-pdf-o'
-    },
-    {
-      state: 'app.admin.pricing',
-      linkText: 'subscriptions_and_prices',
-      linkIcon: 'money'
-    },
-    {
-      state: 'app.admin.open_api_clients',
-      linkText: 'open_api_clients',
-      linkIcon: 'cloud'
     }
   ].concat(Fablab.adminNavLinks);
 
