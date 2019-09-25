@@ -32,13 +32,14 @@ fr:
           beware_this_cannot_be_reverted: "Attention : ceci n'est pas réversible."
           the_machine_was_successfully_removed_from_the_slot: "La machine a bien été supprimée du créneau."
           deletion_failed: "La suppression a échouée."
-          DATE_slot: "Créneau du {{DATE}} :"  # angular interpolation
+          DATE_slot: "{{DATE}} :"  # angular interpolation
           what_kind_of_slot_do_you_want_to_create: "Quel type de créneau voulez-vous créer ?"
           training: "Formation"
           machine: "Machine"
           space: "Espace"
-          next: "Suivant >"
-          previous: "< Précédent"
+          create_slot: "Nouveau créneau"
+          next: "Suivant"
+          previous: "Précédent"
           select_some_machines: "Sélectionnez des machines"
           number_of_tickets: "Nombre de places : "
           adjust_the_opening_hours: "Ajuster l'horaire"

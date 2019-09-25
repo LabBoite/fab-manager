@@ -64,7 +64,6 @@ class Stylesheet < ActiveRecord::Base
      .bg-yellow { background-color: #{Stylesheet.secondary} !important; }
      .event:hover { background-color: #{Stylesheet.primary}; }
      .widget h3 { color: #{Stylesheet.primary}; }
-     .modal-header h1, .custom-invoice .modal-header h1 { color: #{Stylesheet.primary}; }
      .block-link:hover, .fc-toolbar .fc-button:hover, .fc-toolbar .fc-button:active, .fc-toolbar .fc-button.fc-state-active { background-color: #{Stylesheet.secondary}; }
      .carousel-control:hover, .carousel-control:focus, .carousel-caption .title a:hover { color: #{Stylesheet.secondary}; }
      .well.well-warning { border-color: #{Stylesheet.secondary};  background-color: #{Stylesheet.secondary};  }

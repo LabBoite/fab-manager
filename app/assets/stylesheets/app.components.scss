@@ -94,6 +94,13 @@ a.modal-message:hover {
     margin-top: 0;
   }
 
+  h2 {
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: normal;
+    margin-top: 0;
+  }
+
   .modal-header-msg {
     font-weight: 400;
     font-size: 13px;
@@ -372,10 +379,16 @@ a.modal-message:hover {
 
   .panel-heading {
     border-bottom: 1px solid #EAEAEA;
-    
-    &.small {
-      padding: 15px 15px;
+
+    .panel-title {
+      font-weight: 700;
+      font-size: 16px;
+      letter-spacing: normal;
+      line-height: auto;
+      color: #777777;
+      margin: 0;
     }
+    
     &.picture {
       height: 150px;
       background-size: cover;
