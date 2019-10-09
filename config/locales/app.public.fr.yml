@@ -292,17 +292,18 @@ fr:
         event_description: "Description de l'évènement"
         downloadable_documents: "Documents"
         information_and_booking: "Informations et réservation"
-        beginning: "Début :"
-        ending: "Fin :"
+        beginning: "du "
+        ending: "au "
         opening_hours: "Horaires"
         tickets_still_availables: "place(s) disponibles"
         sold_out: "Événement complet"
+        to_subscribe: "Je m'inscris"
         free_entry: "Accès libre"
         cancelled: "Annulé"
         ticket: "{NUMBER, plural, =0{place} one{place} other{places}}"  # messageFormat interpolation
         make_a_gift_of_this_reservation: "Offrir cette réservation"
-        you_can_find_your_reservation_s_details_on_your_: "Vous pouvez retrouver le détail de votre réservation sur votre"
-        you_booked_DATE: "Vous avez réservé ({{DATE}}) :"  # angular interpolation
+        you_can_find_your_reservation_s_details_on_your_: "Vous pouvez retrouver le détail de votre inscription sur votre"
+        you_booked_DATE: "le {{DATE}}"  # angular interpolation
         book: "Je m'inscris"
         change_the_reservation: "Modifier la réservation"
         you_can_shift_this_reservation_on_the_following_slots: "Vous pouvez déplacer cette réservation sur les créneaux suivants :"

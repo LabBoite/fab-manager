@@ -1,16 +1,20 @@
-<div class="widget panel b-a m">
-  <div class="panel-heading b-b small">
-    <h3 class="panel-title" translate>{{ 'select_a_member' }}</h3>
+<div class="panel">
+  <div class="panel-heading">
+    <div class="panel-title">
+      <span translate>{{ 'select_a_member' }}</span>
+    </div>
   </div>
-  <div class="widget-content no-bg auto wrapper">
-    <ui-select ng-model="ctrl.member" on-select="updateMember()">
-        <ui-select-match placeholder="{{ 'start_typing' | translate }}">
-            <span ng-bind="$select.selected.name"></span>
-        </ui-select-match>
-        <ui-select-choices repeat="m in matchingMembers" refresh="autoCompleteName($select.search)" refresh-delay="300">
-            <span ng-bind-html="m.name | highlight: $select.search"></span>
-        </ui-select-choices>
-    </ui-select>
-    {{member}}
+  <div class="panel-content">
+    <div class="p-l">
+      <ui-select ng-model="ctrl.member" on-select="updateMember()">
+          <ui-select-match placeholder="{{ 'start_typing' | translate }}">
+              <span ng-bind="$select.selected.name"></span>
+          </ui-select-match>
+          <ui-select-choices repeat="m in matchingMembers" refresh="autoCompleteName($select.search)" refresh-delay="300">
+              <span ng-bind-html="m.name | highlight: $select.search"></span>
+          </ui-select-choices>
+      </ui-select>
+      {{member}}
+    </div>
   </div>
 </div>
