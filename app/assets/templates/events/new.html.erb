@@ -1,25 +1,22 @@
 <div>
+  <section class="container wrapper">
 
-  <section class="heading b-b">
-    <div class="row no-gutter">
-      <div class="col-xs-2 col-sm-2 col-md-1">
-        <section class="heading-btn">
-          <a ng-click="cancel()"><i class="fa fa-long-arrow-left"></i></a>
-        </section>
+    <div class="col-lg-12">
+
+      <!-- TITLE -->
+      <div class="row m-b">
+        <div class="col-lg-12">
+          <h1 class="txt-green inline">{{ 'add_an_event' | translate }}</h1>
+        </div>
       </div>
-      <div class="col-xs-10 col-sm-10 col-md-8 b-l ">
-        <section class="heading-title">
-          <h1 translate>{{ 'add_an_event' }}</h1>
-        </section>
-      </div>
+
+      <form role="form" name="eventForm" novalidate action="{{ actionUrl }}" ng-upload="submited(content)" upload-options-enable-rails-csrf="true">
+        <ng-include src="'<%= asset_path 'events/_form.html' %>'"></ng-include>
+      </form>
+
     </div>
+
   </section>
 
-
-  <form role="form" name="eventForm" class="form-horizontal" novalidate action="{{ actionUrl }}" ng-upload="submited(content)" upload-options-enable-rails-csrf="true">
-
-    <ng-include src="'<%= asset_path 'events/_form.html' %>'"></ng-include>
-
-  </form>
-
 </div>
+
