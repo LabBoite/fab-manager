@@ -200,7 +200,7 @@ fr:
   export_availabilities:
     # export des listes de créneaux de réservations, par type, au format EXCEL
     machines: "Machines"
-    trainings: "Formations"
+    trainings: "Initiations"
     spaces: "Espaces"
     events: "Évènements"
     day_of_week: "Jour de la semaine"
@@ -328,7 +328,7 @@ fr:
     subscriptions: "Abonnements"
     machines_hours: "Machines"
     spaces: "Espaces"
-    trainings: "Formations"
+    trainings: "Initiations"
     events: "Évènements"
     registrations: "Inscriptions"
     projects: "Projets"

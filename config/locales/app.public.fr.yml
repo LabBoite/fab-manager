@@ -47,7 +47,7 @@ fr:
         contact: "Contact"
 
         # menu de gauche (partie admin)
-        trainings_monitoring: "Formations"
+        trainings_monitoring: "Initiations"
         trainings_authorisation: "Habilitation"
         select_a_training: "Sélectionnez une formation"
         manage_the_calendar: "Calendrier"
@@ -244,6 +244,7 @@ fr:
         training: "Initiation"
         msg_training_condition: "reservée aux adhérents"
         all_the_events: "toute la programmation"
+        all_the_trainings: "toutes les initiations"
         book_this_training: "Je réserve"
         do_you_really_want_to_delete_this_training: "Êtes-vous sur de vouloir supprimer cette formation ?"
         unauthorized_operation: "Opération non autorisée"
