@@ -225,7 +225,7 @@ fr:
 
       machines_show:
         # détail d'une machine
-        all_tools: "tous les outils"
+        all_the_tools: "tous les outils"
         book_this_machine: "Je réserve"
         files_to_download: "Documents"
         projects_using_the_machine: "Projets utilisant la machine"
@@ -337,7 +337,7 @@ fr:
       space_show:
         # affichage des détails d'un espace
         space_show:
-          all_tools: "tous les outils"
+          all_the_tools: "tous les outils"
           book_this_space: "Je réserve"
           unauthorized_operation: "Opération non autorisée"
           confirmation_required: "Confirmation requise"

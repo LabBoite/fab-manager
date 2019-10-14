@@ -79,6 +79,7 @@
   color: #E1580A;
 }
 
+
 .btn-profile.btn-white {
   background-color: #FFFFFF;
   color: #777777;
@@ -93,7 +94,6 @@
   background-color: #FFFFFF;
   color: #E1580A;
 }
-
 
 .btn-profile.btn-medium {
   background-color: #58baab;
@@ -185,6 +185,25 @@
   background-color: #f9f9f9;
   color: #E1580A;
 }
+
+.btn-neutral.btn-dark {
+  background-color: #E2E2E2;
+  color: #777777;
+}
+
+.btn-neutral.btn-dark:hover {
+  background-color: #D6D6D6;
+  color: #777777;
+}
+
+.btn-neutral.btn-dark:focus, .btn-neutral.btn-dark:active {
+  background-color: #CBCBCB;
+  color: #777777;
+}
+
+
+
+
 
 
 button[disabled],

@@ -21,7 +21,10 @@
     </div>
 
     <!-- ADMIN CONTROLS -->
-    <a class="btn-profile btn-small btn-medium" ui-sref="app.admin.space_new" role="button" translate ng-if="isAuthorized('admin')">{{ 'spaces_list.add_a_space' }}</a>
+    <a class="btn-profile btn-small btn-medium" ui-sref="app.admin.space_new" role="button" ng-if="isAuthorized('admin')">
+      <i class="fa fa-plus m-r-xs"></i> 
+      <span translate>{{ 'spaces_list.add_a_space' }}</span>
+    </a>
 
   </div>
 </section>

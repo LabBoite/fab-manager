@@ -127,7 +127,7 @@ fr:
 
       machines_reserve:
         # réserver une machine
-        machine_planning: "Planning machine"
+        machine_planning: "Planning"
         i_ve_reserved: "J'ai réservé"
         not_available: "Non disponible"
         i_reserve: "Je réserve"
@@ -136,7 +136,7 @@ fr:
 
       trainings_reserve:
         # réserver une formation
-        trainings_planning: "Planning formations"
+        trainings_planning: "Planning des initiations"
         planning_of: "Planning de la"   # suivi du nom de la formation (eg. "Planning de la formation imprimante 3d")
         all_trainings: "Toutes les formations"
         cancel_my_selection: "Annuler ma sélection"

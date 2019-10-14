@@ -5,7 +5,10 @@
         <!-- BACK -->
         <div class="row">
             <div class="col-lg-12 m-b">
-                <a ui-sref="app.public.tools">{{ 'all_tools' | translate }}</a>
+                <a ui-sref="app.public.tools">
+                    <i class="fa fa-chevron-left m-r-xs"></i> 
+                    <span>tous les outils</span>
+                </a>
             </div>
         </div>
 
@@ -24,10 +27,18 @@
             <!-- SIDE INFOS -->
             <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
 
+                <!-- ADMIN -->
+                <div class="m-b" ng-if="isAuthorized('admin')">
+                    <a ui-sref="app.admin.space_edit({id:space.slug})" ng-if="isAuthorized('admin')" class="btn-profile btn-small btn-medium"><i class="fa fa-edit m-r-xs"></i> {{ 'edit' | translate }}</a>
+                    <a ng-click="deleteSpace($event)" ng-if="isAuthorized('admin')" class="btn-profile btn-small btn-medium"><i class="fa fa-trash m-r-xs"></i> {{ 'delete' | translate }}</a>                
+                </div>
+
                 <!-- Specs -->
                 <div class="panel">
                     <div class="panel-heading">
-                        <h3 translate>{{ 'space_show.characteristics' }}</h3>
+                        <div class="panel-title">
+                            <span translate>{{ 'space_show.characteristics' }}</span>
+                        </div>
                     </div>
                     <div class="panel-content p-l" ng-if="space.characteristics">
                         <h3></h3>
@@ -42,8 +53,10 @@
                 <!-- Files -->
                 <section class="panel" ng-if="space.space_files_attributes">
                     <div class="panel-heading">
-                        <span class="badge bg-warning pull-right">{{space.space_files_attributes.length}}</span>
-                        <h3 translate>{{ 'space_show.files_to_download' }}</h3>
+                        <div class="panel-title">
+                            <span class="badge bg-warning pull-right">{{space.space_files_attributes.length}}</span>
+                            <span translate>{{ 'space_show.files_to_download' }}</span>
+                        </div>
                     </div>
                     <ul class="panel-content list-group p-l">       
                         <li ng-repeat="file in machine.machine_files_attributes" class="list-group-item">
@@ -55,8 +68,10 @@
                 <!-- Projects -->
                 <section class="panel" ng-if="space.space_projects">
                     <div class="panel-heading">
-                        <span class="badge bg-warning pull-right">{{space.space_projects.length}}</span>
-                        <h2 translate>{{ 'space_show.projects_using_the_space' }}</h2>
+                        <div class="panel-title">
+                            <span class="badge bg-warning pull-right">{{space.space_projects.length}}</span>
+                            <span translate>{{ 'space_show.projects_using_the_space' }}</span>
+                        </div>
                     </div>
                     <ul class="panel-content list-group p-l">
                         <li ng-repeat="project in machine.machine_projects" class="list-group-item">

@@ -17,7 +17,7 @@
   }
 
   span.event-ticket-date {
-    font-weight: 400;
+    font-weight: 500;
     font-size: 11px;
     color: #777777;
   }
@@ -855,6 +855,25 @@ padding: 10px;
 .calendar-title.title-month {
   font-size: 15px;
   font-weight: 600;
+}
+
+.resa-slot {
+  border: 1px solid #EAEAEA;
+  margin-bottom: 15px;
+  padding: 0;
+
+  span.resa-slot-data {
+    font-weight: 600;
+    font-size: 14px;
+  }
+}
+
+span.resa-process {
+  color: #777777;
+}
+
+span.resa-success {
+  color: #67CE45;
 }
 
 

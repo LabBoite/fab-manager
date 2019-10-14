@@ -46,10 +46,10 @@ fr:
         rough_draft: "Brouillon"
         machines_and_materials: "Machines et matériaux"
         collaborators: "Les collaborateurs"
-        summary: "Résumé"
+        summary: "Votre sélection"
         you_ve_just_selected_a_: "Vous venez de sélectionner un"  # you_ve_just_selected_a_ + _subscription
         _subscription: "abonnement"
-        confirm_and_pay: "Valider et payer"
+        confirm_and_pay: "Valider"
         your_invoice_will_be_available_soon_from_your_: "Votre facture sera bientôt disponible depuis votre"
         add_an_event: "Ajouter un évènement"
         load_the_next_events: "Charger les évènements suivants ..."
@@ -181,7 +181,7 @@ fr:
       valid_reservation_modal:
         # fenêtre de paiement sur place d'une réservation
         booking_confirmation: "Validation réservation"
-        here_is_the_summary_of_the_slots_to_book_for_the_current_user: "Voici le récapitulatif des créneaux à réserver pour l'utilisateur courant :"
+        here_is_the_summary_of_the_slots_to_book_for_the_current_user: "Voici le récapitulatif des créneaux sur le point d'être réservés :"
 
       event:
         # formulaire d'édition d'un événement
@@ -428,7 +428,7 @@ fr:
         cart:
           summary: "Résumé"
           select_one_or_more_slots_in_the_calendar: "Sélectionnez un {SINGLE, select, true{créneau} other{ou plusieurs créneaux}} dans le calendrier"  # messageFormat interpolation
-          you_ve_just_selected_the_slot: "Vous venez de sélectionner le créneau :"
+          you_ve_just_selected_the_slot: "Je sélectionne le(s) créneau(x) suivant(s) :"
           datetime_to_time: "{{START_DATETIME}} à {{END_TIME}}"  # angular interpolation, eg: Thursday, September 4 1986 8:30 PM to 10:00 PM
           cost_of_TYPE: "Coût de {TYPE, select, Machine{l'heure machine} Training{la formation} other{l'élément}}"  # messageFormat interpolation
           offer_this_slot: "Offrir ce créneau"
@@ -440,20 +440,20 @@ fr:
           you_ve_just_selected_a_: "Vous venez de sélectionner un"
           _subscription: "abonnement"
           cost_of_the_subscription: "Coût de l'abonnement"
-          confirm_and_pay: "Valider et payer"
-          you_have_settled_the_following_TYPE: "Vous avez réglé {TYPE, select, Machine{les heures machines suivantes} Training{la formation suivante} other{les éléments suivants}} :"  # messageFormat interpolation
+          confirm_and_pay: "Je réserve"
+          you_have_settled_the_following_TYPE: "Vous venez de réserver {TYPE, select, Machine{les heures machines suivantes} Training{l'initiation suivante} other{les éléments suivants}} :"  # messageFormat interpolation
           you_have_settled_a_: "Vous avez réglé un"
           total_: "TOTAL :"
           thank_you_your_payment_has_been_successfully_registered: "Merci. Votre paiement a bien été pris en compte !"
           your_invoice_will_be_available_soon_from_your_: "Votre facture sera bientôt disponible depuis votre"
           dashboard: "Tableau de bord"
-          i_want_to_change_the_following_reservation: "Je souhaite modifier ma réservation suivante :"
+          i_want_to_change_the_following_reservation: "Je souhaite modifier la réservation suivante :"
           cancel_my_modification: "Annuler ma modification"
           select_a_new_slot_in_the_calendar: "Sélectionnez un nouveau créneau dans le calendrier"
           cancel_my_selection: "Annuler ma sélection"
           tags_of_the_original_slot: "Étiquettes du créneau d'origine :"
           tags_of_the_destination_slot: "Étiquettes du créneau de destination :"
-          confirm_my_modification: "Valider ma modification"
+          confirm_my_modification: "Je modifie"
           your_booking_slot_was_successfully_moved_from_: "Votre créneau de réservation a bien été déplacé du"
           to_date: "au" # context: date. eg: "from 01/01 to 01/05"
           please_select_a_member_first: "Veuillez tout d'abord sélectionner un membre"
