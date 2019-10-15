@@ -1,26 +1,25 @@
-<!-- MESSAGE -->
-<section class="container wrapper">
-    <div class="alert alert-warning text-center" ng-if="(homeBlogpost != null) && (homeBlogpost != '') && (homeBlogpost != undefined)">
-        <span ng-bind-html="homeBlogpost"></span>
-    </div>
-</section>
-
 <section class="container wrapper">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+        <!-- MESSAGE -->
+        <div class="alert alert-warning text-center m-b" ng-if="(homeBlogpost != null) && (homeBlogpost != '') && (homeBlogpost != undefined)">
+            <span ng-bind-html="homeBlogpost"></span>
+        </div>
+
         <!-- ADRESS / CONTACT -->
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padder contact-infos">
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 no-padder">
                 <div class="contact-adress">
                     <h2 class="txt-orange m-b">Contact</h2>
-                    <div class="m-b-sm">
+                    <div class="m-b">
                         <div class="contact-adress-title">Adresse</div>
                         <div class="contact-adress-content">Parvis de la Préfecture<br/>95000 CERGY</div>
                     </div>
-                    <div class="m-b-sm">
+                    <div class="m-b">
                         <div class="contact-adress-title">Mail</div>
                         <div class="contact-adress-content"><a href="mailto:contact@labboite.fr">contact@labboite.fr</a></div>
                     </div>
-                    <div class="m-b-sm">
+                    <div class="m-b">
                         <div class="contact-adress-title">Réseaux sociaux</div>
                         <div class="contact-adress-content">
                             <a href="https://facebook.com/labboite"><span class="social-facebook m-t-xs m-r-xs"></span></a>

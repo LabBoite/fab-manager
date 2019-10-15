@@ -4,7 +4,7 @@
             <div class="col-xs-12 col-s-12 col-md-8 col-lg-6">
                 <div class="settings-item">
                     <div class="settings-label m-b-sm" translate>{{ 'settings.news_of_the_home_page' }}</div>
-                    <div ng-model="homeBlogpostSetting.value" class="well" medium-editor options='{"placeholder": "{{ "settings.type_your_news_here" | translate }}", "buttons": ["bold", "italic", "anchor", "header1", "header2" ]}'></div>
+                    <textarea ng-model="homeBlogpostSetting.value" class="well"></textarea>
                     <span class="help-block text-info text-xs"><i class="fa fa-lightbulb-o"></i> {{ 'settings.leave_it_empty_to_not_bring_up_any_news_on_the_home_page' | translate }}</span>
                     <button name="button" class="btn btn-profile btn-small btn-medium" ng-click="save(homeBlogpostSetting)" translate>{{ 'save' }}</button>
                 </div>

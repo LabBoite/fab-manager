@@ -360,7 +360,11 @@ angular.module('application.router', ['ui.router'])
         views: {
           'main@': {
             templateUrl: '<%= asset_path "contact/index.html.erb" %>',
+            controller: 'ContactController'
           }
+        },
+        resolve: {
+          homeBlogpostPromise: ['Setting', function (Setting) { return Setting.get({ name: 'home_blogpost' }).$promise; }]
         }
       })
 
