@@ -83,13 +83,6 @@
       </div>
     </div>
 
-    <div class="row">
-      <div class="col-lg-12 m-b">
-        <a ui-sref="app.admin.machines_edit({id: machine.id})" ng-if="isAuthorized('admin')" class="btn-profile btn-small btn-medium">{{ 'edit' | translate }}</a>
-        <a ng-click="delete(machine)" ng-if="isAuthorized('admin')" class="btn-profile btn-small btn-medium">{{ 'delete' | translate }}</a>
-      </div>
-    </div>
-
   </div>
 
 </section>
