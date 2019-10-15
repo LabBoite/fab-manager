@@ -257,7 +257,6 @@ a.modal-message:hover {
 .alert {
   border: none;
   font-size: 14px;
-  margin: 0;
 }
 
 .alert-danger {
@@ -272,6 +271,11 @@ a.modal-message:hover {
   border: none;
 }
 
+.alert-info {
+  color: #60a9b2;
+  background-color: #f2fbfc;
+  border: none;
+}
 
 
 /*-- CARD --*/
@@ -376,6 +380,7 @@ a.modal-message:hover {
     }
   }
 }
+
 
 /*-- ARTICLE --*/
 
@@ -875,6 +880,14 @@ span.resa-process {
 span.resa-success {
   color: #67CE45;
 }
+
+.block-link:hover, .fc-toolbar .fc-button:hover, .fc-toolbar .fc-button:active, .fc-toolbar .fc-button.fc-state-active { 
+  background-color: #E1580A;
+  color: #FFFFFF;
+}
+
+
+
 
 
 .app-generator {

@@ -19,7 +19,7 @@ stylesheet_1:
          .bg-yellow { background-color: #ffdd00 !important; }
          .event:hover { background-color: #cb1117; }
          .widget h3 { color: #cb1117; }
-         .block-link:hover, .fc-toolbar .fc-button:hover, .fc-toolbar .fc-button:active, .fc-toolbar .fc-button.fc-state-active { background-color: #ffdd00; }
+         .block-link:hover, .fc-toolbar .fc-button:hover, .fc-toolbar .fc-button:active, .fc-toolbar .fc-button.fc-state-active { background-color: #e1580a; }
          .carousel-control:hover, .carousel-control:focus, .carousel-caption .title a:hover { color: #ffdd00; }
          .well.well-warning { border-color: #ffdd00;  background-color: #ffdd00;  }
          .text-yellow { color: #ffdd00 !important; }

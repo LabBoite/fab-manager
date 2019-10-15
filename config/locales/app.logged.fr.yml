@@ -137,7 +137,7 @@ fr:
       trainings_reserve:
         # réserver une formation
         trainings_planning: "Planning des initiations"
-        planning_of: "Planning de la"   # suivi du nom de la formation (eg. "Planning de la formation imprimante 3d")
+        planning_of: "Planning de l'initiation "   # suivi du nom de la formation (eg. "Planning de la formation imprimante 3d")
         all_trainings: "Toutes les formations"
         cancel_my_selection: "Annuler ma sélection"
         i_ve_reserved: "J'ai réservé"
@@ -145,7 +145,7 @@ fr:
       space_reserve:
         # réserver un espace
         space_reserve:
-          planning_of_space_NAME: "Planning de l'espace {{NAME}}"  # angular interpolation
+          planning_of_space_NAME: "Planning {{NAME}}"  # angular interpolation
           i_ve_reserved: "J'ai réservé"
           i_shift: "Je déplace"
           i_change: "Je change"
