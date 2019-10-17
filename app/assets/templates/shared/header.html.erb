@@ -5,10 +5,10 @@
     <!-- Logo -->
     <div class="col-xs-12 col-sm-12 hidden-md hidden-lg">
       <div class="header-logo">
-        <a ui-sref="app.public.home" ng-click="goabout = false" class="header-logo-img">
+        <a ui-sref="app.public.home" ng-click="goabout = false" class="header-logo-img" onClick="hideMobileMenu();">
           <img ng-src="{{logo.custom_asset_file_attributes.attachment_url}}" alt="{{logo.custom_asset_file_attributes.attachment}}"/>
         </a>
-        <a ng-click="toggleNavSize($event)" class="btn btn-link visible-xs visible-sm" data-toggle="class:nav-off-screen" data-target="#nav"><i class="fa fa-bars"></i></a>
+        <a id="hamburger" onClick="showMobileMenu();">MENU</a>
       </div>
     </div>
 

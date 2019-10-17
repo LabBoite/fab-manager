@@ -65,7 +65,7 @@
 }
 
 
-/*-- Navbar --*/
+/*-- NAVBAR --*/
 
 .navbar-nav{
 	> li{
@@ -94,7 +94,7 @@
 }
 
 
-/*-- Dropdown --*/
+/*-- DROPDOWN --*/
 
 .dropdown-menu {
 	border: none;
@@ -112,6 +112,88 @@
 
 .dropdown-menu .divider {
 	margin: 5px 0;
+}
+
+
+/*-- MOBILE NAV --*/
+
+
+#hamburger {
+	cursor: pointer;
+}
+
+#mobile-menu {
+	position: absolute;
+	margin-top: 90px;
+	top:0;
+    bottom:0;
+    right:0;
+	left: -100vw;
+	z-index: 9999;
+	width: 100vw;
+	height: 1000vh;
+	overflow: hidden;
+	background: #F9F9F9;
+	transition-property: left;
+	transition-duration: 0.2s;
+	transition-timing-function: ease-in-out;
+}
+
+#mobile-menu-content {
+
+}
+
+#mobile-menu.opened {
+	left: 0;
+	transition-property: left;
+	transition-duration: 0.2s;
+	transition-timing-function: ease-in-out;
+}
+
+ul.nav-mobile {
+	list-style: none;
+	padding-top: 10px;
+	padding-bottom: 30px;
+	padding-left: 0;
+	padding-right: 0;
+	margin: 0;
+
+	li {
+		
+		a {
+			color: #777777;
+		}
+
+		a:hover {
+			color: #E1580A;
+		}
+
+		a.link-common {
+			font-weight: 700;
+		}
+
+		a.link-connect {
+			font-weight: 400;
+		}
+	}
+
+	li.nav-mobile-link {
+		margin-top: 10px;
+		margin-bottom: 10px;
+		font-size: 20px;
+	}
+
+	li.nav-mobile-section {
+		margin-top: 15px;
+		margin-bottom: 15px;
+		font-weight: 400;
+		font-size: 25px;
+		color: #E1580A;
+	}
+}
+
+ul.nav-mobile-separator {
+	border-top: #eaeaea solid 1px;
 }
 
 
@@ -607,31 +689,7 @@
 				@include translate3d(-$off-screen-nav-width, 0px, 0px);
 			}
 		}
-		+ *{
-			background-color: $body-bg;
-			@include transition-transform(0.2s ease-in-out);
-			@include transition-delay(0s);
-			@include translate3d(0px, 0px, 0px);
-			@include backface-visibility(hidden);
-			@include translate3d($off-screen-nav-width, 0px, 0px);
-			overflow: hidden;
-			position: absolute;
-			width: 100%;
-			top: 0;
-			bottom: 0;
-			left: 0;
-			right: 0;
-			z-index: 2;
-			.nav-off-screen-block {
-				display:block !important;
-				position: absolute;
-				left: 0;
-				right: 0;
-				top: 0;
-				bottom: 0;
-				z-index: 1950;
-			}
-		}
+		
 	}
 
 	.navbar + section{

@@ -21,7 +21,6 @@ Application.Controllers.controller('MainNavController', ['$scope', function ($sc
       linkText: 'home',
       linkIcon: 'home'
     },
-
     {
       state: 'app.public.events_list',
       linkText: 'events_registrations',

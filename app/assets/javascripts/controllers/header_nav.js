@@ -41,7 +41,6 @@ Application.Controllers.controller('HeaderNavController', ['$scope', function ($
       linkText: 'contact',
       linkIcon: 'rocket'
     }
-
   ];
 
   if (!Fablab.withoutPlans) {
