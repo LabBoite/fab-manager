@@ -255,25 +255,32 @@ a.modal-message:hover {
 /*-- ALERTS --*/
 
 .alert {
-  border: none;
   font-size: 15px;
+  font-weight: 600;
+  border: none;
 }
 
 .alert-danger {
   color: #991b0f;
-  background-color: #fbe9e8;
+  background-color: #f8d4d2;
   border: none;
 }
 
 .alert-warning {
   color: #ce890f;
-  background-color: #fff6e9;
+  background-color: #ffeed4;
   border: none;
 }
 
 .alert-info {
   color: #60a9b2;
-  background-color: #f2fbfc;
+  background-color: #dcf4f7;
+  border: none;
+}
+
+.alert-success {
+  color: #4fa62e;
+  background-color: #e0f6d9;
   border: none;
 }
 

@@ -37,6 +37,12 @@
   z-index: 1100;
 }
 
+.growl-item {
+  -webkit-box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.07);
+  -moz-box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.07);
+  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.07);
+}
+
 // fullcalendar
 
 .fc-view-container .fc-body tr {
