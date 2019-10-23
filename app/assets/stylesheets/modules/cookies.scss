@@ -1,30 +1,65 @@
 .cookies-consent {
   display: flex;
-  position: fixed;
-  bottom: 3rem;
-  left: 3rem;
-  width: 40rem;
-  background-color: #f5f5f5;
-  padding: 3rem;
   flex-direction: column;
+  width: 100vw;
+  bottom: 0;
+  padding-top: 20px;
+  padding-bottom: 30px;
   z-index: 100;
-  -webkit-box-shadow: 0 4px 10px 2px rgba(224,224,224,0.43);
-  -moz-box-shadow: 0 4px 10px 2px rgba(224,224,224,0.43);
-  box-shadow: 0 4px 10px 2px rgba(224,224,224,0.43);
+  position: fixed;
+  background-color: rgba(20,20,20,.95);
+  text-align: left;
+
+  .cookies-title {
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: normal;
+    color: #FFFFFF;
+  }
+
+  .cookies-infos {
+    font-size: 15px;
+    font-weight: 400;
+    color: #FFFFFF;
+  }
 
   .cookies-actions {
-    display: flex;
-    button {
-      flex-basis: 50%;
-    }
     button.decline {
-      background-color: transparent;
+      background-color: #3f3f3f;
+      color: #9b9b9b;
       border: 0;
+      padding: 7px 10px;
+      font-size: 14px;
+      font-weight: 600;
     }
+    
+    button.decline:hover {
+      background-color: #393939;
+      color: #9b9b9b;
+    }
+    
+    button.decline:focus, button.decline:active {
+      background-color: #323232;
+      color: #9b9b9b;
+    }
+
     button.accept {
-      background-color: red;
+      background-color: #E1580A;
+      color: #FFFFFF;
       border: 0;
-      font-size: 17px;
+      padding: 7px 10px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    
+    button.accept:hover {
+      background-color: #CA4F09;
+      color: #FFFFFF;
+    }
+    
+    button.accept:focus, button.accept:active {
+      background-color: #9D3D07;
+      color: #FFFFFF;
     }
   }
 }

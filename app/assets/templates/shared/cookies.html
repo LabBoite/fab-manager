@@ -1,10 +1,17 @@
 <div class="cookies-consent" ng-hide="cookiesState">
-  <p class="cookies-infos">
-    <span translate>{{ 'cookies.about_cookies' }}</span>
-    <a ng-href="{{learnMoreUrl}}" target="{{ learnMoreUrl.startsWith('http') ? '_blank' : '_self' }}" translate>{{ 'cookies.learn_more' }}</a>
-  </p>
-  <div class="cookies-actions">
-    <button class="decline" ng-click="declineCookies()" translate>{{ 'cookies.decline' }}</button>
-    <button class="accept" ng-click="acceptCookies()" translate>{{ 'cookies.accept' }}</button>
+  <div class="container">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <div class="cookies-title m-b-sm">
+        <span translate>{{ 'cookies.title_cookies' }}</span>
+      </div>
+      <p class="cookies-infos m-b-sm">
+        <span translate>{{ 'cookies.about_cookies' }}</span>
+        <a ng-href="{{learnMoreUrl}}" target="{{ learnMoreUrl.startsWith('http') ? '_blank' : '_self' }}" translate>{{ 'cookies.learn_more' }}</a>
+      </p>
+      <div class="cookies-actions">
+        <button class="decline m-r" ng-click="declineCookies()" translate>{{ 'cookies.decline' }}</button>
+        <button class="accept" ng-click="acceptCookies()" translate>{{ 'cookies.accept' }}</button>
+      </div>
+    </div>
   </div>
 </div>

@@ -8,7 +8,8 @@ fr:
 
         # cookies
         cookies:
-          about_cookies: "Ce site web utilise des cookies à des fins de mesure d'audience."
+          title_cookies: "À propos des cookies"
+          about_cookies: "Ce site internet utilise des cookies à des fins de mesure d'audience."
           learn_more: "En savoir plus"
           accept: "Accepter les cookies"
           decline: "Refuser"
