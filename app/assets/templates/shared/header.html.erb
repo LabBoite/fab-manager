@@ -2,7 +2,7 @@
 <div class="header-public">
   <div class="container">
 
-    <!-- Logo -->
+    <!-- MOBILE -->
     <div class="col-xs-12 col-sm-12 hidden-md hidden-lg">
       <div class="header-logo">
         <a ui-sref="app.public.home" ng-click="goabout = false" class="header-logo-img" onClick="hideMobileMenu();">
@@ -12,19 +12,13 @@
       </div>
     </div>
 
-    <!-- Logo -->
-    <div class="hidden-xs hidden-sm col-md-12 col-lg-12 p-n">
+    <!-- DESKTOP -->
+    <div class="hidden-xs hidden-sm col-md-12 col-lg-12">
       <div class="header-logo">
         <a ui-sref="app.public.home" ng-click="goabout = false" class="header-logo-img">
           <img ng-src="{{logo.custom_asset_file_attributes.attachment_url}}" alt="{{logo.custom_asset_file_attributes.attachment}}"/>
         </a>
       </div>
-    </div>
-
-    <!-- Menu -->
-    <div class="hidden-xs hidden-sm col-md-12 col-lg-12 p-n">
-
-      <!-- Website -->
       <ul class="nav navbar-nav navbar-webesite">  
         <li ng-repeat="navLink in navLinks" >
           <a ng-click="toggleNavSize($event)" ui-sref="{{navLink.state}}" ui-sref-active="active" class="font-bold auto" data-toggle="class:nav-off-screen" data-target="#nav">
@@ -32,8 +26,6 @@
           </a>
         </li>
       </ul>
-
-      <!-- Connection -->
       <ul class="nav navbar-nav navbar-right navbar-connect">
         <li class="dropdown user-profile-nav" ng-if="isAuthenticated()" uib-dropdown>
           <a href="#" class="dropdown-toggle" uib-dropdown-toggle>
@@ -63,16 +55,18 @@
         </li> 
         <% active_provider = AuthProvider.active %>
         <% if active_provider.providable_type == DatabaseProvider.name %>
-          <li ng-if="!isAuthenticated()">
-              <a href="#" class="font-normal" ng-click="login($event)">{{ 'sign_in' | translate }}</a>
-          </li>
+        <li ng-if="!isAuthenticated()">
+          <a href="#" class="font-normal" ng-click="signup($event)">{{ 'sign_up' | translate }}</a>
+        </li>
+        <li ng-if="!isAuthenticated()">
+          <a href="#" class="font-normal" ng-click="login($event)">{{ 'sign_in' | translate }}</a>
+        </li>
         <% else %>
-          <li ng-if="!isAuthenticated()">
-            <a href="<%= "/users/auth/#{active_provider.strategy_name}"%>" class="font-sbold  label text-md">{{ 'sign_in' | translate }}</a>
-          </li>
+        <li ng-if="!isAuthenticated()">
+          <a href="<%= "/users/auth/#{active_provider.strategy_name}"%>" class="font-sbold  label text-md">{{ 'sign_in' | translate }}</a>
+        </li>
         <% end %>
       </ul>
-    
     </div>
 
   </div>
