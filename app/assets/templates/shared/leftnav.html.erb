@@ -1,6 +1,13 @@
-<div id="mobile-menu-content">
+<div class="mobile-menu-content">
   <div class="container">
     <div class="col-xs-12 col-sm-12 col-md-hidden col-lg-hidden">
+
+      <div class="header-logo">
+        <a ui-sref="app.public.home" ng-click="goabout = false" class="header-logo-img" onClick="hideMobileMenu();">
+          <img src="/logo_head.png" alt="Logo de LabBoite"/>
+        </a>
+        <a id="hamburger" onClick="showMobileMenu();"><span class="close-menu"></span></a>
+      </div>
 
       <!-- COMMON -->
       <ul class="nav-mobile" data-ride="collapse">
@@ -24,7 +31,7 @@
       <!-- PROFILE -->
       <ul class="nav-mobile nav-mobile-separator" data-ride="collapse" ng-if="isAuthenticated()">
         <li class="nav-mobile-section">
-          <span translate>{{ 'my_profile' }}</span>
+          <span class="nav-mob-profile m-r-xs"></span> <span translate>{{ 'my_profile' }}</span>
         </li>
         <li class="nav-mobile-link">
           <a href="#" class="link-common" ui-sref="app.logged.notifications" onClick="hideMobileMenu();">
@@ -61,7 +68,7 @@
       <!-- ADMIN -->
       <ul class="nav-mobile nav-mobile-separator" ng-if="isAuthorized('admin')">
         <li class="nav-mobile-section">
-          <span translate>{{ 'admin' }}</span>
+          <span class="nav-mob-admin m-r-xs"></span> <span translate>{{ 'admin' }}</span>
         </li>
         <li class="nav-mobile-link" ng-repeat="navLink in adminNavLinks">
           <a ng-click="toggleNavSize($event)" ga ui-sref="{{navLink.state}}" class="link-common" onClick="hideMobileMenu();">

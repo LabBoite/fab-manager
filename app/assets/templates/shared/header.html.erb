@@ -6,9 +6,9 @@
     <div class="col-xs-12 col-sm-12 hidden-md hidden-lg">
       <div class="header-logo">
         <a ui-sref="app.public.home" ng-click="goabout = false" class="header-logo-img" onClick="hideMobileMenu();">
-          <img ng-src="{{logo.custom_asset_file_attributes.attachment_url}}" alt="{{logo.custom_asset_file_attributes.attachment}}"/>
+          <img src="/logo_head.png" alt="Logo de LabBoite"/>
         </a>
-        <a id="hamburger" onClick="showMobileMenu();">MENU</a>
+        <a id="hamburger" onClick="showMobileMenu();"><span class="open-menu"></span></a>
       </div>
     </div>
 
@@ -16,7 +16,7 @@
     <div class="hidden-xs hidden-sm col-md-12 col-lg-12">
       <div class="header-logo">
         <a ui-sref="app.public.home" ng-click="goabout = false" class="header-logo-img">
-          <img ng-src="{{logo.custom_asset_file_attributes.attachment_url}}" alt="{{logo.custom_asset_file_attributes.attachment}}"/>
+          <img src="/logo_head.png" alt="Logo de LabBoite"/>
         </a>
       </div>
       <ul class="nav navbar-nav navbar-webesite">  
@@ -29,7 +29,7 @@
       <ul class="nav navbar-nav navbar-right navbar-connect">
         <li class="dropdown user-profile-nav" ng-if="isAuthenticated()" uib-dropdown>
           <a href="#" class="dropdown-toggle" uib-dropdown-toggle>
-            <i class="fa fa-user"></i>
+            <span class="nav-desk-profile"></span>
           </a>
           <ul class="uib-dropdown-menu">
             <li><a href="#" ui-sref="app.logged.notifications" translate>{{ 'my_notifications' }}</a></li>
@@ -43,7 +43,7 @@
         </li>
         <li class="dropdown user-profile-nav" ng-if="isAuthorized('admin')" uib-dropdown>
           <a href="#" class="dropdown-toggle" uib-dropdown-toggle>
-            <i class="fa fa-gear"></i>
+            <span class="nav-desk-admin"></span>
           </a>
           <ul class="uib-dropdown-menu">
             <li class="" ng-repeat="navLink in adminNavLinks">

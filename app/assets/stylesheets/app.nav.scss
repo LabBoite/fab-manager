@@ -8,7 +8,7 @@
 		margin-bottom: 25px;
 		padding: 0;
 		img {
-			width: 88px;
+			width: 76px;
 			height: 40px;
 		}
 	}
@@ -24,7 +24,7 @@
 		margin-bottom: 25px;
 		padding: 0;
 		img {
-			width: 88px;
+			width: 76px;
 			height: 40px;
 		}
 	}
@@ -39,7 +39,7 @@
 		margin-top: 35px;
 		margin-bottom: 5px;
 		img {
-			width: 88px;
+			width: 76px;
 			height: 40px;
 		}
 	}
@@ -58,7 +58,7 @@
 		margin-top: 35px;
 		margin-bottom: 5px;
 		img {
-			width: 88px;
+			width: 76px;
 			height: 40px;
 		}
 	}
@@ -129,31 +129,29 @@
 }
 
 #mobile-menu {
-	position: absolute;
-	margin-top: 90px;
-	top:0;
-    bottom:0;
-    right:0;
+	position: fixed;
+	top: 0;
 	left: -100vw;
 	z-index: 9999;
 	width: 100vw;
-	height: 1000vh;
-	overflow: hidden;
+	height: 100vh;
 	background: #F9F9F9;
 	transition-property: left;
-	transition-duration: 0.2s;
-	transition-timing-function: ease-in-out;
-}
-
-#mobile-menu-content {
-
+	transition-duration: 0.5s;
+	transition-timing-function: cubic-bezier(.35,0,.1,1);
 }
 
 #mobile-menu.opened {
 	left: 0;
 	transition-property: left;
-	transition-duration: 0.2s;
-	transition-timing-function: ease-in-out;
+	transition-duration: 0.5s;
+	transition-timing-function: cubic-bezier(.35,0,.1,1);
+}
+
+.mobile-menu-content {
+	width: 100vw;
+	height: 100vh;
+	overflow: scroll;
 }
 
 ul.nav-mobile {

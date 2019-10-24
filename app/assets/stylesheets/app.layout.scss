@@ -155,6 +155,60 @@
 
 /*-- ICONS --*/
 
+.nav-desk-profile, .nav-desk-admin, .nav-mob-profile, .nav-mob-admin, .open-menu, .close-menu {
+	display: inline-block;
+	background-image: url("icons_nav.svg");
+	background-size: 150px 150px;
+	background-repeat: no-repeat;
+}
+
+.nav-desk-profile {
+	width: 30px;
+	height: 20px;
+	background-position: -0px -0px;
+}
+
+.nav-desk-profile:hover {
+	background-position: -0px -25px; 
+}
+
+.nav-desk-admin {
+	width: 28px;
+	height: 20px;
+	background-position: -35px -0px;
+}
+
+.nav-desk-admin:hover {
+	background-position: -35px -25px; 
+}
+
+.nav-mob-profile {
+	width: 25px;
+	height: 25px;
+	background-position: -0px -50px;
+}
+
+.nav-mob-admin {
+	width: 20px;
+	height: 25px;
+	background-position: -30px -50px;
+}
+
+.open-menu {
+	width: 30px;
+	height: 30px;
+	margin-top: 5px;
+	background-position: -70px -0px;
+}
+
+.close-menu {
+	width: 30px;
+	height: 30px;
+	margin-top: 5px;
+	background-position: -105px -0px;
+}
+
+
 .social-facebook, .social-twitter, .social-instagram {
 	display: inline-block;
 	background-image: url("icons_social.svg");
