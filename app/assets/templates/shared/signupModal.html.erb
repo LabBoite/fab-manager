@@ -184,6 +184,20 @@
 
           </form>
         </div>
+        <div vc-recaptcha
+             key="recaptchaSiteKey"
+             class="flex-center"
+             ng-model="user.recaptcha"
+             ng-if="recaptchaSiteKey">
+        </div>
+        <span class="info-required">
+          <span class="exponent"><i class="fa fa-asterisk" aria-hidden="true"></i></span>
+          <span translate>{{ 'field_required' }}</span>
+        </span>
+        <div ng-if="!cgu">
+            <input type="hidden" name="cgu" ng-model="user.cgu" value="true">
+        </div>
+      </form>
     </div>
     <div>
       <button class="btn-big btn-block btn-public btn-medium" ng-click="ok()" ng-disabled="signupForm.$invalid" translate>{{ 'confirm' }}</button>

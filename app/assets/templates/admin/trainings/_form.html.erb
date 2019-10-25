@@ -64,6 +64,23 @@
             <span class="help-block" ng-show="trainingForm['training[description]'].$dirty && trainingForm['training[description]'].$error.required" translate>{{ 'trainings_form.description_is_required' }}</span>
           </div>
         </div>
+    <div class="form-group m-b-lg" ng-class="{'has-error': trainingForm['training[machine_ids]'].$dirty && trainingForm['training[machine_ids]'].$invalid}">
+      <label for="training_machines" class="col-sm-2 control-label">{{ 'trainings_form.associated_machines' | translate }}</label>
+      <div class="col-sm-4">
+        <ui-select multiple ng-model="training.machine_ids" class="form-control" id="training_machines">
+          <ui-select-match>
+            <span ng-bind="$item.name"></span>
+            <input type="hidden" name="training[machine_ids][]" value="{{$item.id}}" />
+          </ui-select-match>
+          <ui-select-choices ui-disable-choice="m.disabled" repeat="m.id as m in (machines | filter: $select.search)">
+            <span ng-bind-html="m.name | highlight: $select.search"></span>
+          </ui-select-choices>
+          <ui-select-no-choice>
+            <input type="hidden" name="training[machine_ids][]" value="" />
+          </ui-select-no-choice>
+        </ui-select>
+      </div>
+    </div>
 
         <div class="form-group m-b-lg" ng-class="{'has-error': trainingForm['training[machine_ids]'].$dirty && trainingForm['training[machine_ids]'].$invalid}">
           <label for="training_machines" class="col-sm-2 control-label">{{ 'trainings_form.associated_machines' | translate }}</label>

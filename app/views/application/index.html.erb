@@ -81,6 +81,101 @@
               <section id="cookies-modal" ui-view="cookies"></section>
               <section id="content-main" ui-view="main"></section>
               <section id="footer" ui-view="footer"></section>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title><%=Setting.find_by(name: 'fablab_name').value%></title>
+
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,800,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700,300italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Loved+by+the+King' rel='stylesheet' type='text/css'>
+  <script type="text/javascript" src="https://js.stripe.com/v3/"></script>
+  <script type="text/javascript">
+      var Fablab = Fablab || {};
+
+      Fablab.withoutPlans = ('<%= Rails.application.secrets.fablab_without_plans %>' === 'true');
+      Fablab.withoutSpaces = ('<%= Rails.application.secrets.fablab_without_spaces %>' !== 'false');
+      Fablab.withoutOnlinePayment = ('<%= Rails.application.secrets.fablab_without_online_payments %>' === 'true');
+      Fablab.withoutInvoices = ('<%= Rails.application.secrets.fablab_without_invoices %>' === 'true');
+      Fablab.disqusShortname = "<%= Rails.application.secrets.disqus_shortname %>";
+      Fablab.defaultHost = "<%= Rails.application.secrets.default_host %>";
+      Fablab.gaId = "<%= Rails.application.secrets.google_analytics_id %>";
+      Fablab.superadminId = parseInt("<%= User.superadmin&.id %>", 10);
+
+      // i18n stuff
+      Fablab.locale = "<%= Rails.application.secrets.app_locale %>";
+      Fablab.moment_locale = "<%= Rails.application.secrets.moment_locale %>";
+      Fablab.summernote_locale = "<%= Rails.application.secrets.summernote_locale %>";
+      Fablab.fullcalendar_locale = "<%= Rails.application.secrets.fullcalendar_locale %>";
+      Fablab.timezone = "<%= Time.zone.tzinfo.name %>";
+      Fablab.translations = {
+        app: {
+          shared: {
+            buttons: <%= I18n.t('app.shared.buttons').to_json.html_safe %>,
+            messages: <%= I18n.t('app.shared.messages').to_json.html_safe %>
+          }
+        }
+      };
+      Fablab.weekStartingDay = <%= Date.parse(Rails.application.secrets.week_starting_day).strftime('%w') %>;
+      Fablab.d3DateFormat = "<%= Rails.application.secrets.d3_date_format %>";
+      Fablab.uibDateFormat = "<%= Rails.application.secrets.uib_date_format %>";
+      Fablab.openlabProjectsActive = <%= Rails.application.secrets.openlab_app_secret.present? %>;
+      Fablab.openlabDefault = ('<%= Rails.application.secrets.openlab_default %>' !== 'false');
+      <% if Rails.application.secrets.openlab_app_id.present? %>
+      Fablab.openlabAppId = "<%= Rails.application.secrets.openlab_app_id %>";
+      <% end %>
+      <% if RecaptchaService.recaptcha_enabled? %>
+      Fablab.recaptchaSiteKey = "<%= RecaptchaService.site_key %>";
+      <% end %>
+  </script>
+
+  <%= stylesheet_link_tag 'application', media: 'all' %>
+  <%= stylesheet_link_tag 'app.printer', media: 'print' %>
+  <% if !Stylesheet.first.nil? %>
+    <link rel="stylesheet" media="all" href="<%= stylesheet_path(Stylesheet.first.id) %>-<%=Stylesheet.first.updated_at.to_i.to_s%>.css" />
+  <% end %>
+  <base href="/"></base>
+
+  <% if CustomAsset.get_url('favicon-file') %>
+    <link rel="shortcut icon" type="image/x-icon" href="<%= CustomAsset.get_url('favicon-file') %>">
+    <link rel="shortcut icon" type="image/ico" href="<%= CustomAsset.get_url('favicon-file') %>">
+  <% end %>
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS: <%= t('app.public.projects_list.projects_list.the_fablab_projects') %>" href="<%= rss_projects_path %>.xml">
+  <link rel="alternate" type="application/rss+xml" title="RSS: <%= t('app.public.events_list.the_fablab_s_events') %>" href="<%= rss_events_path %>.xml">
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body ng-controller="ApplicationController" ng-init="setCurrentUser(<%= current_user ? current_user.to_json : 'null' %>)" ng-cloak>
+  <div growl></div>
+
+  <%= flash_messages %>
+
+  <section class="vbox">
+
+    <header class="header header-md navbar navbar-fixed-top-xs">
+      <div ui-view="header"></div>
+    </header>
+
+    <section ui-view="content">
+      <section class="hbox stretch">
+        <aside id="nav" class="aside-md bg-red hidden-print" ui-view="leftnav"></aside>
+
+        <section id="content">
+          <section class="vbox">
+            <section id="cookies-modal" ui-view="cookies">
+            </section>
+            <section id="content-main" class="scrollable" ui-view="main">
             </section>
           </section>
         </section>
