@@ -23,8 +23,10 @@
     <a class="btn-profile btn-small btn-ultralight m-l-sm" ng-href="api/members/export_reservations.xlsx" target="export-frame" ng-click="alertExport('reservations')">
       <i class="fa fa-file-excel-o"></i> {{ 'reservations' | translate }}
     </a>
+    <a role="button" class="btn-profile btn-small btn-ultralight m-l-sm" ui-sref="app.admin.members_import">
+      <i class="fa fa-cloud-upload"></i>
+    </a>
     <iframe name="export-frame" height="0" width="0" class="none"></iframe>
-    </div>
   </div>
 </div>  
 
