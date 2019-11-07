@@ -346,12 +346,62 @@ angular.module('application.router', ['ui.router'])
         }
       })
 
+      // legal
+      .state('app.public.legal', {
+        url: '/legal',
+        views: {
+          'main@': {
+            templateUrl: '<%= asset_path "shared/legal.html" %>'
+          }
+        }
+      })
+
       // place
       .state('app.public.place', {
         url: '/place',
         views: {
           'main@': {
-            templateUrl: '<%= asset_path "place/index.html.erb" %>',
+            templateUrl: '<%= asset_path "place/index.html.erb" %>'
+          }
+        }
+      })
+
+      // conditions individuals
+      .state('app.public.cond_individual', {
+        url: '/individual',
+        views: {
+          'main@': {
+            templateUrl: '<%= asset_path "conditions/individual.html.erb" %>'
+          }
+        }
+      })
+
+      // conditions association
+      .state('app.public.cond_association', {
+        url: '/association',
+        views: {
+          'main@': {
+            templateUrl: '<%= asset_path "conditions/association.html.erb" %>'
+          }
+        }
+      })
+
+      // conditions education
+      .state('app.public.cond_education', {
+        url: '/education',
+        views: {
+          'main@': {
+            templateUrl: '<%= asset_path "conditions/education.html.erb" %>'
+          }
+        }
+      })
+
+      // conditions business
+      .state('app.public.cond_business', {
+        url: '/business',
+        views: {
+          'main@': {
+            templateUrl: '<%= asset_path "conditions/business.html.erb" %>'
           }
         }
       })
