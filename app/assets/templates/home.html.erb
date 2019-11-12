@@ -33,8 +33,8 @@
             <div class="card-header-bg" style="background-image: url({{event.event_image_medium}});"></div>
           </div>
           <div class="card-body">
-            <div class="card-data" ng-hide="isOneDayEvent(event)">{{ 'from_date_to_date' | translate:{START:(event.start_date | amDateFormat:'LL'), END:(event.end_date | amDateFormat:'LL')} }}</div> 
-            <div class="card-data" ng-show="isOneDayEvent(event)">{{ 'on_the_date' | translate:{DATE:(event.start_date | amDateFormat:'LL')} }}</div> 
+            <div class="card-data m-t-xs" ng-hide="isOneDayEvent(event)">{{ 'from_date_to_date' | translate:{START:(event.start_date | amDateFormat:'LL'), END:(event.end_date | amDateFormat:'LL')} }}</div> 
+            <div class="card-data m-t-xs" ng-show="isOneDayEvent(event)">{{ 'on_the_date' | translate:{DATE:(event.start_date | amDateFormat:'LL')} }}</div> 
             <div class="card-title">{{event.title}}</div>
           </div>
         </div>  

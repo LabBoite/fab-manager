@@ -82,7 +82,7 @@ angular.module('application.router', ['ui.router'])
       .state('app.public.about', {
         url: '/about',
         views: {
-          'content@': {
+          'main@': {
             templateUrl: '<%= asset_path "shared/about.html" %>',
             controller: 'AboutController'
           }

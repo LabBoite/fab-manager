@@ -197,19 +197,25 @@ dl {
 }
 
 ul {
-  margin-left: 27px;
-  padding: 0;
   font-size: 15px;
   line-height: 140%;
 }
 
 ul.list-default {
+  margin-left: 27px;
+  padding: 0;
   color: #777777;
   list-style-image: url("list_bullet_grey.svg");
 
   li {
     margin-bottom: 5px;
   }
+}
+
+ul.list-neutral {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 
