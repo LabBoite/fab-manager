@@ -27,8 +27,11 @@
                   <img ng-src="{{ event.event_image }}" alt="" />
                 </div>
                 <div>
-                  <span class="btn btn-profile btn-small btn-white btn-file"><span class="fileinput-new">{{ 'choose_a_picture' | translate }}</span><span class="fileinput-exists" translate>{{ 'change' }}</span>
-                    <input type="file" name="event[event_image_attributes][attachment]"></span>
+                  <span class="btn btn-profile btn-small btn-white btn-file">
+                    <span class="fileinput-new">{{ 'choose_a_picture' | translate }}</span>
+                    <span class="fileinput-exists" translate>{{ 'change' }}</span>
+                    <input type="file" name="event[event_image_attributes][attachment]" />
+                  </span>
                   <a class="btn btn-danger fileinput-exists" data-dismiss="fileinput"><i class="fa fa-trash-o"></i></a>
                 </div>
               </div>
