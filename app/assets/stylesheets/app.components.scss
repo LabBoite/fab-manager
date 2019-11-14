@@ -160,6 +160,51 @@ table.conditions-individual {
 }
 
 
+/*-- PROJECTS --*/
+
+.article-step {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-top: 1px solid #EAEAEA;
+}
+
+.title-step {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  font-weight: 600;
+  color: #E1580A;
+  text-transform: uppercase;
+}
+
+.article-step {
+  img {
+    width: 100%;
+  }
+}
+
+.project-user-item {
+  display: flex;
+  flex-direction: row;
+}
+
+.project-user-name {
+  padding-top: 12px;
+}
+
+.project-user-enabled {
+  font-weight: 700;
+  font-size: 17px;
+  color: #E1580A;
+}
+
+.project-user-disabled {
+  font-weight: 700;
+  font-size: 17px;
+  color: #777777;
+}
+
+
 
 /*-- WIDGET --*/
 
