@@ -31,7 +31,7 @@
             <div ng-if="user.training_reservations.length > 0">
               <div class="event-item" ng-repeat="r in user.training_reservations | trainingReservationsFilter:'future'">
                   <div class="event-content">
-                    <div class="event-icon"><i class="fa fa-gear"></i></div>
+                    <div class="event-icon"><i class="fa fa-graduation-cap"></i></div>
                     <div class="event-data">
                       <span class="event-name">{{r.reservable.name}}</span><br/>
                       <span class="event-date">{{ r.start_at | amDateFormat:'LLL' }} - {{ r.end_at | amDateFormat:'LT' }}</span>

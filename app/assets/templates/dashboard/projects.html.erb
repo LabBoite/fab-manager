@@ -10,7 +10,10 @@
         <h1 class="txt-green m-b">{{ 'my_projects' | translate }}</h2>
 
         <div class="m-b">
-          <a class="btn-small btn-profile btn-medium" ui-sref="app.logged.projects_new" role="button" translate><i class="fa fa-plus m-r-xs"></i> {{ 'add_a_project' }}</a>
+          <a class="btn-small btn-profile btn-medium" ui-sref="app.logged.projects_new" role="button">
+            <i class="fa fa-plus m-r-xs"></i> 
+            <span translate>{{ 'add_a_project' }}</span>
+          </a>
         </div>
 
         <!-- No projects registered -->
