@@ -1,25 +1,21 @@
 <div>
+  <section class="container wrapper">
 
-  <section class="heading b-b">
-    <div class="row no-gutter">
-      <div class="col-xs-2 col-sm-2 col-md-1">
-        <section class="heading-btn">
-          <a ng-click="backPrevLocation($event)"><i class="fa fa-long-arrow-left"></i></a>
-        </section>
+    <div class="col-lg-12">
+
+      <!-- TITLE -->
+      <div class="row m-b">
+        <div class="col-lg-12">
+          <h1 class="txt-green" translate>{{ 'add_a_new_project' }}</h1>
+        </div>
       </div>
-      <div class="col-xs-10 col-sm-10 col-md-8 b-l ">
-        <section class="heading-title">
-          <h1 translate>{{ 'add_a_new_project' }}</h1>
-        </section>
-      </div>
+
+      <!-- FORM -->
+      <form role="form" name="projectForm" novalidate action="{{ actionUrl }}" ng-upload="submited(content)" upload-options-enable-rails-csrf="true" unsaved-warning-form>
+        <ng-include src="'<%= asset_path 'projects/_form.html' %>'"></ng-include>
+      </form>
+
     </div>
+
   </section>
-
-
-  <form role="form" name="projectForm" class="form-horizontal" novalidate action="{{ actionUrl }}" ng-upload="submited(content)" upload-options-enable-rails-csrf="true" unsaved-warning-form>
-
-    <ng-include src="'<%= asset_path 'projects/_form.html' %>'"></ng-include>
-
-  </form>
-
 </div>
