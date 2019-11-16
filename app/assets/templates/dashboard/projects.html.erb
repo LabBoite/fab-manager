@@ -10,17 +10,17 @@
         <h1 class="txt-green m-b">{{ 'my_projects' | translate }}</h2>
 
         <div class="m-b">
-          <a class="btn-small btn-profile btn-medium" ui-sref="app.logged.projects_new" role="button" translate>{{ 'add_a_project' }}</a>
+          <a class="btn-small btn-profile btn-medium" ui-sref="app.logged.projects_new" role="button" translate><i class="fa fa-plus m-r-xs"></i> {{ 'add_a_project' }}</a>
         </div>
 
         <!-- No projects registered -->
-        <div ng-if="user.all_projects.length == 0" translate>{{ 'you_dont_have_any_projects' }}</div>
+        <div class="txt-neutral" ng-if="user.all_projects.length == 0" translate>{{ 'you_dont_have_any_projects' }}</div>
 
         <!-- Project item -->
         <div ng-if="user.all_projects.length > 0">
           <div class="event-item" ng-repeat="project in user.all_projects">
             <div class="event-content">
-              <div class="event-icon"><i class="fa fa-gear"></i></div>
+              <div class="event-icon"><i class="fa fa-cube"></i></div>
               <div class="event-data">
                 <span class="event-name"><a class="link-profile" ui-sref="app.public.projects_show({id:project.slug})">{{project.name}}</a></span><br/>
               </div>

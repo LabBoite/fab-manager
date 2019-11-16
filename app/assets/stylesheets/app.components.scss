@@ -498,19 +498,26 @@ a.modal-message:hover {
   .card-header {
     width: 100%;
     display: block;
-    height: 180px;
     background-size: cover;
     background-position: center;
     border: none;
     cursor: pointer;
     padding: 0;
 
-    .card-header-bg {
+    .card-header-bg-m {
       background-size: cover;
       background-repeat: no-repeat;
       background-position: top center;
       width: 100%;
       height: 180px;
+    }
+
+    .card-header-bg-l {
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: top center;
+      width: 100%;
+      height: 210px;
     }
   }
 
