@@ -13,7 +13,10 @@
 <!-- ADD AUTHENTIFICATION PROVIDER -->
 <div class="row m-b">
   <div class="col-md-12">
-    <button type="button" class="btn-profile btn-small btn-medium" ui-sref="app.admin.authentication_new" translate>{{ 'add_a_new_authentication_provider' }}</button>
+    <button type="button" class="btn-profile btn-small btn-medium" ui-sref="app.admin.authentication_new">
+      <i class="fa fa-plus m-r-xs"></i>
+      {{ 'add_a_new_authentication_provider' | translate }}
+    </button>
   </div>
 </div>
 
