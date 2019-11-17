@@ -94,6 +94,11 @@ Application.Controllers.controller('HeaderNavController', ['$scope', function ($
       linkIcon: 'bar-chart-o'
     },
     {
+      state: 'app.admin.pricing',
+      linkText: 'subscriptions_and_prices',
+      linkIcon: 'money'
+    },
+    {
       state: 'app.admin.settings',
       linkText: 'customization',
       linkIcon: 'gear'
