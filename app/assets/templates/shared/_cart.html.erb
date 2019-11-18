@@ -15,48 +15,11 @@
       <div class="p-l">
         <span class="resa-slot-data resa-process">{{ 'cart.datetime_to_time' | translate:{START_DATETIME:(slot.start | amDateFormat:'LLLL'), END_TIME:(slot.end | amDateFormat:'LT') } }}</span>
       </div>
-
-      <!-- HIDDEN
-      <div class="font-sbold">{{ 'cart.datetime_to_time' | translate:{START_DATETIME:(slot.start | amDateFormat:'LLLL'), END_TIME:(slot.end | amDateFormat:'LT') } }}</div>
-      <div ng-show="isAdmin()" class="m-t">
-        <label for="offerSlot" class="control-label m-r" translate>{{ 'cart.offer_this_slot' }}</label>
-        <input bs-switch
-                  ng-model="slot.offered"
-                  id="offerSlot"
-                  type="checkbox"
-                  class="form-control"
-                  switch-on-text="{{ 'yes' | translate}}"
-                  switch-off-text="{{ 'no' | translate}}"
-                  switch-animate="true"
-                  switch-readonly="{{slot.isValid}}"/>
-      </div>-->
-
       <div>
         <button class="btn btn-small btn-block btn-public btn-medium" ng-click="validateSlot(slot)" ng-if="!slot.isValid" translate>{{ 'cart.confirm_this_slot' }}</button>
         <a class="btn btn-small btn-block btn-neutral btn-dark" href="#" ng-click="removeSlot(slot, $index, $event)" ng-if="slot.isValid" translate>{{ 'cart.remove_this_slot' }}</a>
       </div>
     </div>
-
-    <!-- HIDDEN
-    <coupon show="isSlotsValid() && (!modePlans || selectedPlan)" coupon="coupon.applied" total="totalNoCoupon" user-id="{{user.id}}"></coupon>
-    <div ng-hide="fablabWithoutPlans">
-      <div ng-if="isSlotsValid() && !user.subscribed_plan" ng-show="!modePlans">
-        <p class="font-sbold text-base l-h-2x" translate>{{ 'cart.to_benefit_from_attractive_prices' }}</p>
-        <div><button class="btn btn-warning-full rounded btn-block text-xs" ng-click="showPlans()" translate>{{ 'cart.view_our_subscriptions' }}</button></div>
-        <p class="font-bold text-base text-u-c text-center m-b-xs" translate>{{ 'cart.or' }}</p>
-      </div>
-      <div ng-if="selectedPlan">
-        <div class="m-t-md m-b-sm text-base">{{ 'cart.you_ve_just_selected_a_' | translate }} <br> <span class="font-sbold" translate>{{ 'cart._subscription' }}</span> :</div>
-        <div class="panel panel-default bg-light m-n">
-          <div class="panel-body m-b-md">
-            <div class="font-sbold text-u-c">{{selectedPlan | humanReadablePlanName }}</div>
-            <div class="text-base">{{ 'cart.cost_of_the_subscription' | translate }} <span class="text-blue">{{selectedPlan.amount | currency}}</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    -->
-
   </div>
 
   <!-- Confirm -->
@@ -79,21 +42,6 @@
         <span class="resa-slot-data resa-success">{{ 'cart.datetime_to_time' | translate:{START_DATETIME:(paidSlot.start | amDateFormat:'LLLL'), END_TIME:(paidSlot.end | amDateFormat:'LT') } }}</span>
       </div>
     </div>
-
-      <!-- HIDDEN
-      <div ng-if="selectedPlan">
-        <div class="m-t-md m-b-sm text-base">{{ 'cart.you_have_settled_a_' | translate }} <br> <span class="font-sbold" translate>{{ 'cart._subscription' }}</span> :</div>
-        <div class="well well-warning m-t-sm">
-          <i class="font-sbold  text-u-c">{{selectedPlan | humanReadablePlanName }}</i>
-          <div class="font-sbold">{{ 'cart.cost_of_the_subscription' | translate }} {{selectedPlan.amount | currency}}</div>
-        </div>
-      </div>
-      <div class="m-t-md font-sbold">{{ 'cart.total_' | translate }} {{amountPaid | currency}}</div>
-      <div class="alert alert-success" ng-if="user.subscribed_plan">{{ 'cart.thank_you_your_payment_has_been_successfully_registered' | translate }}<br>
-        {{ 'cart.your_invoice_will_be_available_soon_from_your_' | translate }} <a ui-sref="app.logged.dashboard.invoices" translate>{{ 'cart.dashboard' }}</a>
-      </div>
-      -->
-
   </div>
 </div>
 
@@ -124,31 +72,6 @@
       </div>
     </div>
   </div>
-
-    <!-- HIDDEN
-    <div ng-if="events.placable && (events.modifiable.tags.length > 0 || events.placable.tags.length > 0)" ng-class="{'panel panel-danger bg-red': tagMissmatch()}">
-      <div class="panel-body">
-        <div id="fromTags">
-          {{ 'cart.tags_of_the_original_slot' | translate }}<br/>
-          <span ng-repeat="tag in events.modifiable.tags">
-            <span class='label label-success text-white' title="{{tag.name}}">{{tag.name}}</span>
-          </span>
-          <span ng-show="events.modifiable.tags.length == 0">
-            <span class='label label-warning text-white' title="{{ 'cart.none' | translate }}" translate>{{ 'cart.none' }}</span>
-          </span>
-        </div><br/>
-        <div id="toTags">
-          {{ 'cart.tags_of_the_destination_slot' | translate }}<br/>
-          <span ng-repeat="tag in events.placable.tags">
-            <span class='label label-success text-white' title="{{tag.name}}">{{tag.name}}</span>
-          </span>
-          <span ng-show="events.placable.tags.length == 0">
-            <span class='label label-warning text-white' title="{{ 'cart.none' | translate }}" translate>{{ 'cart.none' }}</span>
-          </span>
-        </div>
-      </div>
-    </div>
-    -->
 
   <!-- Confirm -->
   <div class="panel-footer no-padder" ng-if="events.modifiable && events.placable">

@@ -14,7 +14,7 @@
           <div class="col-sm-12 col-md-12">
   
             <!-- ABUSES -->
-            <span class="message-default" translate>{{ 'manage_abuses.no_reports' }}</span>
+            <span class="message-default" ng-show="abuses.length === 0" translate>{{ 'manage_abuses.no_reports' }}</span>
             <ul ng-show="abuses.length > 0">
               <li class="abuse" ng-repeat="abuse in abuses">
                 <div class="signaled">

@@ -22,17 +22,12 @@
           <div class="m-t-sm">
             <input type="hidden" name="user[profile_attributes][user_avatar_attributes][id]" ng-value="user.profile.user_avatar.id">
             <input type="hidden" name="user[profile_attributes][user_avatar_attributes][_destroy]" ng-value="true" ng-if="user.profile.user_avatar._destory">
-            <span class="btn btn-profile btn-small btn-white btn-file"
-                  ng-click="user.profile.user_avatar._destory = false"
-                  ng-hide="preventField['profile.avatar'] && user.profile.user_avatar.attachment_url && !userForm['user[profile_attributes][user_avatar_attributes]'].$dirty">
-                <span class="fileinput-new" translate>{{ 'add_an_avatar' }}</span>
+            <span class="btn btn-profile btn-small btn-white btn-file" ng-click="user.profile.user_avatar._destory = false" ng-hide="preventField['profile.avatar'] && user.profile.user_avatar.attachment_url && !userForm['user[profile_attributes][user_avatar_attributes]'].$dirty">
+                <span class="fileinput-new" translate><i class="fa fa-file-image-o m-r-xs"></i> {{ 'add_an_avatar' }}</span>
                 <span class="fileinput-exists" translate>{{ 'change' }}</span>
                 <input type="file" name="user[profile_attributes][user_avatar_attributes][attachment]">
             </span>
-            <button class="btn btn-danger fileinput-exists"
-                    data-dismiss="fileinput"
-                    ng-click="user.profile.user_avatar._destory = true"
-                    ng-hide="preventField['profile.avatar'] && user.profile.user_avatar.attachment_url && !userForm['user[profile_attributes][user_avatar_attributes]'].$dirty">
+            <button class="btn btn-danger fileinput-exists" data-dismiss="fileinput" ng-click="user.profile.user_avatar._destory = true" ng-hide="preventField['profile.avatar'] && user.profile.user_avatar.attachment_url && !userForm['user[profile_attributes][user_avatar_attributes]'].$dirty">
                 <i class="fa fa-trash-o"></i>
             </button>
           </div>
