@@ -71,9 +71,9 @@ fr:
         accepted_your_invitation_to_take_part_in_the_project: "a accepté votre demande de collaboration sur votre projet :"
 
     notify_user_training_valid:
-      subject: "Votre formation a été validée"
+      subject: "Votre initiation a été validée"
       body:
-        your_training: "Votre formation"
+        your_training: "Votre initiation"
         has_been_validated: "a bien été validée"
 
     notify_member_subscribed_plan:
@@ -261,7 +261,7 @@ fr:
         statistics_machine: "des statistiques d'heures machines"
         statistics_project: "des statistiques sur les projets"
         statistics_subscription: "des statistiques d'abonnements"
-        statistics_training: "des statistiques sur les formations"
+        statistics_training: "des statistiques sur les initiations"
         statistics_space: "des statistiques sur les espaces"
         users_members: "de la liste des membres"
         users_subscriptions: "de la liste des abonnements"

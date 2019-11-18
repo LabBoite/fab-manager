@@ -50,7 +50,7 @@ fr:
         # menu de gauche (partie admin)
         trainings_monitoring: "Initiations"
         trainings_authorisation: "Habilitation"
-        select_a_training: "Sélectionnez une formation"
+        select_a_training: "Sélectionnez une initiation"
         manage_the_calendar: "Calendrier"
         manage_the_users: "Utilisateurs"
         manage_the_invoices: "Factures"
@@ -241,7 +241,7 @@ fr:
 
       trainings_list:
         # liste des formations
-        the_trainings: "Les formations"
+        the_trainings: "Les initiations"
 
       training_show:
         # détails d'une formation
@@ -250,9 +250,9 @@ fr:
         all_the_events: "toute la programmation"
         all_the_trainings: "toutes les initiations"
         book_this_training: "Je réserve"
-        do_you_really_want_to_delete_this_training: "Êtes-vous sur de vouloir supprimer cette formation ?"
+        do_you_really_want_to_delete_this_training: "Êtes-vous sur de vouloir supprimer cette initiation ?"
         unauthorized_operation: "Opération non autorisée"
-        the_training_cant_be_deleted_because_it_is_already_reserved_by_some_users: "La formation ne peut pas être supprimée car elle a déjà été réservée par des utilisateurs."
+        the_training_cant_be_deleted_because_it_is_already_reserved_by_some_users: "L'initiation ne peut pas être supprimée car elle a déjà été réservée par des utilisateurs."
 
 
       plans:
@@ -323,7 +323,7 @@ fr:
           calendar: "Calendrier"
           show_unavailables: "Afficher les créneaux non disponibles"
           filter_calendar: "Filtrer le calendrier"
-          trainings: "Formations"
+          trainings: "Initiations"
           machines: "Machines"
           spaces: "Espaces"
           events: "Évènements"

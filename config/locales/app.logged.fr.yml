@@ -68,8 +68,8 @@ fr:
             used_for_profile: "Cette donnée sera seulement affichée sur votre profil"
             used_for_pricing_stats: "Cette donné sera utilisée pour déterminer les prix auxquels vous avez droit, ainsi qu'a des fins statistiques"
             public_profile: "Vous aurez un profil public et les autres utilisateurs pourront vous associer à leurs projets"
-            trainings: "Formations"
-            no_trainings: "Aucune formation"
+            trainings: "Initiations"
+            no_trainings: "Aucune initiation"
             subscription: "Abonnement"
             group: "Groupe"
             or: "ou"
@@ -139,7 +139,7 @@ fr:
         # réserver une formation
         trainings_planning: "Planning des initiations"
         planning_of: "Planning de l'initiation "   # suivi du nom de la formation (eg. "Planning de la formation imprimante 3d")
-        all_trainings: "Toutes les formations"
+        all_trainings: "Toutes les initiations"
         cancel_my_selection: "Annuler ma sélection"
         i_ve_reserved: "J'ai réservé"
 

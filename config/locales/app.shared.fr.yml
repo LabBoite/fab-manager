@@ -23,8 +23,8 @@ fr:
         # traductions variées utilisées à plusieurs reprises dans l'application
         group: "Groupe"
         subscription: "Abonnement"
-        trainings: "Formations"
-        no_trainings: "Aucune formation"
+        trainings: "Initiations"
+        no_trainings: "Aucune initiation"
         confirmation_required: "Confirmation requise"
         description: "Description"
         machines: "Machines"
@@ -232,7 +232,7 @@ fr:
           on_the_subscriptions_page_the_most_prominent_subscriptions_will_be_placed_at_the_top_of_the_list: "Sur la page des abonnements, les abonnements les plus importants seront placés en haut de la liste."
           an_evelated_number_means_a_higher_prominence: "Un nombre plus élevé traduit une importance plus élevée."
           rolling_subscription: "Abonnement glissant ?"
-          a_rolling_subscription_will_begin_the_day_of_the_first_training: "Un abonnement glissant prendra effet seulement le jour de la première formation."
+          a_rolling_subscription_will_begin_the_day_of_the_first_training: "Un abonnement glissant prendra effet seulement le jour de la première initiation."
           otherwise_it_will_begin_as_soon_as_it_is_bought: "Dans le cas contraire, il prendra effet dès sa date d'achat."
           information_sheet: "Fiche descriptive"
           attach_an_information_sheet: "Joindre une fiche descriptive"
@@ -253,12 +253,12 @@ fr:
           add_an_illustration: "Ajouter un visuel"
           description: "Description"
           description_is_required: "La description est requise."
-          add_a_new_training: "Ajouter une nouvelle formation"
-          validate_your_training: "Valider votre formation"
+          add_a_new_training: "Ajouter une nouvelle initiation"
+          validate_your_training: "Valider votre initiation"
           associated_machines: "Machines associées"
           number_of_tickets: "Nombre de places"
-          public_page: "Afficher dans la liste de formation"
-          disable_training: "Désactiver la formation"
+          public_page: "Afficher dans la liste des initiations"
+          disable_training: "Désactiver l'initiation"
 
       user_admin:
         # formulaire partiel d'édition/création utilisateur (vue admin)
@@ -266,7 +266,7 @@ fr:
         warning_incomplete_user_profile_probably_imported_from_sso: "Attention : Le profil de cet utilisateur est incomplet. Comme l'authentification \"single sign-on\" (SSO) est actuellement activée, il s'agit probablement d'un compte importé mais non fusionné. N'y apportez aucune modification sauf si vous savez ce que vous faites."
         group: "Groupe"
         group_is_required: "Le groupe est requis."
-        trainings: "Formations"
+        trainings: "Initiations"
 
       authentication:
         # formulaire partiel d'édition/création d'un fournisseur d'authentification (SSO)
@@ -313,14 +313,14 @@ fr:
       request_training_modal:
         # fenêtre présentant l'obligation de participer à une formation avant de réserver une machine
         to_book_the_MACHINE_you_must_have_completed_the_TRAINING: "Pour réserver la machine \"{{MACHINE}}\" vous devez avoir suivi la {{TRAINING}}."  # angular interpolation
-        register_for_the_training: "S'inscrire à la formation"
+        register_for_the_training: "S'inscrire à l'initiation"
         i_dont_want_to_register_now: "Je ne souhaite pas m'inscrire pour l'instant"
 
       training_reservation_modal:
         # fenêtre présentant l'obligation d'attendre la validation de la formation pour réserver une machine
         machine_reservation: "Réservation machine"
-        you_must_wait_for_your_training_is_being_validated_by_the_fablab_team_to_book_this_machine: "Il faut attendre que votre formation soit validée par l'équipe du Fab Lab pour réserver cette machine."
-        your_training_will_occur_: "Votre formation aura lieu le"
+        you_must_wait_for_your_training_is_being_validated_by_the_fablab_team_to_book_this_machine: "Il faut attendre que votre initiation soit validée par l'équipe du Fab Lab pour réserver cette machine."
+        your_training_will_occur_: "Votre initiation aura lieu le"
 
       public_profile:
         # profil publique d'un utilisateur
