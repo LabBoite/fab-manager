@@ -34,7 +34,7 @@
         </div>
 
         <!-- FILES -->
-        <section class="panel" ng-if="event.event_files_attributes">
+        <section class="panel" ng-if="event.event_files_attributes.length > 0">
           <div class="panel-heading">
             <div class="panel-title">
               <span class="badge bg-warning pull-right">{{event.event_files_attributes.length}}</span>
@@ -61,7 +61,6 @@
 
             <!-- Age -->
             <div class="m-b-sm" ng-if="event.age_range">
-              <div class="panel-data-title">{{ 'dates' | translate }}</div>
               <div>{{event.age_range.name}}</div>
             </div>
 
