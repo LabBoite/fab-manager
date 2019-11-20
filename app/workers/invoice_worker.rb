@@ -10,15 +10,16 @@ class InvoiceWorker
     File.binwrite(invoice.file, pdf)
 
     # notify user + send invoice by mail
-    if invoice.is_a?(Avoir)
-      NotificationCenter.call type: 'notify_user_when_avoir_ready',
-                              receiver: invoice.user,
-                              attached_object: invoice
-    else
-      NotificationCenter.call type: 'notify_user_when_invoice_ready',
-                              receiver: invoice.user,
-                              attached_object: invoice
-    end
+    # Invoice sending desactivated by putting the following condition in comment
+    # if invoice.is_a?(Avoir)
+    #   NotificationCenter.call type: 'notify_user_when_avoir_ready',
+    #                           receiver: invoice.user,
+    #                           attached_object: invoice
+    # else
+    #   NotificationCenter.call type: 'notify_user_when_invoice_ready',
+    #                           receiver: invoice.user,
+    #                           attached_object: invoice
+    # end
   end
 
 end
