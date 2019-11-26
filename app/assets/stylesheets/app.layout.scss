@@ -349,7 +349,7 @@
 	flex-direction: column;
 	justify-content: flex-end;
 	background: #CCCCCC;
-	height: 380px;
+	height: 400px;
 }
 
 .hero-content {
@@ -363,14 +363,18 @@
 	color: #FFFFFF;
 }
 
+.hero-global-poster {
+	width: 100vw;
+	height: 400px;
+}
+
 .poster {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
-	padding: 15px;
 	margin-bottom: 30px;
 	background: #CCCCCC;
-	height: 350px;
+	height: 400px;
 	box-shadow: none;
 	-moz-box-shadow: none;
 	-webkit-box-shadow: none;
@@ -378,8 +382,10 @@
 
 	.poster-title {
 		font-size: 19px;
-		line-height: 120%;
+		line-height: 130%;
 		color: #FFFFFF;
+		background: rgba(225,88,10,.9);
+		padding: 13px;
 	}
 }
 

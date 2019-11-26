@@ -117,5 +117,13 @@
     raise LoadError, "fullcalendar/dist/lang/#{Rails.application.secrets.fullcalendar_locale}.js does not exists"
   end
 %>
+  <script type="text/javascript">
+    var showMobileMenu = function() {
+      $( "#mobile-menu" ).toggleClass( "opened" );
+    };
+    var hideMobileMenu = function() {
+      $( "#mobile-menu" ).removeClass( "opened" );
+    };
+  </script>
 </body>
 </html>
