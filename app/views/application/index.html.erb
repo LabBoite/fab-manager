@@ -55,10 +55,7 @@
     <link rel="stylesheet" media="all" href="<%= stylesheet_path(Stylesheet.first.id) %>-<%=Stylesheet.first.updated_at.to_i.to_s%>.css" />
   <% end %>
   <base href="/"></base>
-  <% if CustomAsset.get_url('favicon-file') %>
-    <link rel="shortcut icon" type="image/x-icon" href="<%= CustomAsset.get_url('favicon-file') %>">
-    <link rel="shortcut icon" type="image/ico" href="<%= CustomAsset.get_url('favicon-file') %>">
-  <% end %>
+  <link rel="shortcut icon" type="TYPE_MIME" href="img/favicon.ico">
   <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="RSS: <%= t('app.public.projects_list.projects_list.the_fablab_projects') %>" href="<%= rss_projects_path %>.xml">
   <link rel="alternate" type="application/rss+xml" title="RSS: <%= t('app.public.events_list.the_fablab_s_events') %>" href="<%= rss_events_path %>.xml">
