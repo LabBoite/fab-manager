@@ -100,6 +100,7 @@ p {
 }
 
 a {
+  color: #E1580A;
   font-weight: 600;
   text-decoration: none;
   cursor: pointer;
@@ -107,6 +108,7 @@ a {
 
 a:visited, a:focus, a:hover {
   text-decoration: none;
+  color: #cc4f00;
 }
 
 a.link-public {
