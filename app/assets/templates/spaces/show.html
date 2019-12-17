@@ -46,7 +46,7 @@
                     </div>
                     <!-- Reservation button -->
                     <div class="panel-footer no-padder ng-scope">
-                        <a ng-click="reserveSpace($event)" class="button-public link-button link-button-block" ng-if="!isAuthorized('admin')" translate>{{ 'space_show.book_this_space' }}</a>
+                        <a ng-click="reserveSpace($event)" class="button-public link-button link-button-block" ng-hide="space.disabled" translate>{{ 'space_show.book_this_space' }}</a>
                     </div>
                 </div>
 
