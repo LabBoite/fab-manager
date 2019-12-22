@@ -46,6 +46,6 @@ class Stylesheet < ActiveRecord::Base
   end
 
   def self.css
-    ""
+    ".bg-red { background-color: #cb1117; }"
   end
 end
