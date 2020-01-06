@@ -447,7 +447,6 @@ a.modal-message:hover {
 .card {
   position: relative;
   display: block;
-  margin-bottom: 30px;
   background-color: #F9F9F9;
   border: none;
   border-radius: 0;
@@ -456,7 +455,7 @@ a.modal-message:hover {
 
   .card-title {
     font-weight: 800;
-    font-size: 16px;
+    font-size: 17px;
     letter-spacing: normal;
     line-height: 120%;
     color: #E1580A;
@@ -477,6 +476,14 @@ a.modal-message:hover {
     line-height: 120%;
     color: #E1580A;
     margin-top: 5px;
+  }
+
+  .card-pretitle {
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: normal;
+    line-height: 120%;
+    color: #E1580A;
   }
 
   .card-data {
