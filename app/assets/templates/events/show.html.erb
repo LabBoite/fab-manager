@@ -111,52 +111,29 @@
                   <span class="event-subscribe" translate>{{ 'to_subscribe' }}</span>
                 </div>
                 <div>
-                    <select ng-model="reserve.nbReservePlaces" ng-change="changeNbPlaces()" ng-options="i for i in reserve.nbPlaces.normal"></select> 
-                    {{ 'ticket' | translate:{NUMBER:reserve.nbReservePlaces}:"messageformat" }}
-
-                    <!-- gift HIDDEN
-                    <div ng-show="currentUser.role == 'admin'" class="m-t">
-                      <label for="offerSlot" class="control-label m-r" translate>{{ 'make_a_gift_of_this_reservation' }}</label>
-                      <input bs-switch
-                          ng-model="event.offered"
-                          id="offerSlot"
-                          type="checkbox"
-                          class="form-control"
-                          switch-on-text="{{ 'yes' | translate }}"
-                          switch-off-text="{{ 'no' | translate }}"
-                          switch-animate="true"
-                          switch-readonly="{{trainingIsValid}}"
-                          ng-change="computeEventAmount()"/>
-                    </div>
-                    -->
+                  <select ng-model="reserve.nbReservePlaces" ng-change="changeNbPlaces()" ng-options="i for i in reserve.nbPlaces.normal"></select> 
+                  {{ 'ticket' | translate:{NUMBER:reserve.nbReservePlaces}:"messageformat" }}                    
                 </div>
               </div>
             </div>
 
             <!-- Success -->
-            <div ng-show="reserve.toReserve">
-              <div class="p-l"> 
-                <div ng-if="reserveSuccess">
-                  <div class="alert alert-success">
-                    {{ 'thank_you_your_payment_has_been_successfully_registered' | translate }}<br>{{ 'you_can_find_your_reservation_s_details_on_your_' | translate }} <a ui-sref="app.logged.dashboard.invoices" translate>{{ 'dashboard' }}</a>
-                  </div>
+            <div class="p-l"> 
+              <div ng-if="reserveSuccess">
+                <div class="alert alert-success">
+                  {{ 'thank_you_your_payment_has_been_successfully_registered' | translate }}<br>{{ 'you_can_find_your_reservation_s_details_on_your_' | translate }} <a ui-sref="app.logged.dashboard.invoices" translate>{{ 'dashboard' }}</a>
                 </div>
-                <div class="event-ticket" ng-if="reservations && !reserve.toReserve" ng-repeat="reservation in reservations">
-                  <div class="event-ticket-icon">
-                    <i class="fa fa-ticket m-r"></i>
-                  </div>
-                  <div class="event-ticket-content">
-                    <span class="event-ticket-msg">Vous avez réservé <span class="font-sbold" ng-if="reservation.nb_reserve_places > 0">{{reservation.nb_reserve_places}} {{ 'ticket' | translate:{NUMBER:reservation.nb_reserve_places}:"messageformat" }}</span></span><br/>
-                    <span class="event-ticket-date">{{ 'you_booked_DATE' | translate:{DATE:(reservation.created_at | amDateFormat:'L LT')} }}</span>
-                  </div>
-                  <!--
-                  <div class="font-sbold text-sm" ng-repeat="ticket in reservation.tickets">
-                    {{ticket.event_price_category.price_category.name}} : {{ticket.booked}} {{ 'ticket' | translate:{NUMBER:ticket.booked}:"messageformat" }}
-                  </div>
-                  -->
-                  <div class="clear" ng-if="event.recurrence_events.length > 0 && reservationCanModify(reservation)">
-                    <a class="pull-right m-t-xs text-u-l" href="#" ng-click="modifyReservation(reservation, $event)" translate>{{ 'change' }}</a>
-                  </div>
+              </div>
+              <div class="event-ticket" ng-if="reservations && !reserve.toReserve" ng-repeat="reservation in reservations">
+                <div class="event-ticket-icon">
+                  <i class="fa fa-ticket m-r"></i>
+                </div>
+                <div class="event-ticket-content">
+                  <span class="event-ticket-msg">Vous avez réservé <span class="font-sbold" ng-if="reservation.nb_reserve_places > 0">{{reservation.nb_reserve_places}} {{ 'ticket' | translate:{NUMBER:reservation.nb_reserve_places}:"messageformat" }}</span></span><br/>
+                  <span class="event-ticket-date">{{ 'you_booked_DATE' | translate:{DATE:(reservation.created_at | amDateFormat:'L LT')} }}</span>
+                </div>
+                <div class="clear" ng-if="event.recurrence_events.length > 0 && reservationCanModify(reservation)">
+                  <a class="pull-right m-t-xs text-u-l" href="#" ng-click="modifyReservation(reservation, $event)" translate>{{ 'change' }}</a>
                 </div>
               </div>
             </div>
