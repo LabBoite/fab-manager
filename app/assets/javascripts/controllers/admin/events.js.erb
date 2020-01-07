@@ -62,7 +62,7 @@ class EventsController {
           angular.forEach(v, function (err) { $scope.alerts.push({ msg: k + ': ' + err, type: 'danger' }); });
         });
       } else {
-        $state.go('app.public.events_list');
+        $state.go('app.admin.events');
       }
     };
 

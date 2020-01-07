@@ -56,7 +56,7 @@
       </div>
 
       <!-- PROJECT LIST -->
-      <div class="row" ng-repeat="project in (trainings.projects/3 | array)">
+      <div class="row" ng-repeat="project in (projects.length/3 | array)">
         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4" ng-repeat="project in projects.slice(3*$index, 3*$index + 3)" ng-click="showProject(project)">
           <div class="card m-b card-project">
             <div class="card-header" style="background-image: url('/thumbnail_blank.png'); background-size: cover; background-repeat: no-repeat; background-position: center;">
