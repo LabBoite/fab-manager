@@ -21,7 +21,7 @@
           <table border="0" cellpadding="20" cellspacing="0" width="600" id="templateContainer" style="width:600px; border:1px solid #dddddd; background-color:#fff; -webkit-border-radius:2px; -moz-border-radius:2px; -ms-border-radius:2px; -o-border-radius:2px; border-radius:2px;">
             <tr>
               <td align="center">
-                <a href="<%= root_url %>"><img src="<%= root_url + image_url('fablab-logo.png') %>" alt="<%=fablab_name%>" width="140px;"></a>
+                <a href="<%= root_url %>"><img src="<%= root_url + 'logo_head.png' %>" alt="LabBoite" width="140px;"></a>
               </td>
             </tr>
             <tr>
@@ -34,11 +34,7 @@
             </tr>
             <tr>
               <td>
-                <p>
-                  <%= _t(".see_you_later", {GENDER:Setting.find_by(name: 'name_genre').value})
-                      # messageFormat
-                  %> <a href="<%= root_url %>" style="color:<%=primary_color%>"> <%=fablab_name%></a>.</p>
-                <p><%= t(".sincerely") %><br><%= t(".signature") %></p>
+                <p><%= t(".see_you_later") %><br><%= t(".signature") %></p>
               </td>
             </tr>
             <tr>

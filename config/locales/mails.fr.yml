@@ -1,9 +1,9 @@
 fr:
   layouts:
     notifications_mailer:
-      see_you_later: "A très bientôt sur {GENDER, select, male{le} female{la} neutral{} other{les}}"  # messageFormat interpolation
+      see_you_later: "A très bientôt"  # messageFormat interpolation
       sincerely: "Cordialement,"
-      signature: "L'équipe du Fab Lab."
+      signature: "L'équipe LabBoîte."
       do_not_reply: "Merci de ne pas répondre directement à cet email."
 
   users_mailer:
