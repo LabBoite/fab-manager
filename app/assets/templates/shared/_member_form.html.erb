@@ -160,7 +160,29 @@
         <span class="help-block" ng-show="userForm['user[password_confirmation]'].$error.match" translate>{{ 'confirmation_mismatch_with_password' }}</span>
       </div>
 
-      <div class="form-group" ng-if="user.invoicing_profile.organization" ng-class="{'has-error': userForm['user[invoicing_profile_attributes][organization_attributes][name]'].$dirty && userForm['user[invoicing_profile_attributes][organization_attributes][name]'].$invalid}">
+      <div class="form-group">
+        <label for="user_interest" class="help-cursor" title="{{ 'used_for_profile' | translate }}" translate>{{ 'interests' }}</label>
+        <textarea name="user[profile_attributes][interest]"
+                  ng-model="user.profile.interest"
+                  rows="5"
+                  class="form-control"
+                  id="user_interest"
+                  placeholder=""
+                  ng-disabled="preventField['profile.interest'] && user.profile.interest && !userForm['user[profile_attributes][interest]'].$dirty"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="user_software_mastered" class="help-cursor" title="{{ 'used_for_profile' | translate }}" translate>{{ 'CAD_softwares_mastered' }}</label>
+        <textarea name="user[profile_attributes][software_mastered]"
+                  ng-model="user.profile.software_mastered"
+                  rows="5"
+                  class="form-control"
+                  id="user_software_mastered"
+                  placeholder=""
+                  ng-disabled="preventField['profile.software_mastered'] && user.profile.software_mastered && !userForm['user[profile_attributes][software_mastered]'].$dirty"></textarea>
+      </div>
+
+      <!--<div class="form-group" ng-if="user.invoicing_profile.organization" ng-class="{'has-error': userForm['user[invoicing_profile_attributes][organization_attributes][name]'].$dirty && userForm['user[invoicing_profile_attributes][organization_attributes][name]'].$invalid}">
         <div class="input-group">
           <span class="input-group-addon help-cursor" title="{{ 'used_for_invoicing' | translate }}"><i class="fa fa-building-o"></i> <span class="exponent"><i class="fa fa-asterisk" aria-hidden="true"></i></span></span>
           <input type="hidden"
@@ -177,7 +199,7 @@
         <span class="help-block" ng-show="userForm['user[invoicing_][organization_attributes][name]'].$dirty && userForm['user[invoicing_profile_attributes][organization_attributes][name]'].$error.required" translate>{{ 'organization_name_is_required' }}</span>
       </div>
 
-      <!--<div class="form-group" ng-if="user.invoicing_profile.organization" ng-class="{'has-error': userForm['user[invoicing_profile_attributes][organization_attributes][address_attributes][address]'].$dirty && userForm['user[invoicing_profile_attributes][organization_attributes][address_attributes][address]'].$invalid}">
+      <div class="form-group" ng-if="user.invoicing_profile.organization" ng-class="{'has-error': userForm['user[invoicing_profile_attributes][organization_attributes][address_attributes][address]'].$dirty && userForm['user[invoicing_profile_attributes][organization_attributes][address_attributes][address]'].$invalid}">
         <div class="input-group">
           <span class="input-group-addon help-cursor" title="{{ 'used_for_invoicing' | translate }}"><i class="fa fa-map-marker"></i> <span class="exponent"><i class="fa fa-asterisk" aria-hidden="true"></i></span></span>
           <input type="hidden"
@@ -271,28 +293,6 @@
                  placeholder="{{ 'job' | translate }}"
                  ng-disabled="preventField['profile.job'] && user.profile.job && !userForm['user[profile_attributes][job]'].$dirty"/>
         </div>
-      </div>
-
-      <div class="form-group">
-        <label for="user_interest" class="help-cursor" title="{{ 'used_for_profile' | translate }}" translate>{{ 'interests' }}</label>
-        <textarea name="user[profile_attributes][interest]"
-                  ng-model="user.profile.interest"
-                  rows="5"
-                  class="form-control"
-                  id="user_interest"
-                  placeholder=""
-                  ng-disabled="preventField['profile.interest'] && user.profile.interest && !userForm['user[profile_attributes][interest]'].$dirty"></textarea>
-      </div>
-
-      <div class="form-group">
-        <label for="user_software_mastered" class="help-cursor" title="{{ 'used_for_profile' | translate }}" translate>{{ 'CAD_softwares_mastered' }}</label>
-        <textarea name="user[profile_attributes][software_mastered]"
-                  ng-model="user.profile.software_mastered"
-                  rows="5"
-                  class="form-control"
-                  id="user_software_mastered"
-                  placeholder=""
-                  ng-disabled="preventField['profile.software_mastered'] && user.profile.software_mastered && !userForm['user[profile_attributes][software_mastered]'].$dirty"></textarea>
       </div>-->
 
       <!-- allow contact-->
