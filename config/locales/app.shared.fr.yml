@@ -441,7 +441,7 @@ fr:
           you_ve_just_selected_a_: "Vous venez de sélectionner un"
           _subscription: "abonnement"
           cost_of_the_subscription: "Coût de l'abonnement"
-          confirm_and_pay: "Je réserve"
+          confirm_and_pay: "Valider la réservation"
           you_have_settled_the_following_TYPE: "Vous venez de réserver {TYPE, select, Machine{les heures machines suivantes} Training{l'initiation suivante} other{les éléments suivants}} :"  # messageFormat interpolation
           you_have_settled_a_: "Vous avez réglé un"
           total_: "TOTAL :"

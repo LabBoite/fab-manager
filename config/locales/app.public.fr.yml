@@ -230,7 +230,7 @@ fr:
       machines_show:
         # détail d'une machine
         all_the_tools: "tous les outils"
-        book_this_machine: "Je réserve"
+        book_this_machine: "Voir les disponibilités"
         files_to_download: "Documents"
         projects_using_the_machine: "Projets utilisant la machine"
         _or_the_: " ou la "
@@ -342,7 +342,7 @@ fr:
         # affichage des détails d'un espace
         space_show:
           all_the_tools: "tous les outils"
-          book_this_space: "Je réserve"
+          book_this_space: "Voir les disponibilités"
           unauthorized_operation: "Opération non autorisée"
           confirmation_required: "Confirmation requise"
           do_you_really_want_to_delete_this_space: "Voulez-vous vraiment supprimer cet espace ?"
