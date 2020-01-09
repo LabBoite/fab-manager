@@ -90,6 +90,23 @@
               </div>
             </div>
 
+            <div class="form-group required-row" ng-class="{'has-error': signupForm.email_confirmation.$dirty && signupForm.email_confirmation.$invalid}">
+              <div class="col-sm-12">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                  <input type="email"
+                        name="email_confirmation"
+                        ng-model="user.email_confirmation"
+                        class="form-control"
+                        placeholder="{{ 'type_your_email_again' | translate }}"
+                        match="user.email">
+                </div>
+                <span class="exponent"><i class="fa fa-asterisk" aria-hidden="true"></i></span>
+                <span class="help-block" ng-show="signupForm.email_confirmation.$dirty && signupForm.email_confirmation.$error.required" translate>{{ 'email_confirmation_is_required' }}</span>
+                <span class="help-block" ng-show="signupForm.email_confirmation.$error.match" translate>{{ 'email_does_not_match_with_confirmation' }}</span>
+              </div>
+            </div>
+
             <div class="form-group required-row" ng-class="{'has-error': signupForm.password.$dirty && signupForm.password.$invalid}">
               <div class="col-sm-12">
                 <div class="input-group">
