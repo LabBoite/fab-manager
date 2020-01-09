@@ -302,7 +302,7 @@ fr:
       notify_user_profile_complete:
         your_profile_was_completed: "Votre profil a bien été complété, vous avez désormais accès à l'ensemble de la plateforme."
       notify_user_training_valid:
-        your_TRAINING_was_validated_html: "Votre formation <strong><em>%{TRAINING}</em></strong> a bien été validée."
+        your_TRAINING_was_validated_html: "Vous avez été habilité sur une machine suite à votre formation <strong><em>%{TRAINING}</em></strong>."
       notify_user_user_group_changed:
         your_group_has_changed: "Vous avez changé de groupe"
       notify_user_when_avoir_ready:

@@ -71,10 +71,10 @@ fr:
         accepted_your_invitation_to_take_part_in_the_project: "a accepté votre demande de collaboration sur votre projet :"
 
     notify_user_training_valid:
-      subject: "Votre initiation a été validée"
+      subject: "Vous avez été habilité sur une machine"
       body:
-        your_training: "Votre initiation"
-        has_been_validated: "a bien été validée"
+        your_training: "Suite à votre initiation"
+        has_been_validated: ", vous avez été habilité sur la machine. Vous pouvez à présent la réserver."
 
     notify_member_subscribed_plan:
       subject: "Votre abonnement a bien été souscrit"
