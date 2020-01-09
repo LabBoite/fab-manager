@@ -121,7 +121,7 @@
             <div class="p-l"> 
               <div ng-if="reserveSuccess">
                 <div class="alert alert-success">
-                  {{ 'thank_you_your_payment_has_been_successfully_registered' | translate }}<br>{{ 'you_can_find_your_reservation_s_details_on_your_' | translate }} <a ui-sref="app.logged.dashboard.invoices" translate>{{ 'dashboard' }}</a>
+                  {{ 'thank_you_your_payment_has_been_successfully_registered' | translate }}
                 </div>
               </div>
               <div class="event-ticket" ng-if="reservations && !reserve.toReserve" ng-repeat="reservation in reservations">
