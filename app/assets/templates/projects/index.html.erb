@@ -46,13 +46,36 @@
 
     </div>
 
+    
+    <!-- INFOS -->
+    <div class="wrapper">
+
+      <!-- Infobox -->
+      <div class="row m-b">
+        <div class="col-lg-12">
+          <div class="alert-warning text-center p-l">
+            En panne d'inspiration ? Découvrez des idées de projets à réaliser, des tutoriels ainsi que des ressources sur <a href="https://www.instructables.com/">Instructables</a>, <a href="https://www.thingiverse.com/">Thingiverse</a>, <a href="https://wikifab.org/wiki/Accueil">Wikifab</a> ou <a href="https://www.myminifactory.com/fr/">MyMiniFactory</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add a project -->
+      <div class="row m-b">
+        <div class="col-lg-12">
+          <a class="btn-small btn-profile btn-medium" ui-sref="app.logged.projects_new" role="button">
+            <i class="fa fa-plus m-r-xs"></i> 
+            <span translate>{{ 'add_a_project' }}</span>
+          </a>
+        </div>
+      </div>
+    
+    </div>
+
+
     <!-- CONTENT -->
     <div class="wrapper">
 
-      <div class="alert-warning text-center p-l m-b">
-        En panne d'inspiration ? Découvrez des idées de projets à réaliser, des tutoriels ainsi que des ressources sur <a href="https://www.instructables.com/">Instructables</a>, <a href="https://www.thingiverse.com/">Thingiverse</a>, <a href="https://wikifab.org/wiki/Accueil">Wikifab</a> ou <a href="https://www.myminifactory.com/fr/">MyMiniFactory</a>
-      </div>
-
+      <!-- If no projects -->
       <div class="row">
         <div class="col-lg-12 text-center">
           <span class="txt-neutral" ng-show="projects && (projects.length == 0)"> {{ 'projects_list.project_search_result_is_empty' | translate }} </span>
