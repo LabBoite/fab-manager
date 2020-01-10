@@ -61,7 +61,7 @@
               <fab-user-avatar ng-model="project.author.user_avatar" avatar-class="thumb-50"></fab-user-avatar>
             </div>
             <div class="project-user-name">
-              <span ng-show="project.author_id" class="project-user-enabled" ui-sref="app.logged.members_show({id: project.author.slug})">{{ 'by_name' | translate:{NAME:project.author.first_name} }}</span>
+              <a ng-show="project.author_id" class="project-user-enabled" ui-sref="app.logged.members_show({id: project.author.slug})">{{ 'by_name' | translate:{NAME:project.author.username} }}</a>
               <span ng-hide="project.author_id" class="project-user-disabled" translate>{{ 'deleted_user' }}</span>
             </div>
           </div>
@@ -70,8 +70,6 @@
           <div class="project-user-item m-b-sm" ng-repeat="collaborator in project.project_users" ui-sref="app.logged.members_show({id: collaborator.slug})">
             <div class="project-user-avatar m-r">
               <fab-user-avatar ng-model="collaborator.user_avatar" avatar-class="thumb-50"></fab-user-avatar>
-              <i class="on b-white bottom" ng-if="collaborator.is_valid"></i>
-              <i class="off b-white bottom" ng-if="!collaborator.is_valid"></i>
             </div>
             <div class="project-user-name">
               <span class="project-user-enabled">{{collaborator.username}}</span>
