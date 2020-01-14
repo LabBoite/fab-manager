@@ -373,6 +373,11 @@ Application.Controllers.controller('CreateEventModalController', ['$scope', '$ui
   // $uibModal parameter
     $scope.start = start;
 
+    // Checked the checkboxes
+    $scope.getCheckedTrue = function(){
+      return true;
+    };
+
     // $uibModal parameter
     $scope.end = end;
 
@@ -386,7 +391,7 @@ Application.Controllers.controller('CreateEventModalController', ['$scope', '$ui
     $scope.spaces = spacesPromise.filter(function (s) { return !s.disabled; });
 
     // machines associated with the created slot
-    $scope.selectedMachines = [];
+    $scope.selectedMachines = machinesPromise.filter(function (m) { return !m.disabled; });
 
     // training associated with the created slot
     $scope.selectedTraining = null;
