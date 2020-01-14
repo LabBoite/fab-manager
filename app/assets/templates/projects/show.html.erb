@@ -121,28 +121,6 @@
           </ul>
         </section>
 
-        <!-- COLLABORATORS TO BE MODIFIED -->
-        <section class="panel" ng-if="project.project_users.length > 0">
-          <div class="panel-heading">
-            <div class="panel-title">
-              <span class="badge bg-warning pull-right">{{project.project_users.length}}</span>
-              <span translate>{{ 'collaborators' }}</span>
-            </div>
-          </div>
-          <ul class="widget-content list-group list-group-lg no-bg auto">
-            <li class="list-group-item no-b clearfix block-link" ng-repeat="collaborator in project.project_users" ui-sref="app.logged.members_show({id: collaborator.slug})">
-              <span class="pull-left thumb-sm avatar m-r">
-                <fab-user-avatar ng-model="collaborator.user_avatar" avatar-class="thumb-38"></fab-user-avatar>
-                <i class="on b-white bottom" ng-if="collaborator.is_valid"></i>
-                <i class="off b-white bottom" ng-if="!collaborator.is_valid"></i>
-              </span>
-              <span class="clear"><span>{{collaborator.full_name}}</span>
-                <small class="text-muted clear text-ellipsis text-c">{{collaborator.username}}</small>
-              </span>
-            </li>
-          </ul>
-        </section>
-
         <!-- LICENCE -->
         <section class="panel" ng-if="project.licence">
           <div class="panel-heading">
