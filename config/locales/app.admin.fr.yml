@@ -516,6 +516,7 @@ fr:
         email: "Courriel"
         phone: "Tel."
         user_type: "Type utilisateur"
+        user_job: "Structure"
         display_more_users: "Afficher plus d'utilisateurs ..."
         administrators: "Administrateurs"
         search_for_an_administrator: "Recherchez un administrateur"
