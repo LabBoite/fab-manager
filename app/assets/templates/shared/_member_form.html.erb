@@ -160,6 +160,51 @@
         <span class="help-block" ng-show="userForm['user[password_confirmation]'].$error.match" translate>{{ 'confirmation_mismatch_with_password' }}</span>
       </div>
 
+      <div class="form-group" ng-class="{'has-error': userForm['user[profile_attributes][job]'].$dirty && userForm['user[profile_attributes][job]'].$invalid}">
+        <div class="input-group">
+          <span class="input-group-addon help-cursor" title="{{ 'used_for_profile' | translate }}"><i class="fa fa-building"></i> </span>
+          <input type="text"
+                 name="user[profile_attributes][job]"
+                 ng-model="user.profile.job"
+                 class="form-control"
+                 id="user_job"
+                 placeholder="{{ 'job' | translate }}"
+                 ng-disabled="preventField['profile.job'] && user.profile.job && !userForm['user[profile_attributes][job]'].$dirty"/>
+        </div>
+      </div>
+
+      <!--<div class="form-group" ng-class="{'has-error': userForm['user[invoicing_profile_attributes][organization_attributes][name]'].$dirty && userForm['user[invoicing_profile_attributes][organization_attributes][name]'].$invalid}">
+        <div class="input-group">
+          <span class="input-group-addon help-cursor" title="{{ 'used_for_invoicing' | translate }}"><i class="fa fa-building-o"></i> <span class="exponent"><i class="fa fa-asterisk" aria-hidden="true"></i></span></span>
+          <input type="hidden"
+                 name="user[invoicing_profile_attributes][organization_attributes][id]"
+                 ng-value="user.invoicing_profile.organization.id" />
+          <input type="text"
+                 name="user[invoicing_profile_attributes][organization_attributes][name]"
+                 ng-model="user.invoicing_profile.organization.name"
+                 class="form-control"
+                 placeholder="{{ 'organization_name' | translate }}"
+                 ng-disabled="preventField['profile.organization_name'] && user.invoicing_profile.organization.name && !userForm['user[invoicing_profile_attributes][organization_attributes][name]'].$dirty">
+        </div>
+        <span class="help-block" ng-show="userForm['user[invoicing_][organization_attributes][name]'].$dirty && userForm['user[invoicing_profile_attributes][organization_attributes][name]'].$error.required" translate>{{ 'organization_name_is_required' }}</span>
+      </div>
+
+      <div class="form-group" ng-class="{'has-error': userForm['user[invoicing_profile_attributes][organization_attributes][address_attributes][address]'].$dirty && userForm['user[invoicing_profile_attributes][organization_attributes][address_attributes][address]'].$invalid}">
+        <div class="input-group">
+          <span class="input-group-addon help-cursor" title="{{ 'used_for_invoicing' | translate }}"><i class="fa fa-map-marker"></i> <span class="exponent"><i class="fa fa-asterisk" aria-hidden="true"></i></span></span>
+          <input type="hidden"
+                 name="user[invoicing_profile_attributes][organization_attributes][address_attributes][id]"
+                 ng-value="user.invoicing_profile.organization.address.id" />
+          <input type="text"
+                 name="user[invoicing_profile_attributes][organization_attributes][address_attributes][address]"
+                 ng-model="user.invoicing_profile.organization.address.address"
+                 class="form-control"
+                 placeholder="{{ 'organization_address' | translate }}"
+                 ng-disabled="preventField['profile.organization_address'] && user.invoicing_profile.organization.address.address && !userForm['user[invoicing_profile_attributes][organization_attributes][address_attributes][address]'].$dirty">
+        </div>
+        <span class="help-block" ng-show="userForm['user[invoicing_profile_attributes][organization_attributes][address_attributes][address]'].$dirty && userForm['user[invoicing_profile_attributes][organization_attributes][address_attributes][address]'].$error.required" translate>{{ 'organization_address_is_required' }}</span>
+      </div>-->
+
       <div class="form-group">
         <label for="user_interest" class="help-cursor" title="{{ 'used_for_profile' | translate }}" translate>{{ 'interests' }}</label>
         <textarea name="user[profile_attributes][interest]"
@@ -182,41 +227,7 @@
                   ng-disabled="preventField['profile.software_mastered'] && user.profile.software_mastered && !userForm['user[profile_attributes][software_mastered]'].$dirty"></textarea>
       </div>
 
-      <!--<div class="form-group" ng-if="user.invoicing_profile.organization" ng-class="{'has-error': userForm['user[invoicing_profile_attributes][organization_attributes][name]'].$dirty && userForm['user[invoicing_profile_attributes][organization_attributes][name]'].$invalid}">
-        <div class="input-group">
-          <span class="input-group-addon help-cursor" title="{{ 'used_for_invoicing' | translate }}"><i class="fa fa-building-o"></i> <span class="exponent"><i class="fa fa-asterisk" aria-hidden="true"></i></span></span>
-          <input type="hidden"
-                 name="user[invoicing_profile_attributes][organization_attributes][id]"
-                 ng-value="user.invoicing_profile.organization.id" />
-          <input type="text"
-                 name="user[invoicing_profile_attributes][organization_attributes][name]"
-                 ng-model="user.invoicing_profile.organization.name"
-                 class="form-control"
-                 placeholder="{{ 'organization_name' | translate }}"
-                 ng-required="user.invoicing_profile.organization"
-                 ng-disabled="preventField['profile.organization_name'] && user.invoicing_profile.organization.name && !userForm['user[invoicing_profile_attributes][organization_attributes][name]'].$dirty">
-        </div>
-        <span class="help-block" ng-show="userForm['user[invoicing_][organization_attributes][name]'].$dirty && userForm['user[invoicing_profile_attributes][organization_attributes][name]'].$error.required" translate>{{ 'organization_name_is_required' }}</span>
-      </div>
-
-      <div class="form-group" ng-if="user.invoicing_profile.organization" ng-class="{'has-error': userForm['user[invoicing_profile_attributes][organization_attributes][address_attributes][address]'].$dirty && userForm['user[invoicing_profile_attributes][organization_attributes][address_attributes][address]'].$invalid}">
-        <div class="input-group">
-          <span class="input-group-addon help-cursor" title="{{ 'used_for_invoicing' | translate }}"><i class="fa fa-map-marker"></i> <span class="exponent"><i class="fa fa-asterisk" aria-hidden="true"></i></span></span>
-          <input type="hidden"
-                 name="user[invoicing_profile_attributes][organization_attributes][address_attributes][id]"
-                 ng-value="user.invoicing_profile.organization.address.id" />
-          <input type="text"
-                 name="user[invoicing_profile_attributes][organization_attributes][address_attributes][address]"
-                 ng-model="user.invoicing_profile.organization.address.address"
-                 class="form-control"
-                 placeholder="{{ 'organization_address' | translate }}"
-                 ng-required="user.invoicing_profile.organization"
-                 ng-disabled="preventField['profile.organization_address'] && user.invoicing_profile.organization.address.address && !userForm['user[invoicing_profile_attributes][organization_attributes][address_attributes][address]'].$dirty">
-        </div>
-        <span class="help-block" ng-show="userForm['user[invoicing_profile_attributes][organization_attributes][address_attributes][address]'].$dirty && userForm['user[invoicing_profile_attributes][organization_attributes][address_attributes][address]'].$error.required" translate>{{ 'organization_address_is_required' }}</span>
-      </div>
-
-      <div class="form-group" ng-class="{'has-error': userForm['user[statistic_profile_attributes][birthday]'].$dirty && userForm['user[statistic_profile_attributes][birthday]'].$invalid}">
+      <!--<div class="form-group" ng-class="{'has-error': userForm['user[statistic_profile_attributes][birthday]'].$dirty && userForm['user[statistic_profile_attributes][birthday]'].$invalid}">
         <div class="input-group">
           <span class="input-group-addon help-cursor" title="{{ 'used_for_statistics' | translate }}"><i class="fa fa-calendar-o"></i> <span class="exponent"><i class="fa fa-asterisk" aria-hidden="true"></i></span></span>
           <input type="text"
@@ -279,19 +290,6 @@
                  ng-pattern="/^https?:\/\//"
                  placeholder="{{ 'website' | translate }} (http://...)"
                  ng-disabled="preventField['profile.website'] && user.profile.website && !userForm['user[profile_attributes][website]'].$dirty"/>
-        </div>
-      </div>
-
-      <div class="form-group" ng-class="{'has-error': userForm['user[profile_attributes][job]'].$dirty && userForm['user[profile_attributes][job]'].$invalid}">
-        <div class="input-group">
-          <span class="input-group-addon help-cursor" title="{{ 'used_for_profile' | translate }}"><i class="fa fa-briefcase"></i> </span>
-          <input type="text"
-                 name="user[profile_attributes][job]"
-                 ng-model="user.profile.job"
-                 class="form-control"
-                 id="user_job"
-                 placeholder="{{ 'job' | translate }}"
-                 ng-disabled="preventField['profile.job'] && user.profile.job && !userForm['user[profile_attributes][job]'].$dirty"/>
         </div>
       </div>-->
 

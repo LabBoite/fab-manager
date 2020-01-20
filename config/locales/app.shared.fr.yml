@@ -123,7 +123,7 @@ fr:
         date_of_birth: "Date de naissance"
         date_of_birth_is_required: "La date de naissance est requise."
         website: "Site web"
-        job: "Profession"
+        job: "Structure"
 
       project:
         # formulaire d'étition d'un projet
