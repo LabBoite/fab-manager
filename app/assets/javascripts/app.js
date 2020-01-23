@@ -76,6 +76,7 @@ angular.module('application', ['ngCookies', 'ngResource', 'ngSanitize', 'ui.rout
       $rootScope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
         $state.prevState = fromState;
         $state.prevParams = fromParams;
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
       });
 
       // Global config: if true, the whole 'Plans & Subscriptions' feature will be disabled in the application
