@@ -252,7 +252,7 @@ fr:
         msg_training_condition: "reservée aux adhérents"
         all_the_events: "toute la programmation"
         all_the_trainings: "toutes les initiations"
-        book_this_training: "Je réserve"
+        book_this_training: "Voir les disponibilités"
         do_you_really_want_to_delete_this_training: "Êtes-vous sur de vouloir supprimer cette initiation ?"
         unauthorized_operation: "Opération non autorisée"
         the_training_cant_be_deleted_because_it_is_already_reserved_by_some_users: "L'initiation ne peut pas être supprimée car elle a déjà été réservée par des utilisateurs."
