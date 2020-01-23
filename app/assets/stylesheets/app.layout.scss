@@ -716,28 +716,17 @@
 }
 
 .reservation-canceled {
-  color: #606060;
-  border-radius: 0.2em;
-  background-color: #e4e4e4;
-  padding: 0.7em 0.7em;
-  font-size: 90%;
-  display:inline-block;
-  vertical-align:middle;
-
-  .reservation-time {
-    color: #606060;
-  }
+  color: #E0E0E0;
 
   &:before {
     content: "Annulée";
-    display: inline-block;
-    background-color: #c44242;
-    border-radius: 0.25em;
-    padding: 0.1em 0.5em;
-    font-weight: bold;
-    color: #fff;
-    float: left;
-    margin-right: 1em;
+    display: block;
+    background-color: #D82A21;
+    padding: 15px;
+	text-align: center;
+	width: 100%;
+    color: #FFFFFF;
+    margin-bottom: 15px;
   }
 
 }
