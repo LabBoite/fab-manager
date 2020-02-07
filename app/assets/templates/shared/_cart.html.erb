@@ -1,11 +1,6 @@
 <!-- RESERVATION PROCESS -->
 <div class="panel m-b-sm" ng-if="user && !events.modifiable && !events.moved">
 
-  <!-- No selection -->
-  <div class="panel-content p-l" ng-show="events.reserved.length == 0 && (!events.paid || events.paid.length == 0)">
-    <i>{{ 'cart.select_one_or_more_slots_in_the_calendar' | translate:{SINGLE:limitToOneSlot}:"messageformat" }}</i>
-  </div>
-
   <!-- Process -->
   <div class="panel-content p-l" ng-if="events.reserved.length > 0">
     <div class="m-b-sm">

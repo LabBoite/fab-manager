@@ -6,8 +6,9 @@
       <!-- TITLE -->
       <div class="row m-b">
         <div class="col-lg-12">
-          <h1 class="txt-orange" ng-show="mode == 'all'" translate>{{ 'trainings_planning' }}</h1>
-          <h1 class="txt-orange" ng-hide="mode == 'all'"><span translate>{{ 'planning_of' }}</span> {{training.name}}</h1>
+          <h1 class="txt-orange m-b-xs" ng-show="mode == 'all'" translate>{{ 'trainings_planning' }}</h1>
+          <h1 class="txt-orange m-b-xs" ng-hide="mode == 'all'">{{training.name}}</h1>
+          <span class="title-tips txt-orange m-b">Faites défiler le calendrier pour voir les initiations à venir, puis sélectionnez un créneau</span>
         </div>
       </div>
 
@@ -22,13 +23,13 @@
         <!-- SIDE -->
         <div class="col-sm-12 col-md-12 col-lg-3">
 
-          <div class="m-b text-center">
+          <!--<div class="m-b text-center">
             <a class="btn btn-small btn-public btn-medium"
             ui-sref="app.logged.trainings_reserve({id:'all'})"
             ng-hide="mode == 'all'"
             role="button"
             translate>{{ 'all_trainings' }}</a>
-          </div>
+          </div>-->
 
           <div ng-if="currentUser.role === 'admin'">
             <select-member></select-member>
