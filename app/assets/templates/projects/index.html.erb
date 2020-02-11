@@ -64,7 +64,7 @@
     <div class="wrapper">
 
       <!-- Add a project -->
-      <div class="row m-b">
+      <div class="row m-b" ng-if="isAuthorized(['admin','member'])">
         <div class="col-lg-12">
           <a class="btn-small btn-profile btn-medium" ui-sref="app.logged.projects_new" role="button">
             <i class="fa fa-plus m-r-xs"></i> 
