@@ -1,27 +1,23 @@
 <!-- NAV -->
-<div class="nav-tabs-text nav-public m-b">
+<div class="menu-tabs m-t-xl m-b">
   <div class="container">
     <ul>
-      <li class="active">
-        <a>ateliers et rencontres</a>
+      <li>
+        <a class="active">ateliers et rencontres</a>
       </li>
       <li>
-        <a ui-sref="app.public.trainings_list" uib-tab-heading-transclude="" class="ng-binding">initiations</a>
+        <a class="unactive" ui-sref="app.public.trainings_list" uib-tab-heading-transclude="">initiations</a>
       </li>
     </ul>
   </div>
 </div>
-<div class="container">
-  <div class="col-lg-12">
-    <p>Vous souhaitez proposer et animer un atelier ou une rencontre ouvert à toutes et à tous dans LabBoîte ? Remplissez <a href="https://forms.gle/KHmY8THYdRo18onL8">ce formulaire</a>.</p>
-  </div>
-</div>
-
 
 <section class="container">
   <div class="col-lg-12">
 
-    <section class="wrapper">
+      <div class="m-b">
+        <p>Nos ateliers et rencontres sont <b>ouverts à tous</b>.<br/>Vous pouvez nous proposer un atelier en remplissant <a href="https://forms.gle/KHmY8THYdRo18onL8">ce formulaire</a>.</p>
+      </div>
 
       <!-- EVENT LIST -->
       <div ng-repeat="month in monthOrder">
@@ -53,8 +49,6 @@
           <a class="btn-small btn-public btn-light" ng-click="loadMoreEvents()" ng-hide="noMoreResults" translate>{{ 'load_the_next_events' }}</a>
         </div>
       </div>
-      
-    </section>
 
   </div>
 </section>

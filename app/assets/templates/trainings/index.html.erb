@@ -1,19 +1,23 @@
 <!-- NAV -->
-<div class="nav-tabs-text nav-public">
+<div class="menu-tabs m-t-xl m-b">
   <div class="container">
     <ul>
       <li>
-        <a ui-sref="app.public.events_list" uib-tab-heading-transclude="" class="ng-binding">ateliers et rencontres</a>
+        <a class="unactive" ui-sref="app.public.events_list" uib-tab-heading-transclude="">ateliers et rencontres</a>
       </li>
-      <li class="active">
-        <a>initiations</a>
+      <li>
+        <a class="active">initiations</a>
       </li>
     </ul>
   </div>
 </div>
 
-<section class="container wrapper">
+<section class="container">
   <div class="col-lg-12">
+
+    <div class="m-b">
+      <p>Nos initiations sont <b>réservées aux adhérents</b>.</p>
+    </div>
     
     <!-- EVENT LIST -->
     <div class="row" ng-repeat="training in (trainings.length/4 | array)">
