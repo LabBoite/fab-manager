@@ -51,7 +51,7 @@ class MachinesController {
           });
         });
       } else {
-        return $state.go('app.public.machines_list');
+        return $state.go('app.public.machines_show', { id: content.id });
       }
     };
 

@@ -51,7 +51,7 @@ class SpacesController {
           });
         });
       } else {
-        $state.go('app.public.spaces_list');
+        $state.go('app.public.space_show', { id: content.id });
       }
     };
 
