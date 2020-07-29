@@ -20,16 +20,10 @@
             <a ui-sref="app.public.cond_individual">
                 <div class="poster" style="background-size: cover; background-position: center; background-image: url('img/place_community_individual.jpg');">
                     <div class="poster-title">
-                        Je suis un <span class="font-ebold">particulier</span>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="col-sx-6 col-sm-6 col-md-3 col-lg-3">
-            <a ui-sref="app.public.cond_education">
-                <div class="poster" style="background-size: cover; background-position: center; background-image: url('img/place_community_education.jpg');">
-                    <div class="poster-title">
-                        J'ai un <span class="font-ebold">projet pédagogique</span>
+                        <div class="poster-title-txt">
+                            Je suis un <span class="poster-title-bold">particulier</span>, je suis curieux, j'ai un projet créatif
+                        </div>
+                        <div class="poster-title-cta">Cliquez ici</div>
                     </div>
                 </div>
             </a>
@@ -38,16 +32,34 @@
             <a ui-sref="app.public.cond_association">    
                 <div class="poster" style="background-size: cover; background-position: center; background-image: url('img/place_community_association.jpg');">
                     <div class="poster-title">
-                        Je suis une <span class="font-ebold">association</span> ou une <span class="font-ebold">structure locale</span>
+                        <div class="poster-title-txt">
+                            Je suis une <span class="poster-title-bold">structure locale</span>, j'ai un projet créatif
+                        </div>
+                        <div class="poster-title-cta">Cliquez ici</div>
                     </div>
                 </div>
             </a>
         </div>
         <div class="col-sx-6 col-sm-6 col-md-3 col-lg-3">
-            <a ui-sref="app.public.cond_business">
+            <a ui-sref="app.public.cond_education">
+                <div class="poster" style="background-size: cover; background-position: center; background-image: url('img/place_community_education.jpg');">
+                    <div class="poster-title">
+                        <div class="poster-title-txt">
+                            Je suis un <span class="poster-title-bold">acteur éducatif</span>, j’ai un projet pédagogique
+                        </div>
+                        <div class="poster-title-cta">Cliquez ici</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-sx-6 col-sm-6 col-md-3 col-lg-3">
+            <a ui-sref="app.public.cond_entrepreneur">
                 <div class="poster" style="background-size: cover; background-position: center; background-image: url('img/place_community_commercial.jpg');">
                     <div class="poster-title">
-                        J'ai un projet à but <span class="font-ebold">commercial</span>
+                        <div class="poster-title-txt">
+                            Je suis un <span class="poster-title-bold">entrepreneur</span>, j’ai un projet (pré-)commercial
+                        </div>
+                        <div class="poster-title-cta">Cliquez ici</div>
                     </div>
                 </div>
             </a>
@@ -61,13 +73,13 @@
         <h2 class="txt-orange m-b">LabBoîte en trois questions</h2>
         <div class="row">
             <div class="col-sx-4 col-sm-4 col-md-4 col-lg-4 m-b">
-                <a href="https://www.youtube.com/watch?v=XtuZXllaqGQ" target="_blank"><img class="img-width-full m-b-sm" src="img/3questions_what.jpg" /></a>
+                <a href="https://www.youtube.com/watch?v=XtuZXllaqGQ" target="_blank"><img class="img-3quest img-width-full m-b-sm" src="img/3questions_what.jpg" /></a>
             </div>
             <div class="col-sx-4 col-sm-4 col-md-4 col-lg-4 m-b">
-                <a href="https://www.youtube.com/watch?v=07M8Vp1NSpw" target="_blank"><img class="img-width-full m-b-sm" src="img/3questions_forwho.jpg" /></a>
+                <a href="https://www.youtube.com/watch?v=07M8Vp1NSpw" target="_blank"><img class="img-3quest img-width-full m-b-sm" src="img/3questions_forwho.jpg" /></a>
             </div>
             <div class="col-sx-4 col-sm-4 col-md-4 col-lg-4 m-b">
-                <a href="https://www.youtube.com/watch?v=urNp8UdBV-4" target="_blank"><img class="img-width-full m-b-sm" src="img/3questions_howto.jpg" /></a>
+                <a href="https://www.youtube.com/watch?v=urNp8UdBV-4" target="_blank"><img class="img-3quest img-width-full m-b-sm" src="img/3questions_howto.jpg" /></a>
             </div>
         </div>
     </div>
@@ -112,7 +124,14 @@
             <h3 class="txt-orange m-b-sm">Documentation</h3>
             <p>LabBoîte s’inscrit dans une logique de partage et de transmission des savoirs. À ce titre, chaque usager du lieu est invité à <a ui-sref="app.public.projects_list">documenter ses projets</a>.</p>
         </div>
-        
+    </div>
+    <div class="row">
+        <div class="col-sx-6 col-sm-6 col-md-6 col-lg-6">
+            <a href="" class="btn btn-block btn-small btn-neutral btn-medium m-b-sm">Consulter le règlement du fablab</a>
+        </div>
+        <div class="col-sx-6 col-sm-6 col-md-6 col-lg-6">
+            <a href="" class="btn btn-block btn-small btn-neutral btn-medium m-b-sm">Consulter la plaquette</a>
+        </div>
     </div>
   </div>
 </section>
@@ -133,11 +152,8 @@
         <p>Les fablabs soutiennent l’apprentissage par le faire (ou « Do it Yourself ») et la libre diffusion des savoirs. Accessibles à tous, ils proposent des espaces et des outils mutualisés. Ces espaces favorisent l’échange et le partage en réunissant une communauté d’utilisateurs aux idées et aux compétences variées.</p>
     </div>
     <div class="row">
-        <div class="col-sx-6 col-sm-6 col-md-6 col-lg-6">
-            <a href="files/CA-21102019_Reglement.pdf" class="btn btn-block btn-small btn-neutral btn-medium m-b-sm">Consulter le règlement du fablab</a>
-        </div>
-        <div class="col-sx-6 col-sm-6 col-md-6 col-lg-6">
-            <a href="files/charte_fablab.pdf" class="btn btn-block btn-small btn-neutral btn-medium m-b-sm">Consulter la charte des fablabs</a>
+        <div class="col-sx-12 col-sm-12 col-md-12 col-lg-12">
+            <a href="" class="btn btn-block btn-small btn-neutral btn-medium m-b-sm">Consulter la charte des fablabs</a>
         </div>
     </div>
   </div>

@@ -368,10 +368,10 @@ angular.module('application.router', ['ui.router'])
 
       // conditions individuals
       .state('app.public.cond_individual', {
-        url: '/individual',
+        url: '/particulier',
         views: {
           'main@': {
-            templateUrl: '<%= asset_path "conditions/individual.html.erb" %>'
+            templateUrl: '<%= asset_path "conditions/individual2020.html.erb" %>'
           }
         }
       })
@@ -381,7 +381,7 @@ angular.module('application.router', ['ui.router'])
         url: '/association',
         views: {
           'main@': {
-            templateUrl: '<%= asset_path "conditions/association.html.erb" %>'
+            templateUrl: '<%= asset_path "conditions/association2020.html.erb" %>'
           }
         }
       })
@@ -391,17 +391,17 @@ angular.module('application.router', ['ui.router'])
         url: '/education',
         views: {
           'main@': {
-            templateUrl: '<%= asset_path "conditions/education.html.erb" %>'
+            templateUrl: '<%= asset_path "conditions/education2020.html.erb" %>'
           }
         }
       })
 
       // conditions business
-      .state('app.public.cond_business', {
-        url: '/business',
+      .state('app.public.cond_entrepreneur', {
+        url: '/entrepreneur',
         views: {
           'main@': {
-            templateUrl: '<%= asset_path "conditions/business.html.erb" %>'
+            templateUrl: '<%= asset_path "conditions/entrepreneur2020.html.erb" %>'
           }
         }
       })

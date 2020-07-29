@@ -61,6 +61,12 @@
 
 /*-- PLACE --*/
 
+.conditions-intro {
+  font-weight: 600;
+  font-size: 17px;
+  color: #777777;
+}
+
 ul.list-conditions {
   margin-left: 27px;
   padding: 0;
@@ -118,45 +124,116 @@ table.conditions-individual {
 	background-position: -20px -80px;
 }
 
+.doc-name {
+  font-weight: 600;
+}
+
+.doc-info {
+  font-weight: 400;
+}
+
+.doc-link {
+  font-weight: 600;
+}
+
 .individual-plan {
   background: #F9F9F9;
-}
-
-.individual-plan-title {
   padding: 15px;
-  background: #E1580A;
-  font-size: 14px;
-  font-weight: 800;
-  letter-spacing: 2%;
-  color: #FFFFFF;
-  text-align: center;
-  text-transform: uppercase;
 }
 
-.individual-plan-price {
-  padding-left: 30px;
-  padding-right: 30px;
+.plan-infos {
+  margin-bottom: 30px;
 }
 
-.individual-plan-item {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  text-align: center;
-  color: #777777;
-}
-
-.individual-plan-item.separator {
-  border-bottom: 1px solid #EAEAEA;
-}
-
-.plan-price {
+.plan-title {
   font-weight: 700;
-  font-size: 24px;
+  font-size: 15px;
+  color: #777777;
 }
 
 .plan-conditions {
   font-weight: 400;
+  font-size: 15px;
+  color: #777777;
+}
+
+.plan-price {
+  font-size: 28px;
+  color: #E1580A;
+}
+
+.price-amount {
+  font-weight: 800;
+}
+
+.price-duration {
+  font-weight: 400;
+}
+
+.storage-plan {
+  background: #FFFFFF;
+  border: 1px solid #E0E0E0;
+  padding: 15px;
+  text-align: center;
+}
+
+.storage-title {
+  font-weight: 700;
+  font-size: 15px;
+  color: #777777;
+}
+
+.storage-description {
+  font-weight: 400;
   font-size: 13px;
+  color: #777777;
+}
+
+.storage-img {
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  img {
+    width: 120px;
+    height: auto;
+  }
+}
+
+.storage-price {
+  font-size: 18px;
+  color: #E1580A;
+}
+
+.storage-amount {
+  font-weight: 800;
+}
+
+.storage-duration {
+  font-weight: 400;
+}
+
+.storage-offer {
+  width: 100%;
+  background: #E1580A;
+  font-size: 13px;
+  font-weight: 600;
+  color: #FFFFFF;
+  padding: 7px 10px;
+  text-align: center;
+}
+
+.question-item {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.question-item:first-child {
+  border-top: 1px solid #E0E0E0;
+}
+
+.question-content {
+  margin-top: 10px;
 }
 
 

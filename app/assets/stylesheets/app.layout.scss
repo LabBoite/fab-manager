@@ -381,15 +381,48 @@
 	transition: all 0.3s;
 
 	.poster-title {
-		font-size: 19px;
+		font-size: 18px;
 		line-height: 130%;
+	}
+
+	.poster-title-txt {
+		padding: 13px 15px;
+		background: #CC4F00;
 		color: #FFFFFF;
-		background: rgba(225,88,10,.9);
-		padding: 13px;
+		font-weight: 400;
+	}
+
+	.poster-title-bold {
+		font-weight: 800;
+	}
+
+	.poster-title-cta {
+		padding: 10px 15px;
+		background: #E1580A;
+		width: 100%;
+		color: #FFFFFF;
+		font-weight: 800;
+		text-transform: uppercase;
+		text-align: center;
+		font-size: 13px;
 	}
 }
 
 .poster:hover {
+	transform: scale(1.03);
+	-webkit-box-shadow: 0px 5px 30px 0px rgba(0,0,0,0.15);
+	-moz-box-shadow: 0px 5px 30px 0px rgba(0,0,0,0.15);
+	box-shadow: 0px 5px 30px 0px rgba(0,0,0,0.15);
+}
+
+.img-3quest {
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	transition: all 0.3s;
+}
+
+.img-3quest:hover {
 	transform: scale(1.03);
 	-webkit-box-shadow: 0px 5px 30px 0px rgba(0,0,0,0.15);
 	-moz-box-shadow: 0px 5px 30px 0px rgba(0,0,0,0.15);

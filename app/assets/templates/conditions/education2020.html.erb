@@ -1,0 +1,157 @@
+<section class="container wrapper">
+    <div class="col-sx-12 col-sm-12 col-md-offset-2 col-md-8 col-lg-offset-2 col-lg-8">
+
+        <div class="m-b">
+            <a ui-sref="app.public.place">
+                <i class="fa fa-chevron-left m-r-xs"></i> 
+                <span>retour</span>
+            </a>
+        </div>
+
+        <h1 class="txt-orange m-b">Devenez Ambassadeur pédagogique !</h1>
+
+        <!-- INTRO -->
+        <div class="conditions-intro m-b">
+            LabBoîte n’est pas un centre de formation, une école ou une bibliothèque et reste avant tout un lieu ouvert sur l’innovation et l’apprentissage par le projet…
+        </div>
+
+        <div class="m-b">
+            <p>L’accès au lieu pour un acteur éducatif dans le cadre d’un projet pédagogique est <b>gratuit</b>.</p>
+        </div>
+
+        <!-- HOW TO -->
+        <div class="m-b-xl">
+            <h3 class="txt-orange m-b-sm">Comment s'inscrire ?</h3>
+            <p>Vous devez nous fournir les pièces suivantes (tout dossier incomplet ne sera pas accepté) :</p>
+            <ul class="list-default">   
+                <li><span class="doc-name">fiche projet pédagogique</span> <span class="doc-info">(remplie et signée)</span> • <a class="doc-link" href="#">télécharger</a></li>
+                <li><span class="doc-name">annexes précisant le projet</span> <span class="doc-info">(facultatif)</span></li>
+            </ul>
+        </div>
+        
+        <!-- OFFER -->
+        <div class="m-b">
+            <h3 class="txt-orange m-b-sm">En élaborant mon projet…</h3>
+            <ul class="list-default">   
+                <li>Moi et mes étudiants pouvons <b>contribuer à l’animation du lieu et du parc machine</b> en partageant les techniques utilisées et expérimentées.</li>
+                <li>Je peux <b>stocker</b> des projets gratuitement dans un délai bien défini et m’engage à évacuer les éléments une fois le projet achevé (dans le cas contraire sera béné ou mis à disposition des utilisateurs du lieu).</li>
+            </ul>
+            <div class="row m-t">
+                <div class="col-sx-4 col-sm-4 col-md-4 col-lg-4">
+                    <div class="storage-plan m-b">
+                        <div class="storage-title">Mini box</div>
+                        <div class="storage-description">Boîte de 45 L</div>
+                        <div class="storage-price">
+                            <span class="storage-amount">5 €</span>
+                            <span class="storage-duration">&sol; trimestre</span>
+                        </div>
+                        <div class="storage-price">
+                            <span class="storage-amount">20 €</span>
+                            <span class="storage-duration">&sol; an</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sx-4 col-sm-4 col-md-4 col-lg-4">
+                    <div class="storage-plan m-b">
+                        <div class="storage-title">Medium box</div>
+                        <div class="storage-description">Boîte de 130 L</div>
+                        <div class="storage-price">
+                            <span class="storage-amount">10 €</span>
+                            <span class="storage-duration">&sol; trimestre</span>
+                        </div>
+                        <div class="storage-price">
+                            <span class="storage-amount">30 €</span>
+                            <span class="storage-duration">&sol; an</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sx-4 col-sm-4 col-md-4 col-lg-4">
+                    <div class="storage-plan m-b">
+                        <div class="storage-title">Big box</div>
+                        <div class="storage-description">Surface au sol d'environ 1 m2</div>
+                        <div class="storage-price">
+                            <span class="storage-amount">20 €</span>
+                            <span class="storage-duration">&sol; trimestre</span>
+                        </div>
+                        <div class="storage-price">
+                            <span class="storage-amount">70 €</span>
+                            <span class="storage-duration">&sol; an</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONDITIONS -->
+        <div class="m-b-xl">
+            <h3 class="txt-orange m-b-sm">Oui, mais…</h3>
+            <ul class="list-default">   
+                <li>Je m’engage à ce que les réalisations faites dans le lieu soient <b>documentées</b> et à communiquer sur l’utilisation de LabBoîte dans le cadre du déroulé du projet pédagogique.</li>
+                <li>Je ne peux réaliser des projets à vocation commerciale, de petites séries ou des projets personnels d’autant plus s’ils sont exclusivement confidentiels ou protégés par une licence ou un brevet.</li>
+                <li>Je dois absolument <b>être présent(e)</b> lors des animations et activités proposées (et dois préalablement m’initier aux outils et machines du lieu ou prévoir d’initier mes étudiants). Dans le cas d’un projet continu, des créneaux spécifiques d’accueil des étudiants devront/pourront être convenus.</li>
+                <li>Moi et mes étudiants utiliserons les espaces et les outils du lieu dans une logique <b>partagée</b>. Nous ne pourrons nous les accaparer (des seuils et limites d’utilisation sont définis) et devrons ranger derrière nous après utilisation.</li>
+                <li>Je dois <b>amener le consommable</b> destiné à être usiné sur les machines. Nous ne fournissons pas de matériaux ; un chutier est néanmoins à disposition pour du prototypage et dans un usage raisonné.</li>
+            </ul>
+        </div>
+
+        <!-- Q AND A -->
+        <div class="m-b">
+            <div ng-init="accordion=1">
+                <div class="question-item">
+                    <div class="question-title" ng-class="{active:accordion==1}">
+                        <a href ng-click="accordion = 1">Pourquoi élaborer une fiche projet ?</a>
+                    </div>
+                    <div class="question-content" ng-show="accordion==1">
+                        <p>LabBoîte tend à valoriser la démarche en mode projet. L’élaboration concertée de cette fiche permet d’en définir les contours et modalités sans avoir recours à des procédures administratives lourdes. Il s’agit d’un engagement moral entre les deux partis. L’objectif de LabBoîte est de participer à l’animation du campus et du territoire. Ainsi, en tant que service public, les locaux sont mis à disposition des établissements d’enseignement et des leurs équipes pédagogiques dans le cadre du développement de leurs projets.</p>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <div class="question-title" ng-class="{active:accordion==2}">
+                        <a href ng-click="accordion = 2">Un étudiant s’inscrivant dans un projet pédagogique peut-il venir à LabBoîte ?</a>
+                    </div>
+                    <div class="question-content" ng-show="accordion==2">
+                        <p>Les étudiants s’inscrivant dans un projet collectif peuvent uniquement utiliser l’espace machines dans le cadre des créneaux et conditions du projet défini avec le référent pédagogique. En dehors, l’étudiant pourra uniquement utiliser les espaces ouverts à toutes et tous ou devra souscrire à une inscription adaptée dans le cadre d’un projet personnel, si besoin d’utilisation des machines (réduction pour les détenteurs du Pass Campus).</p>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <div class="question-title" ng-class="{active:accordion==3}">
+                        <a href ng-click="accordion = 3">Pourquoi un établissement de rattachement est-il demandé ?</a>
+                    </div>
+                    <div class="question-content" ng-show="accordion==3">
+                        <p>Le(s)/la référent(e-s) pédagogique(s) est/sont responsables de l’encadrement de leurs étudiants en cas de dégradation d’outils ou machines ou de blessures sur un tiers. LabBoîte est mis à disposition prioritairement des établissements de CY Alliance, de CY Campus et de l’agglomération de Cergy-Pontoise. Pour les autres établissements, les demandes seront arbitrées en fonction du projet.</p>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <div class="question-title" ng-class="{active:accordion==4}">
+                        <a href ng-click="accordion = 4">Comment avoir accès à un espace membre ?</a>
+                    </div>
+                    <div class="question-content" ng-show="accordion==4">
+                        <p>Après élaboration des contours du projet. Un (ou deux) comptes seront créés pour les référents du projet pédagogique. Une fois les identifiants transmis, vous pourrez réserver les outils et/ou espaces adaptés depuis votre espace membre : pour vous y connecter, cliquez sur <i>Se connecter</i>, en haut de cette page.</p>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <div class="question-title" ng-class="{active:accordion==5}">
+                        <a href ng-click="accordion = 5">Pourquoi créer un espace membre ?</a>
+                    </div>
+                    <div class="question-content" ng-show="accordion==5">
+                        <p>L’espace membre favorise l’autonomie des utilisateurs et référents. Il permet de s’inscrire aux ateliers et initiations, de réserver des outils et machines (une fois initié) et documenter ses projets. Pour plus d’agilité et de facilités, les/la référent(e)s identifié(e-s) sera/seront l’(les) unique(s) interlocuteur(rice-s) des étudiants pour réserver un créneau outil/machine ou un espace en fonction des disponibilités.</p>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <div class="question-title" ng-class="{active:accordion==6}">
+                        <a href ng-click="accordion = 6">Comment documenter un projet ?</a>
+                    </div>
+                    <div class="question-content" ng-show="accordion==6">
+                        <ul class="list-default">   
+                            <li>Connectez-vous à votre espace membre en cliquant sur <i>Se connecter</i> en haut de cette page.</li>
+                            <li>Accédez à la rubrique <a ui-sref="app.public.projects_list">Projets</a></li>
+                            <li>Cliquez sur <i>Ajouter un projet</i> et remplissez le formulaire du projet.</li>
+                            <li>À minima, indiquer un titre, une description, les ressources utilisées et charger une photo du projet. Au mieux, indiquez également les étapes du projet et chargez les fichiers sources.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
