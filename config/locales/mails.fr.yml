@@ -190,7 +190,7 @@ fr:
       body:
         member_cancelled: "Le membre %{NAME} a annulé sa réservation :"
         item_details: "%{START} - %{END}, concernant %{RESERVABLE}"
-        generate_refund: "Pensez à générer un avoir ou un remboursement pour cette annulation, le cas échéant."
+        generate_refund: " "
 
     notify_admin_when_user_is_imported:
       subject: "Un compte utilisateur a été importé depuis le SSO"

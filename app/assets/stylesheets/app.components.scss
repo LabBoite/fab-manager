@@ -132,7 +132,29 @@ table.conditions-individual {
   font-weight: 400;
 }
 
-.doc-link {
+.doc-list {
+  list-style: none;
+  padding: 0;
+}
+
+.doc-list li {
+  margin-bottom: 7px;
+}
+
+.doc-link, .doc-link:visited {
+  display: inline-block;
+  background: #F9F9F9;
+  font-weight: 400;
+  color: #777777;
+  padding: 7px 10px;
+  box-sizing: border-box;
+}
+
+.doc-link:hover, .doc-link:focus {
+  color: #E1580A;
+}
+
+.doc-link-bold {
   font-weight: 600;
 }
 
