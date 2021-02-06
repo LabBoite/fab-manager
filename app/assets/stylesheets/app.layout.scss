@@ -429,6 +429,29 @@
 	box-shadow: 0px 5px 30px 0px rgba(0,0,0,0.15);
 }
 
+.newsletter {
+	background: #F6F6F6;
+	padding: 20px;
+}
+
+.newsletter-text {
+	text-align: left;
+}
+
+.newsletter-text-bold {
+	font-weight: 700;
+	color: #E1580A;
+}
+
+.newsletter-text-normal {
+	font-weight: 600;
+	color: #777777;
+}
+
+.newsletter-text-cta {
+	margin-top: 15px;
+}
+
 
 /*-- Contact --*/
 

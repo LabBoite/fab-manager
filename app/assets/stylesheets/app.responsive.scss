@@ -34,6 +34,21 @@
 	.fc-toolbar {
 		margin-bottom: 2.5em !important;
 	}
+
+	.newsletter-content {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.newsletter-icon {
+		margin-bottom: 15px;
+		margin-right: 0;
+	}
+
+	.newsletter-icon-img {
+		width: 70px;
+		height: 54px;
+	}
 }
 
 // SM Medium devices (tablets, 768px and up)
@@ -61,6 +76,21 @@
 	.m-t-xxl-on-md { margin-top: 60px; }
 	.m-t-3xl-on-md { margin-top: 80px; }
 	.m-t-4xl-on-md { margin-top: 100px; }
+
+	.newsletter-content {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.newsletter-icon {
+		margin-bottom: 0;
+		margin-right: 20px;
+	}
+
+	.newsletter-icon-img {
+		width: 70px;
+		height: 54px;
+	}
 }
 
 // MD Large devices (desktops, 992px and up)
@@ -75,6 +105,21 @@
 		border-left: none;
 		border-right: solid 1px #EAEAEA;
 	}
+
+	.newsletter-content {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.newsletter-icon {
+		margin-bottom: 20px;
+		margin-right: 20px;
+	}
+
+	.newsletter-icon-img {
+		width: 100px;
+		height: 77px;
+	}
 }
 
 // LG Extra large devices (large desktops, 1200px and up)
@@ -88,5 +133,20 @@
 		border-bottom: none;
 		border-left: none;
 		border-right: solid 1px #EAEAEA;
+	}
+
+	.newsletter-content {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.newsletter-icon {
+		margin-bottom: 20px;
+		margin-right: 20px;
+	}
+
+	.newsletter-icon-img {
+		width: 100px;
+		height: 77px;
 	}
 }
