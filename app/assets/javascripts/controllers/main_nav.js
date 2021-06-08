@@ -49,14 +49,6 @@ Application.Controllers.controller('MainNavController', ['$scope', function ($sc
 
   ];
 
-  if (!Fablab.withoutPlans) {
-    $scope.navLinks.push({
-      state: 'app.public.plans',
-      linkText: 'subscriptions',
-      linkIcon: 'credit-card'
-    });
-  }
-
   if (!Fablab.withoutSpaces) {
     $scope.navLinks.splice(3, 0, {
       state: 'app.public.spaces_list',
