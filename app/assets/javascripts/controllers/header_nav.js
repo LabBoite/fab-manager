@@ -43,14 +43,6 @@ Application.Controllers.controller('HeaderNavController', ['$scope', function ($
     }
   ];
 
-  if (!Fablab.withoutPlans) {
-    $scope.navLinks.push({
-      state: 'app.public.plans',
-      linkText: 'subscriptions',
-      linkIcon: 'credit-card'
-    });
-  }
-
   Fablab.adminNavLinks = Fablab.adminNavLinks || [];
   const adminNavLinks = [
     {
