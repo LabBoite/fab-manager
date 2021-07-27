@@ -124,38 +124,33 @@ table.conditions-individual {
 	background-position: -20px -80px;
 }
 
-.doc-name {
-  font-weight: 600;
-}
-
-.doc-info {
-  font-weight: 400;
-}
-
-.doc-list {
+.list-documents {
   list-style: none;
   padding: 0;
 }
 
-.doc-list li {
+.list-documents li {
+  box-sizing: border-box;
+  background: #F9F9F9;
+  color: #777777;
+  padding: 10px 15px;
   margin-bottom: 7px;
 }
 
-.doc-link, .doc-link:visited {
-  display: inline-block;
-  background: #F9F9F9;
+.list-document-link {
+  display: inline-block
+}
+
+.doc-buttons {
+  margin-top: 7px;
+}
+
+.doc-name {
+  font-weight: 700;
+}
+
+.doc-info {
   font-weight: 400;
-  color: #777777;
-  padding: 7px 10px;
-  box-sizing: border-box;
-}
-
-.doc-link:hover, .doc-link:focus {
-  color: #E1580A;
-}
-
-.doc-link-bold {
-  font-weight: 600;
 }
 
 .individual-plan {
