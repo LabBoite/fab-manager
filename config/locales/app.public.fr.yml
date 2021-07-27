@@ -249,7 +249,7 @@ fr:
       training_show:
         # détails d'une formation
         training: "Initiation"
-        msg_training_condition: "reservée aux adhérents"
+        msg_training_condition: "reservée aux membres"
         all_the_events: "toute la programmation"
         all_the_trainings: "toutes les initiations"
         book_this_training: "Voir les disponibilités"
