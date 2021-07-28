@@ -429,6 +429,31 @@
 	box-shadow: 0px 5px 30px 0px rgba(0,0,0,0.15);
 }
 
+.news-alert {
+	background: #FCEEE6;
+}
+
+.news-alert p, .news-alert ul { 
+	color: #E1580A;
+}
+
+.news-alert-head {
+	width: 100%;
+    box-sizing: border-box;
+    color: #E1580A;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+	padding: 10px 5px;
+	border-bottom: solid 1px #f6cdb5;
+}
+
+.news-alert-body {
+	box-sizing: border-box;
+    color: #E1580A;
+	padding: 15px;
+}
+
 .newsletter {
 	background: #F6F6F6;
 	padding: 20px;

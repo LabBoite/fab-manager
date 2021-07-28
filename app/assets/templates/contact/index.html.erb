@@ -2,8 +2,11 @@
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
         <!-- MESSAGE -->
-        <div class="alert alert-warning text-center m-b" ng-if="(homeBlogpost != null) && (homeBlogpost != '') && (homeBlogpost != undefined)">
-            <span ng-bind-html="homeBlogpost"></span>
+        <div class="news-alert m-b" ng-if="(homeBlogpost != null) && (homeBlogpost != '') && (homeBlogpost != undefined)">
+            <div class="news-alert-head">Attention</div>
+            <div class="news-alert-body">
+                <span ng-bind-html="homeBlogpost"></span>
+            </div>
         </div>
 
         <!-- ADRESS / CONTACT -->

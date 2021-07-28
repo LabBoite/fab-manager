@@ -14,8 +14,12 @@
 
 <section class="container m-t">
   <div class="col-lg-12"> 
-    <div class="alert alert-warning text-center" ng-if="(homeBlogpost != null) && (homeBlogpost != '') && (homeBlogpost != undefined)">
-      <span ng-bind-html="homeBlogpost"></span>
+    <!-- MESSAGE -->
+    <div class="news-alert m-b" ng-if="(homeBlogpost != null) && (homeBlogpost != '') && (homeBlogpost != undefined)">
+        <div class="news-alert-head">Attention</div>
+        <div class="news-alert-body">
+            <span ng-bind-html="homeBlogpost"></span>
+        </div>
     </div>
   </div>
 </section>
