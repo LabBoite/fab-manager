@@ -17,6 +17,6 @@
   </ul>
 </p>
 
-<% if @attached_object.reservable_type == 'Event' %>
+<% if @attached_object.reservable_type == 'Event' || @attached_object.reservable_type == 'Training' %>
   <p>Merci d'arriver cinq minutes avant le début de l'activité. Si vous ne pouvez pas venir ou si vous prévoyez d'être en retard, merci de prévenir l'équipe en envoyant un mail à <a href="mailto:contact@labboite.fr">contact@labboite.fr</a></p>
 <% end %>
