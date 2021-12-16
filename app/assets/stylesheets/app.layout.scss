@@ -484,6 +484,45 @@
 	margin-top: 15px;
 }
 
+.tips-item {
+	background: #F6F6F6;
+	padding: 20px;
+	display: flex;
+	flex-direction: row;
+}
+
+.tips-icon {
+	margin-right: 20px;
+}
+
+.tips-icon img {
+	height: 40px;
+	weight: 40px;
+}
+
+.tips-text {
+	font-weight: 400;
+	color: #777777;
+}
+
+.tips-text a, .tips-text a:visited {
+	border-bottom: 1px solid #E1580A;
+	padding-bottom: 1px;
+}
+
+.tips-text a:hover, .tips-text a:focus {
+	border: none;
+}
+
+.tips-text-bold {
+	font-weight: 600;
+}
+
+.tips-text-cta {
+	margin-top: 15px;
+}
+
+
 
 /*-- Contact --*/
 

@@ -2,8 +2,25 @@
   <div class="col-lg-12">
 
     <!-- INTRO -->
-    <h2 class="txt-orange m-b-sm">Espace fablab</h2>
-    <p class="m-b">Ici, on construit, on fabrique, on teste ! Nous mettons à disposition des outils dédiés à la conception, à la fabrication et au prototypage. Son accès est réservé aux membres ainsi qu’aux projets des structures partenaires.</p>
+    <div class="m-b">
+      <h2 class="txt-orange m-b-sm">Espace fablab</h2>
+      <p>Ici, on construit, on fabrique, on teste ! Nous mettons à disposition des outils dédiés à la conception, à la fabrication et au prototypage. Son accès est réservé aux membres ainsi qu’aux projets des structures partenaires.</p>
+    </div>
+
+    <!-- LINK TO MACHINES WEBSITE-->
+    <div class="tips-list m-b-lg">
+      <div class="tips-item">
+        <div class="tips-icon">
+          <img src="img/tips_documentation.png"/>
+        </div>
+        <div class="tips-content">
+          <div class="tips-text">Sur notre <span class="tips-text-bold">plateforme de documentation des machines</span>, vous retrouverez les informations, les notices et des astuces sur les différents outils disponibles au fablab</div>
+          <div class="tips-text-cta">
+            <a href="https://documentation.labboite.fr" class="btn btn-public btn-small btn-medium" target="_blank">Visiter la plateforme</a>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- MACHINES LIST -->
     <div class="row" ng-repeat="machine in (machines.length/4 | array)">
