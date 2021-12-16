@@ -117,16 +117,23 @@
 	color: #FFFFFF;
 	.footer-logo {
 		margin-bottom: 30px;
-		img {
-			width: 100px;
+		display: flex;
+		flex-direction: row;
+		.footer-logo-item {
+			margin-right: 20px;
+			img {
+				height: 45px;
+			}
 		}
+	}
+	.footer-links-title {
+		font-weight: 800;
 	}
 	.footer-links {
 		margin-bottom: 30px;
 		ul {
 			font-weight: 600;
 			font-size: 12px;
-			margin: 0;
 			padding: 0;
 			li {
 				list-style: none;
