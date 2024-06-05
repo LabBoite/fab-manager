@@ -203,4 +203,10 @@ Rails.application.routes.draw do
   end
 
   apipie
+
+  # If there is a GET /newsletter/subscription-pending request, then route the request to the "newsletter_subscription" controller and the "pending" action.
+  get "/newsletter/subscription-pending", to: "newsletter_subscription#pending"
+
+  # If there is a GET /newsletter/subscription-success request, then route the request to the "newsletter_subscription" controller and the "success" action.
+  get "/newsletter/subscription-success", to: "newsletter_subscription#success"
 end
