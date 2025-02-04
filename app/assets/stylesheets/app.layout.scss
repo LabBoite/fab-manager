@@ -216,10 +216,10 @@
 }
 
 
-.social-facebook, .social-linkedin, .social-instagram {
+.social-facebook, .social-linkedin, .social-instagram, .social-youtube {
 	display: inline-block;
 	background-image: url("icons_social.svg");
-	background-size: 120px 80px;
+	background-size: 160px 80px;
 	background-repeat: no-repeat;
 	width: 40px;
 	height: 40px;
@@ -237,6 +237,10 @@
 	background-position: -80px -0px; 
 }
 
+.social-youtube {
+	background-position: -120px -0px; 
+}
+
 .social-facebook:hover {
 	background-position: -0px -40px; 
 }
@@ -249,6 +253,9 @@
 	background-position: -80px -40px; 
 }
 
+.social-youtube:hover {
+	background-position: -120px -40px; 
+}
 
 /*layout*/
 .header,
